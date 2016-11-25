@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:700i');
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 16px Arial;
+    color: #fff;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+/* Header */
+
+header {
+    width: 1280px;
+    height: 323px;
+    background-color: #445161;
+}
+
+section {
+    float: left;
+    width: 530px;
+    height: 214px;
+    margin: 50px 0 0 59px ;
+}
+
+section h1 {
+    font-size: 60px;
+    font-weight: 400;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+.presentment {
+    width: 530px;
+    height: 127px;
+}
+
+.presentment i {
+    float: left;
+}
+
+.presentment span {
+    display: block;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.img-header {
+    width: 469px;
+    height: 214px;
+    background: url('images/geek.png') no-repeat center;
+    background-color: #fff;
+    float: right;
+    margin: 50px 59px 0 0 ;
+    
+}
+
+.img-header:hover {
+    box-shadow: 0 0 30px #ccc;
+}
+
+
+
+.img-header span + span {
+    margin-top: 120px;
+}
+
+/* End Header */
+
+/* Info */
+.info {
+    width: 1280px;
+    height: 344px;
+}
+.info section {
+    margin-left: 50px;
+}
+.info h2 {
+    color:  #445161;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 30px;
+    
+}
+.info p {
+    color: #333;
+    width: 653px;
+    height: 60px;
+    margin-bottom: 20px;
+    line-height: 24px;
+}
+
+.info p a {
+    text-decoration: none;
+}
+ .img-info {
+    width: 430px;
+    height: 245px;
+    background:url('images/grafik.png') no-repeat;
+    background-color: #445161;
+    float: right;
+    margin-top: 50px;
+    margin-right: 59px;
+}
+.img-info:hover {
+    box-shadow: 0 0 30px #445161;
+}
+.img-info span {
+    display: block;
+    color:#445162;
+    font: 20px 'Coming Soon', cursive;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.img-info span + span {
+    margin-top: 180px;
+}
+
+
+/* End info */
+/* Contacts */
+.contacts {
+    width: 1280px;
+    height: 509px;
+    background-color: #445161;
+    
+}
+.contacts h1 {
+    font-weight: 400;
+    text-align: center;
+    padding-top: 53px;
+    margin-bottom: 31px;
+    font-size: 30px;
+}
+.contacts form {
+}
+.contacts .form-left {
+    float:left;
+    width: 500px;
+    margin-left: 249px;
+    position: relative;
+}
+
+.contacts input, .contacts textarea {
+    width: 500px;
+    border-radius: 5px;
+    float: left;
+    color: #445162;
+    border: 0;
+    box-sizing: border-box;
+    padding-left: 10px;
+
+}
+
+
+.contacts input{
+    height: 40px;
+    margin-bottom: 21px;
+    text-transform: capitalize;
+}
+.contacts input::-webkit-input-placeholder {
+    color: #445161;
+    text-transform: none;
+}
+
+.contacts input::-moz-placeholder {
+    color: #445162;
+    text-transform: none;
+}
+
+.contacts input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+.contacts textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+.contacts textarea {
+    height: 170px;
+    padding-top: 10px;
+}
+
+.contacts textarea::-webkit-input-placeholder {
+    color: #445162;
+    text-transform: none;
+}
+.contacts textarea::-moz-placeholder {
+    color: #445162;
+    text-transform: none;
+}
+
+.contacts textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.contacts textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+
+.contacts button {
+    width: 140px;
+    height: 40px;
+    border: 0;
+    color: #445162;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 21px;
+    margin-left: 180px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contacts button:active {
+    position: relative;
+    top:3px;
+    box-shadow: 0 0 15px  #000;
+}
+
+.contacts button:hover {
+    background-color: #4867aa;
+    color: #fff;
+    transition: background-color 0.5s ease,
+                color 0.5s ease;
+    
+}
+.contacts .form-right {
+    float: right;
+    margin-right: 246px;
+    width: 240px;
+}
+
+.contacts i {
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.icq {
+    background: url(images/icq-sprite.png) no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+.phone {
+    background: url(images/phone-sprite.png) no-repeat;
+    width: 24px;
+    height: 23px;
+}
+
+
+.contacts .fa.fa-skype:hover {
+    color: #00aff0;
+}
+
+.contacts .icq:hover {
+    background-position: -26px 0;
+}
+
+.contacts .fa.fa-at:hover {
+    color: #ffa930;
+}
+
+.contacts .phone:hover {
+    background-position: -24px 0;
+}
+.contacts span {
+   margin-bottom: 18px;
+    display: block;
+    line-height: 30px;
+}
+.contacts .socials {
+    width: 240px;
+    height: 42px;
+    margin-top: 37px;
+    position: relative;
+}
+
+
+.contacts .socials a {
+    display: block;
+    float: left;
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.contacts .socials i {
+    display: block;
+    margin-left: 14px;
+    line-height: 41px;
+    color: #445162;
+}
+
+.contacts .socials .icon-google-plus {
+    font: 23px 'Titillium Web', sans-serif;   
+    line-height: 35px;
+}
+
+
+
+.socials .fa.fa-twitter:hover {
+    color: #1da1f2;
+}
+
+.socials a:hover:nth-child(2) {
+    background-color: #4867aa; 
+}
+.socials .fa.fa-facebook:hover {
+    color: #fff;
+}
+.socials a:hover:nth-child(3) {
+    background-color: #0077b5;
+}
+.socials .fa.fa-linkedin:hover {
+    color: #fff;
+}
+.socials .icon-google-plus:hover {
+    color: #df4a32;
+}
+.socials .fa.fa-youtube:hover {
+    color: red;
+}
+
+
+
+
+
+/* End Contacts */
+/* Footer */
+footer {
+    width: 1280px;
+    height: 30px;
+    text-align: center;
+    color: #445162;
+    font-size: 12px;
+    line-height: 30px;
+}
+/* End Footer */

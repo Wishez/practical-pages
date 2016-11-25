@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Domine:700|Montserrat:400,700|Open+Sans:400,700');
+
+@mixin  border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+
+
+.header-nav {
+    background: url(../images/top.png) no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 46.76991150442478% ;
+    .row {     
+        #brand { 
+            
+          h4 {
+            background-color: #fa5c65;
+            height: 74px;
+            margin-top: -15px;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+              a {
+                font: 0.9em 'Domine', serif;
+                color: #fff;
+                line-height: 6.11111111111em;
+                text-decoration: none;
+                  
+                  span{
+                    color: #000;     
+                  }
+              }
+            }
+        }
+        
+        #social-icons {
+            margin-top: -35px;
+            span {
+                margin-right: 33.650794%;
+                color: #fa5c65;
+                
+            }
+        }
+        
+        #nav-list {
+            margin-top: -45px;
+            text-transform: uppercase;
+            margin-right: 6.85416666666667%; 
+            li {
+                margin-right: 5px;
+                a {
+                font-family: 'Montserrat', sans-serif;       
+                color:  #263642;
+                text-decoration: none;
+                color: #000;
+                }
+            }
+        }
+    }
+        #slogan {
+            margin: 28.94985808893094% 0;
+            h1 {
+                text-transform: uppercase;
+                color:  #314a5b;
+                font: { 
+                size : 1,333333333333333em; 
+                family: 'Montserrat', sans-serif;
+                weight: bold;
+                margin-bottom: 26px;
+                }
+                span {
+                    color: #fa5c65;
+                }
+            }
+            p {
+                color: #314a5b;
+                font-size: 1,428571428571429em;
+                margin-bottom: 41px;
+            }
+            #read-more {
+                margin: 0;
+                
+                background-color: #fa5c65;
+                text-align: center;
+                color: #fff;
+                font: {
+                  size: 15px;
+                  family: 'Open sans', sans-serif;
+                  weight: 700;
+                }
+                letter-spacing: 1px;
+                line-height: 1.3em;
+                text-transform: uppercase;
+                @include border-radius(10px);
+            }
+        }
+} /* end header */
+
+/*  Main content */
+
+
+/* end main content */
+
+/* For large screen devices */
+@media (min-width: 1200px) {
+    .header-nav {
+        max-width: 100%;
+    }
+    
+}
+/* For medium screen devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-nav {
+        max-width: 100%;
+      .row {
+        #social-icons {
+          span {
+            margin-right: 18.650794%;
+            color: #fa5c65; 
+          }
+        }
+        #nav-list {
+          margin-right: 14%;
+            li {
+              a {
+                font-size: 0.8571428571428571em;
+               }
+           }
+       }
+      }
+    }
+}
+/* For small screen devices */
+@media (min-width: 768px) and (max-width: 991px){
+     .header-nav {
+
+      .row {
+        #brand {
+            h4 {
+                height: 55px;
+              a {
+                font-size: 0.7em;      
+              }
+            }
+          }
+          #nav-list {
+              margin-right: 14%;
+              margin-left: auto;
+              li {
+                 a {
+                    font-size: 0.8571428571428571em;
+                  }
+              }
+          }
+          #social-icons {
+            span {
+              margin-right: 18.650794%;
+              color: #fa5c65;
+            }
+          }
+        
+      }
+    }
+}
+/* For extra-small screen devices */
+@media (max-width: 767px) {
+    .header-nav {
+      max-width: 100%;
+      .row {
+        #brand {
+          h4 {
+            height: 55px;
+            a {
+              font-size: 2.2vw;
+               line-height: 5.11111111111em;
+              }
+            }
+          }
+        }
+        #slogan {
+          a#read-more {
+            font-size: 0.8em;
+          }        
+        }
+    }
+    
+}
+
+

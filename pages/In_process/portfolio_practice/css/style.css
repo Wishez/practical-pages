@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Domine:700|Montserrat:400,700|Open+Sans:400,700");
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #000; }
+
+.header-nav {
+  background: url(../images/top.png) no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 46.76991%; }
+  .header-nav .row #brand h4 {
+    background-color: #fa5c65;
+    height: 74px;
+    margin-top: -15px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .header-nav .row #brand h4 a {
+      font: 0.9em 'Domine', serif;
+      color: #fff;
+      line-height: 6.11111111111em;
+      text-decoration: none; }
+      .header-nav .row #brand h4 a span {
+        color: #000; }
+  .header-nav .row #social-icons {
+    margin-top: -35px; }
+    .header-nav .row #social-icons span {
+      margin-right: 33.650794%;
+      color: #fa5c65; }
+  .header-nav .row #nav-list {
+    margin-top: -45px;
+    text-transform: uppercase;
+    margin-right: 6.85416666666667%; }
+    .header-nav .row #nav-list li {
+      margin-right: 5px; }
+      .header-nav .row #nav-list li a {
+        font-family: 'Montserrat', sans-serif;
+        color: #263642;
+        text-decoration: none;
+        color: #000; }
+  .header-nav #slogan {
+    margin: 28.94985808893094% 0; }
+    .header-nav #slogan h1 {
+      text-transform: uppercase;
+      color: #314a5b;
+      font-size: 1,333333333333333em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-margin-bottom: 26px; }
+      .header-nav #slogan h1 span {
+        color: #fa5c65; }
+    .header-nav #slogan p {
+      color: #314a5b;
+      font-size: 1,428571428571429em;
+      margin-bottom: 41px; }
+    .header-nav #slogan #read-more {
+      margin: 0;
+      background-color: #fa5c65;
+      text-align: center;
+      color: #fff;
+      font-size: 15px;
+      font-family: 'Open sans', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.3em;
+      text-transform: uppercase;
+      -webkit-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px; }
+
+/* end header */
+/*  Main content */
+/* end main content */
+/* For large screen devices */
+@media (min-width: 1200px) {
+  .header-nav {
+    max-width: 100%; } }
+/* For medium screen devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-nav {
+    max-width: 100%; }
+    .header-nav .row #social-icons span {
+      margin-right: 18.650794%;
+      color: #fa5c65; }
+    .header-nav .row #nav-list {
+      margin-right: 14%; }
+      .header-nav .row #nav-list li a {
+        font-size: 0.8571428571428571em; } }
+/* For small screen devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-nav .row #brand h4 {
+    height: 55px; }
+    .header-nav .row #brand h4 a {
+      font-size: 0.7em; }
+  .header-nav .row #nav-list {
+    margin-right: 14%;
+    margin-left: auto; }
+    .header-nav .row #nav-list li a {
+      font-size: 0.8571428571428571em; }
+  .header-nav .row #social-icons span {
+    margin-right: 18.650794%;
+    color: #fa5c65; } }
+/* For extra-small screen devices */
+@media (max-width: 767px) {
+  .header-nav {
+    max-width: 100%; }
+    .header-nav .row #brand h4 {
+      height: 55px; }
+      .header-nav .row #brand h4 a {
+        font-size: 2.2vw;
+        line-height: 5.11111111111em; }
+    .header-nav #slogan a#read-more {
+      font-size: 0.8em; } }
+
+/*# sourceMappingURL=style.css.map */
