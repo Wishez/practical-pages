@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Domine:700|Montserrat:400,700|Open+Sans:400,700');
 
+
+$red: #fa5c65;
+$dark-blue: #314a5b;
+$red-text: #f0454c;
+$gray: #9aa0ab;
+$fMontserrat:  'Montserrat', sans-serif;
+$fOpenSans: 'Open Sans', sans-serif;
+
+
 @mixin  border-radius($radius) {
     -webkit-border-radius: $radius;
     -ms-border-radius: $radius;
@@ -15,7 +24,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fOpenSans;
     color: #000;
 }
 
@@ -64,7 +73,7 @@ body {
             li {
                 margin-right: 5px;
                 a {
-                font-family: 'Montserrat', sans-serif;       
+                font-family: $fMontserrat;       
                 color:  #263642;
                 text-decoration: none;
                 color: #000;
@@ -79,7 +88,7 @@ body {
                 color:  #314a5b;
                 font: { 
                 size : 1,333333333333333em; 
-                family: 'Montserrat', sans-serif;
+                family: $fMontserrat;
                 weight: bold;
                 margin-bottom: 26px;
                 }
@@ -100,7 +109,7 @@ body {
                 color: #fff;
                 font: {
                   size: 15px;
-                  family: 'Open sans', sans-serif;
+                  family: $fOpenSans;
                   weight: 700;
                 }
                 letter-spacing: 1px;
@@ -111,10 +120,161 @@ body {
         }
 } /* end header */
 
+
 /*  Main content */
+.main {
+  .row{
+      .article{
+          margin-top: 32px;
+          .article__heading {
+              white-space: pre-wrap;
+              font: {
+                size: 1,083333333333333em;
+                family: $fMontserrat;
+                weight: 700;
+              }
+              color: #465065;
+              text-transform: uppercase;
 
-
+              .article__heading--red-dote {
+                  color: $red-text;
+              }
+          }
+          
+          .article__text {
+              color: $gray;
+              font-size: 1.071428571428571em;
+              line-height: 1.466666666666667em;
+              margin-top: 24px;
+          }
+          
+          .aticle__more-text {
+              display: inline-block;
+              color: $red-text;
+              margin-right: 7px;
+              margin-top: 29px;
+              text-transform: uppercase;
+              font-family: $fMontserrat;
+          }
+          .fa.fa-arrow-right {
+              color: $red-text;
+          }
+      }
+    }
+    
+    .portfolio {
+        .image-container {
+            margin-top: 57px;
+        }
+        
+        .article {
+            margin-top: 95px;
+            .article__heading{
+                color: $dark-blue;
+                
+            }
+            .article__heading-slogan {
+                color: $dark-blue;
+                font-size: 1.142857142857143em;
+                line-height: 1.25em;
+            }
+            
+            .aticle__more-text{
+               margin-top: 45px;
+            }
+        }
+    }
+    
+    .our-team {
+      .intro {
+        .article__text {
+          margin-top: 16px;    
+          }
+        }
+        .team-persons{
+          margin-top: 47px;
+          .human{
+              margin-top: 40px;
+            .human__photo--joey{
+                background: url(../images/Joey.png);
+                width: 120px;height: 120px;
+              }
+              
+             .human__photo--matt{
+                background: url(../images/Matt.png);
+                 width: 120px;height: 120px;
+              }
+              
+              .human__photo--mike{
+                  background: url(../images/Mike.png);   
+                  width: 120px;height: 120px;
+              }
+              
+              .human__info {
+                  .human__info__name {
+                      color: $dark-blue;
+                      font: {
+                        size : 1.571428571428571em;
+                        family: $fMontserrat;
+                        weight: 700;
+                      }
+                      margin-bottom: 12px;
+                      text-transform: uppercase;
+                  }
+                  
+                  .human__info__profession {
+                      color: $red-text;
+                  }
+                  
+                  .human__info__hobbies {
+                      color: $gray;
+                      line-height: 1.428571428571429em;
+                     margin-top: 14px;   
+                  }
+              }
+          }
+            .team-persons__block-more-text {
+              margin-top: 67px;
+              .team-persons__more-text {
+                display: inline-block;
+                color: $red-text;
+                margin-right: 7px;
+                margin-top: 29px;
+                text-transform: uppercase;
+                font-family: $fMontserrat;
+              }
+              .fa.fa-arrow-right {
+                color: $red-text;
+              }
+            }
+       }
+    }
+}
 /* end main content */
+
+/* footer */
+footer {
+  hr{
+      margin-top: 68px;
+      margin-bottom: 30px;
+    }
+.footer {
+color: $gray;
+  .social-icons {
+    margin-bottom: 41px;
+    .fa {
+       margin-right: 22px ;
+      }
+   }
+    .copyright {
+        text-align: right;
+        
+    }
+  }
+}
+
+/* end footer */
+
 
 /* For large screen devices */
 @media (min-width: 1200px) {

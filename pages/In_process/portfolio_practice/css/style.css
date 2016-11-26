@@ -4,7 +4,7 @@
   margin: 0; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #000; }
 
 .header-nav {
@@ -38,7 +38,7 @@ body {
     .header-nav .row #nav-list li {
       margin-right: 5px; }
       .header-nav .row #nav-list li a {
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         color: #263642;
         text-decoration: none;
         color: #000; }
@@ -48,7 +48,7 @@ body {
       text-transform: uppercase;
       color: #314a5b;
       font-size: 1,333333333333333em;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: bold;
       font-margin-bottom: 26px; }
       .header-nav #slogan h1 span {
@@ -63,7 +63,7 @@ body {
       text-align: center;
       color: #fff;
       font-size: 15px;
-      font-family: 'Open sans', sans-serif;
+      font-family: "Open Sans", sans-serif;
       font-weight: 700;
       letter-spacing: 1px;
       line-height: 1.3em;
@@ -76,7 +76,101 @@ body {
 
 /* end header */
 /*  Main content */
+.main .row .article {
+  margin-top: 32px; }
+  .main .row .article .article__heading {
+    white-space: pre-wrap;
+    font-size: 1,083333333333333em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #465065;
+    text-transform: uppercase; }
+    .main .row .article .article__heading .article__heading--red-dote {
+      color: #f0454c; }
+  .main .row .article .article__text {
+    color: #9aa0ab;
+    font-size: 1.071428571428571em;
+    line-height: 1.466666666666667em;
+    margin-top: 24px; }
+  .main .row .article .aticle__more-text {
+    display: inline-block;
+    color: #f0454c;
+    margin-right: 7px;
+    margin-top: 29px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif; }
+  .main .row .article .fa.fa-arrow-right {
+    color: #f0454c; }
+.main .portfolio .image-container {
+  margin-top: 57px; }
+.main .portfolio .article {
+  margin-top: 95px; }
+  .main .portfolio .article .article__heading {
+    color: #314a5b; }
+  .main .portfolio .article .article__heading-slogan {
+    color: #314a5b;
+    font-size: 1.142857142857143em;
+    line-height: 1.25em; }
+  .main .portfolio .article .aticle__more-text {
+    margin-top: 45px; }
+.main .our-team .intro .article__text {
+  margin-top: 16px; }
+.main .our-team .team-persons {
+  margin-top: 47px; }
+  .main .our-team .team-persons .human {
+    margin-top: 40px; }
+    .main .our-team .team-persons .human .human__photo--joey {
+      background: url(../images/Joey.png);
+      width: 120px;
+      height: 120px; }
+    .main .our-team .team-persons .human .human__photo--matt {
+      background: url(../images/Matt.png);
+      width: 120px;
+      height: 120px; }
+    .main .our-team .team-persons .human .human__photo--mike {
+      background: url(../images/Mike.png);
+      width: 120px;
+      height: 120px; }
+    .main .our-team .team-persons .human .human__info .human__info__name {
+      color: #314a5b;
+      font-size: 1.571428571428571em;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase; }
+    .main .our-team .team-persons .human .human__info .human__info__profession {
+      color: #f0454c; }
+    .main .our-team .team-persons .human .human__info .human__info__hobbies {
+      color: #9aa0ab;
+      line-height: 1.428571428571429em;
+      margin-top: 14px; }
+  .main .our-team .team-persons .team-persons__block-more-text {
+    margin-top: 67px; }
+    .main .our-team .team-persons .team-persons__block-more-text .team-persons__more-text {
+      display: inline-block;
+      color: #f0454c;
+      margin-right: 7px;
+      margin-top: 29px;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif; }
+    .main .our-team .team-persons .team-persons__block-more-text .fa.fa-arrow-right {
+      color: #f0454c; }
+
 /* end main content */
+/* footer */
+footer hr {
+  margin-top: 68px;
+  margin-bottom: 30px; }
+footer .footer {
+  color: #9aa0ab; }
+  footer .footer .social-icons {
+    margin-bottom: 41px; }
+    footer .footer .social-icons .fa {
+      margin-right: 22px; }
+  footer .footer .copyright {
+    text-align: right; }
+
+/* end footer */
 /* For large screen devices */
 @media (min-width: 1200px) {
   .header-nav {
