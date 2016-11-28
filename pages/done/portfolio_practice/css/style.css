@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css?family=Domine:700|Montserrat:400,700|Open+Sans:400,700");
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #000; }
+
+.header-nav {
+  background: url(../images/top.png) no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 46.76991%; }
+  .header-nav .row #brand h4 {
+    background-color: #fa5c65;
+    height: 74px;
+    margin-top: -15px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .header-nav .row #brand h4 a {
+      font: 0.9em 'Domine', serif;
+      color: #fff;
+      line-height: 6.11111111111em;
+      text-decoration: none; }
+      .header-nav .row #brand h4 a span {
+        color: #000; }
+  .header-nav .row #social-icons {
+    margin-top: -35px; }
+    .header-nav .row #social-icons span {
+      margin-right: 33.650794%;
+      color: #fa5c65; }
+  .header-nav .row #nav-list {
+    margin-top: -45px;
+    text-transform: uppercase;
+    margin-right: 6.85416666666667%; }
+    .header-nav .row #nav-list li {
+      margin-right: 5px; }
+      .header-nav .row #nav-list li a {
+        font-family: "Montserrat", sans-serif;
+        color: #263642;
+        text-decoration: none;
+        color: #000; }
+  .header-nav #slogan {
+    margin: 28.94985808893094% 0; }
+    .header-nav #slogan h1 {
+      text-transform: uppercase;
+      color: #314a5b;
+      font-size: 2.71429em;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      margin-bottom: 26px; }
+      .header-nav #slogan h1 span {
+        color: #fa5c65; }
+    .header-nav #slogan p {
+      color: #314a5b;
+      font-size: 1.428571428571429em;
+      margin-bottom: 41px; }
+    .header-nav #slogan #read-more {
+      margin: 0;
+      background-color: #fa5c65;
+      text-align: center;
+      color: #fff;
+      font-size: 15px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.3em;
+      text-transform: uppercase;
+      -webkit-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px; }
+
+/* end header */
+/*  Main content */
+.main .row .article {
+  margin-top: 32px; }
+  .main .row .article .article__heading {
+    white-space: pre-wrap;
+    font-size: 1,083333333333333em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: #465065;
+    text-transform: uppercase; }
+    .main .row .article .article__heading .article__heading--red-dote {
+      color: #f0454c; }
+  .main .row .article .article__text {
+    color: #9aa0ab;
+    font-size: 1.071428571428571em;
+    line-height: 1.466666666666667em;
+    margin-top: 24px; }
+  .main .row .article .article__more-text {
+    display: inline-block;
+    color: #f0454c;
+    margin-right: 7px;
+    margin-top: 29px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif; }
+  .main .row .article .fa.fa-arrow-right {
+    color: #f0454c; }
+.main .portfolio .image-container {
+  margin-top: 57px; }
+.main .portfolio .article {
+  margin-top: 95px; }
+  .main .portfolio .article .article__heading {
+    color: #314a5b; }
+  .main .portfolio .article .article__heading-slogan {
+    color: #314a5b;
+    font-size: 1.142857142857143em;
+    line-height: 1.25em; }
+  .main .portfolio .article .aticle__more-text {
+    margin-top: 45px; }
+.main .our-team .intro .article__text {
+  margin-top: 16px; }
+.main .our-team .team-persons {
+  margin-top: 47px; }
+  .main .our-team .team-persons .human {
+    margin-top: 40px; }
+    .main .our-team .team-persons .human .human__photo--joey {
+      background: url(../images/Joey.png);
+      width: 120px;
+      height: 120px; }
+    .main .our-team .team-persons .human .human__photo--matt {
+      background: url(../images/Matt.png);
+      width: 120px;
+      height: 120px; }
+    .main .our-team .team-persons .human .human__photo--mike {
+      background: url(../images/Mike.png);
+      width: 120px;
+      height: 120px; }
+    .main .our-team .team-persons .human .human__info .human__info__name {
+      color: #314a5b;
+      font-size: 1.571428571428571em;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase; }
+    .main .our-team .team-persons .human .human__info .human__info__profession {
+      color: #f0454c; }
+    .main .our-team .team-persons .human .human__info .human__info__hobbies {
+      color: #9aa0ab;
+      line-height: 1.428571428571429em;
+      margin-top: 14px; }
+  .main .our-team .team-persons .team-persons__block-more-text {
+    margin-top: 67px; }
+    .main .our-team .team-persons .team-persons__block-more-text .team-persons__more-text {
+      display: inline-block;
+      color: #f0454c;
+      margin-right: 7px;
+      margin-top: 29px;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif; }
+    .main .our-team .team-persons .team-persons__block-more-text .fa.fa-arrow-right {
+      color: #f0454c; }
+
+/* end main content */
+/* footer */
+footer hr {
+  margin-top: 68px;
+  margin-bottom: 30px; }
+footer .footer {
+  color: #9aa0ab; }
+  footer .footer .social-icons {
+    margin-bottom: 41px; }
+    footer .footer .social-icons .fa {
+      margin-right: 22px; }
+  footer .footer .copyright {
+    text-align: right; }
+
+/* end footer */
+/* For extra-large screen devices */
+@media (min-width: 1200px) {
+  .header-nav {
+    max-width: 100%; } }
+/* For large screen devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-nav {
+    max-width: 100%; }
+    .header-nav .row #social-icons span {
+      margin-right: 18.650794%;
+      color: #fa5c65; }
+    .header-nav .row #nav-list {
+      margin-right: 14%; }
+      .header-nav .row #nav-list li a {
+        font-size: 0.8571428571428571em; }
+
+  .main .preparing .article:last-of-type .article__heading {
+    text-align: center; }
+  .main .preparing .article:last-of-type .article__text {
+    text-align: center; }
+  .main .preparing .article:last-of-type .more-text {
+    text-align: center; } }
+/* For medium screen devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-nav .row #brand h4 {
+    height: 55px; }
+    .header-nav .row #brand h4 a {
+      font-size: 0.7em; }
+  .header-nav .row #nav-list {
+    margin-right: 14%;
+    margin-left: auto; }
+    .header-nav .row #nav-list li a {
+      font-size: 0.8571428571428571em; }
+  .header-nav .row #social-icons span {
+    margin-right: 18.650794%;
+    color: #fa5c65; }
+
+  .main .preparing .article:last-of-type .article__heading {
+    text-align: center; }
+  .main .preparing .article:last-of-type .article__text {
+    text-align: center; }
+  .main .preparing .article:last-of-type .more-text {
+    text-align: center; }
+  .main .portfolio .article .article__heading {
+    margin-bottom: 0; }
+  .main .portfolio .article .article__heading-slogan {
+    margin-top: -15px; }
+  .main .portfolio .article .article__text {
+    margin-top: 0; }
+  .main .portfolio .article .article__more-text {
+    margin-top: 10px; }
+  .main .our-team .team-persons .human:nth-child(3) {
+    margin-top: 50px; }
+    .main .our-team .team-persons .human:nth-child(3) .human__photo--mike {
+      margin-left: 15%; }
+    .main .our-team .team-persons .human:nth-child(3) .human__info .human__info__name {
+      text-align: center; }
+    .main .our-team .team-persons .human:nth-child(3) .human__info .human__info__profession {
+      display: block;
+      text-align: center; }
+    .main .our-team .team-persons .human:nth-child(3) .human__info .human__info__hobbies {
+      text-align: center; }
+    .main .our-team .team-persons .human:nth-child(3) .team-persons__more-text {
+      margin-top: 0; } }
+/* For small screen devices */
+@media (min-width: 574px) and (max-width: 767px) {
+  .header-nav {
+    max-width: 100%; }
+    .header-nav .row #brand h4 {
+      height: 55px; }
+      .header-nav .row #brand h4 a {
+        font-size: 2vw;
+        line-height: 5.11111111111em; }
+    .header-nav #slogan a#read-more {
+      font-size: 0.8em; }
+
+  .main .preparing hr {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto; }
+  .main .preparing .article {
+    margin-top: 0; }
+    .main .preparing .article .article__heading {
+      text-align: center; }
+    .main .preparing .article .article__text {
+      text-align: center; }
+    .main .preparing .article .more-text {
+      text-align: center; }
+  .main .portfolio .article {
+    margin-top: 0; }
+    .main .portfolio .article .article__heading {
+      text-align: center; }
+    .main .portfolio .article .article__heading-slogan {
+      text-align: center; }
+    .main .portfolio .article .article__text {
+      text-align: center; }
+    .main .portfolio .article .more-text {
+      text-align: center; }
+  .main .our-team .article.intro {
+    text-align: center; }
+  .main .our-team .team-persons {
+    margin-top: 0; }
+    .main .our-team .team-persons .human {
+      margin-top: 50px; }
+      .main .our-team .team-persons .human .human__photo--mike {
+        margin-left: 6%; }
+      .main .our-team .team-persons .human .human__photo--joey {
+        margin-left: 6%; }
+      .main .our-team .team-persons .human .human__photo--matt {
+        margin-left: 6%; }
+      .main .our-team .team-persons .human .human__info .human__info__name {
+        text-align: center; }
+      .main .our-team .team-persons .human .human__info .human__info__profession {
+        display: block;
+        text-align: center; }
+      .main .our-team .team-persons .human .human__info .human__info__hobbies {
+        text-align: center; }
+      .main .our-team .team-persons .human .human:first-child {
+        margin-top: 0; }
+    .main .our-team .team-persons .team-persons__block-more-text {
+      margin-top: 0;
+      float: none !important;
+      text-align: center; }
+
+  footer .footer .social-icons {
+    text-align: center;
+    margin-bottom: 25px; }
+  footer .footer .copyright {
+    text-align: center; } }
+/* For extra-small screen devices */
+@media (max-width: 575px) {
+  .header-nav {
+    max-width: 100%; }
+    .header-nav .row #brand h4 {
+      min-width: 84px;
+      height: 40px; }
+      .header-nav .row #brand h4 a {
+        font-size: 0.58333em;
+        line-height: 5.11111111111em; }
+    .header-nav .row #collapsable-nav {
+      text-align: center; }
+    .header-nav #slogan {
+      margin-top: 0;
+      width: 100%; }
+      .header-nav #slogan h1 {
+        font-size: 2em;
+        text-align: center; }
+      .header-nav #slogan p {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 20px; }
+      .header-nav #slogan #read-more {
+        height: 40px;
+        margin-left: 29%;
+        min-width: 126px;
+        font-size: 0.71429em; }
+
+  .main .preparing hr {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto; }
+  .main .preparing .article {
+    margin-top: 0; }
+    .main .preparing .article .article__heading {
+      text-align: center; }
+    .main .preparing .article .article__text {
+      text-align: center; }
+    .main .preparing .article .more-text {
+      text-align: center; }
+  .main .portfolio .article {
+    margin-top: 0; }
+    .main .portfolio .article .article__heading {
+      text-align: center;
+      margin-top: 0; }
+    .main .portfolio .article .article__heading-slogan {
+      text-align: center; }
+    .main .portfolio .article .article__text {
+      text-align: center; }
+    .main .portfolio .article .more-text {
+      text-align: center; }
+  .main .our-team .team-persons .team-persons__block-more-text {
+    margin-top: 0;
+    float: none !important;
+    text-align: center; }
+
+  footer .footer .social-icons {
+    text-align: center;
+    margin-bottom: 25px; }
+  footer .footer .copyright {
+    text-align: center; } }
+
+/*# sourceMappingURL=style.css.map */

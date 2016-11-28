@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css?family=Domine:700|Montserrat:400,700|Open+Sans:400,700');
+
+
+$red: #fa5c65;
+$dark-blue: #314a5b;
+$red-text: #f0454c;
+$gray: #9aa0ab;
+$fMontserrat:  'Montserrat', sans-serif;
+$fOpenSans: 'Open Sans', sans-serif;
+
+
+@mixin  border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $fOpenSans;
+    color: #000;
+}
+
+
+.header-nav {
+    background: url(../images/top.png) no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 46.76991150442478% ;
+    .row {     
+        #brand { 
+            
+          h4 {
+            background-color: #fa5c65;
+            height: 74px;
+            margin-top: -15px;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+              a {
+                font: 0.9em 'Domine', serif;
+                color: #fff;
+                line-height: 6.11111111111em;
+                text-decoration: none;
+                  
+                  span{
+                    color: #000;     
+                  }
+              }
+            }
+        }
+        
+        #social-icons {
+            margin-top: -35px;
+            span {
+                margin-right: 33.650794%;
+                color: #fa5c65;
+                
+            }
+        }
+        
+        #nav-list {
+            margin-top: -45px;
+            text-transform: uppercase;
+            margin-right: 6.85416666666667%; 
+            li {
+                margin-right: 5px;
+                a {
+                font-family: $fMontserrat;       
+                color:  #263642;
+                text-decoration: none;
+                color: #000;
+                }
+            }
+        }
+    }
+        #slogan {
+            margin: 28.94985808893094% 0;
+            h1 {
+                text-transform: uppercase;
+                color:  #314a5b;
+                font: { 
+                size : (38em / 14); 
+                family: $fMontserrat;
+                weight: bold;
+                }
+                margin-bottom: 26px;
+                span {
+                    color: #fa5c65;
+                }
+            }
+            p {
+                color: #314a5b;
+                font-size: 1.428571428571429em;
+                margin-bottom: 41px;
+            }
+            #read-more {
+                margin: 0;
+                
+                background-color: #fa5c65;
+                text-align: center;
+                color: #fff;
+                font: {
+                  size: 15px;
+                  family: $fOpenSans;
+                  weight: 700;
+                }
+                letter-spacing: 1px;
+                line-height: 1.3em;
+                text-transform: uppercase;
+                @include border-radius(10px);
+            }
+        }
+} /* end header */
+
+
+/*  Main content */
+.main {
+  .row{
+      .article{
+          margin-top: 32px;
+          .article__heading {
+              white-space: pre-wrap;
+              font: {
+                size: 1,083333333333333em;
+                family: $fMontserrat;
+                weight: 700;
+              }
+              color: #465065;
+              text-transform: uppercase;
+
+              .article__heading--red-dote {
+                  color: $red-text;
+              }
+          }
+          
+          .article__text {
+              color: $gray;
+              font-size: 1.071428571428571em;
+              line-height: 1.466666666666667em;
+              margin-top: 24px;
+          }
+          
+          .article__more-text {
+              display: inline-block;
+              color: $red-text;
+              margin-right: 7px;
+              margin-top: 29px;
+              text-transform: uppercase;
+              font-family: $fMontserrat;
+          }
+          .fa.fa-arrow-right {
+              color: $red-text;
+          }
+      }
+    }
+    
+    .portfolio {
+        .image-container {
+            margin-top: 57px;
+        }
+        
+        .article {
+            margin-top: 95px;
+            .article__heading{
+                color: $dark-blue;
+                
+            }
+            .article__heading-slogan {
+                color: $dark-blue;
+                font-size: 1.142857142857143em;
+                line-height: 1.25em;
+            }
+            
+            .aticle__more-text{
+              margin-top: 45px;
+              
+            }
+        }
+    }
+    
+    .our-team {
+      .intro {
+        .article__text {
+          margin-top: 16px;    
+          }
+        }
+        .team-persons{
+          margin-top: 47px;
+          .human{
+              margin-top: 40px;
+            .human__photo--joey{
+                background: url(../images/Joey.png);
+                width: 120px;height: 120px;
+              }
+              
+             .human__photo--matt{
+                background: url(../images/Matt.png);
+                 width: 120px;height: 120px;
+              }
+              
+              .human__photo--mike{
+                  background: url(../images/Mike.png);   
+                  width: 120px;height: 120px;
+              }
+              
+              .human__info {
+                  .human__info__name {
+                      color: $dark-blue;
+                      font: {
+                        size : 1.571428571428571em;
+                        family: $fMontserrat;
+                        weight: 700;
+                      }
+                      margin-bottom: 12px;
+                      text-transform: uppercase;
+                  }
+                  
+                  .human__info__profession {
+                      color: $red-text;
+                  }
+                  
+                  .human__info__hobbies {
+                      color: $gray;
+                      line-height: 1.428571428571429em;
+                     margin-top: 14px;   
+                  }
+              }
+          }
+            .team-persons__block-more-text {
+              margin-top: 67px;
+              .team-persons__more-text {
+                display: inline-block;
+                color: $red-text;
+                margin-right: 7px;
+                margin-top: 29px;
+                text-transform: uppercase;
+                font-family: $fMontserrat;
+              }
+              .fa.fa-arrow-right {
+                color: $red-text;
+              }
+            }
+       }
+    }
+}
+/* end main content */
+
+/* footer */
+footer {
+  hr{
+      margin-top: 68px;
+      margin-bottom: 30px;
+    }
+.footer {
+color: $gray;
+  .social-icons {
+    margin-bottom: 41px;
+    .fa {
+       margin-right: 22px ;
+      }
+   }
+    .copyright {
+        text-align: right;
+        
+    }
+  }
+}
+
+/* end footer */
+
+
+/* For extra-large screen devices */
+@media (min-width: 1200px) {
+    .header-nav {
+        max-width: 100%;
+    }
+    
+}
+/* For large screen devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header-nav {
+        max-width: 100%;
+      .row {
+        #social-icons {
+          span {
+            margin-right: 18.650794%;
+            color: #fa5c65; 
+          }
+        }
+        #nav-list {
+          margin-right: 14%;
+            li {
+              a {
+                font-size: 0.8571428571428571em;
+               }
+           }
+       }
+      }
+    }
+    .main {
+      .preparing {
+        .article:last-of-type {
+          .article__heading{
+              text-align: center;
+            }
+            .article__text {
+                text-align: center;
+            }
+            .more-text {
+                text-align: center;
+            }
+        } 
+       }
+    }
+}
+/* For medium screen devices */
+@media (min-width: 768px) and (max-width: 991px){
+     .header-nav {
+
+      .row {
+        #brand {
+            h4 {
+                height: 55px;
+              a {
+                font-size: 0.7em;      
+              }
+            }
+          }
+          #nav-list {
+              margin-right: 14%;
+              margin-left: auto;
+              li {
+                 a {
+                    font-size: 0.8571428571428571em;
+                  }
+              }
+          }
+          #social-icons {
+            span {
+              margin-right: 18.650794%;
+              color: #fa5c65;
+            }
+          }
+        
+      }
+    }
+    .main {
+      .preparing {
+        .article:last-of-type {
+          .article__heading{
+              text-align: center;
+            }
+            .article__text {
+                text-align: center;
+            }
+            .more-text {
+                text-align: center;
+            }
+        } 
+       }
+        .portfolio {
+          .article {
+            .article__heading {
+              margin-bottom: 0;
+            }
+              
+            .article__heading-slogan{
+                margin-top: -15px;      
+            }
+            .article__text{
+              margin-top: 0;
+            }
+            .article__more-text{
+             margin-top: 10px;
+            }
+          }
+        }
+        .our-team {
+          .team-persons{
+            .human:nth-child(3){
+                margin-top: 50px;
+              .human__photo--mike{
+                margin-left: 15%;    
+              }
+              .human__info{
+                  
+                  .human__info__name {
+                      text-align: center;
+                  }
+                  .human__info__profession {
+                      display: block;
+                      text-align: center;
+                  }
+                  .human__info__hobbies {
+                      text-align: center;
+                  }
+                }
+                
+                .team-persons__more-text {
+                    margin-top: 0;
+                }
+            }    
+          }
+        }
+   }
+}
+
+/* For small screen devices */
+@media (min-width: 574px) and (max-width: 767px) {
+    .header-nav {
+      max-width: 100%;
+      .row {
+        #brand {
+          h4 {
+            height: 55px;
+            a {
+              font-size: 2vw;
+               line-height: 5.11111111111em;
+              }
+            }
+          }
+        }
+        #slogan {
+          a#read-more {
+            font-size: 0.8em;
+          }        
+        }
+    }
+    .main {
+      .preparing {
+        hr{
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        .article{
+            margin-top: 0;
+          .article__heading{
+              text-align: center;
+            }
+            .article__text {
+                text-align: center;
+            }
+            .more-text {
+                text-align: center;
+            }
+        } 
+       }
+       .portfolio {
+          
+          .article {
+              margin-top: 0;
+            .article__heading {
+              text-align: center;
+            }
+              
+            .article__heading-slogan{
+              text-align: center;
+            }
+            .article__text{
+              text-align: center;
+            }
+            .more-text{
+             text-align: center;
+            }
+          }
+        }
+        .our-team {
+            .article.intro {
+                text-align: center;
+            }
+          .team-persons{
+              margin-top: 0;
+            .human{
+                margin-top: 50px;
+              .human__photo--mike{
+                margin-left: 6%;    
+              }
+               .human__photo--joey{
+                margin-left: 6%;    
+              }
+                 .human__photo--matt{
+                margin-left: 6%;    
+              }
+              .human__info{
+                  
+                  .human__info__name {
+                      text-align: center;
+                  }
+                  .human__info__profession {
+                      display: block;
+                      text-align: center;
+                  }
+                  .human__info__hobbies {
+                      text-align: center;
+                  }
+                }
+                .human:first-child{
+                  margin-top: 0;      
+                }
+                
+            }    
+                .team-persons__block-more-text{
+                  margin-top: 0;
+                  float: none!important;
+                    text-align: center;
+                }
+                .team-persons__more-text{
+                }
+          }
+        }
+    }
+    
+      footer {
+    .footer {
+        .social-icons{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .copyright{
+            text-align: center;
+        }
+    }
+    }
+    
+}
+
+/* For extra-small screen devices */
+@media (max-width: 575px) {
+    .header-nav {
+      max-width: 100%;
+      .row {
+        #brand {
+          h4 {
+            min-width: 84px;
+            height: 40px;
+            a {
+              font-size: (14em / 24);
+               line-height: 5.11111111111em;
+              }
+            }
+          }
+          #collapsable-nav {
+              text-align: center;
+          }
+        }
+        #slogan {
+            margin-top: 0;
+            width: 100%;
+            h1 {
+                font-size:(40em / 20);
+                text-align: center;
+                
+            }
+            
+            p {
+                font-size: (20em / 20);
+                text-align: center;
+                margin-bottom: 20px;
+            }
+                #read-more {
+                    height: 40px;
+                    margin-left: 29%;
+                    min-width:126px;
+                    font-size: (10em / 14);
+                }
+            
+        }
+    }
+    
+    .main {
+      .preparing {
+        hr{
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        .article{
+            margin-top: 0;
+          .article__heading{
+              text-align: center;
+            }
+            .article__text {
+                text-align: center;
+            }
+            .more-text {
+                text-align: center;
+            }
+        } 
+       }
+       .portfolio {
+          
+          .article {
+              margin-top: 0;
+            .article__heading {
+              text-align: center;
+              margin-top: 0;
+            }
+              
+            .article__heading-slogan{
+              text-align: center;
+            }
+            .article__text{
+              text-align: center;
+            }
+            .more-text{
+             text-align: center;
+            }
+          }
+        }    
+    .our-team{
+      .team-persons{
+          
+    .team-persons__block-more-text{
+                  margin-top: 0;
+                  float: none!important;
+                    text-align: center;
+                }
+                .team-persons__more-text{
+                }
+    
+          }
+        }
+    }
+    footer {
+    .footer {
+        .social-icons{
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .copyright{
+            text-align: center;
+        }
+    }
+    }
+}

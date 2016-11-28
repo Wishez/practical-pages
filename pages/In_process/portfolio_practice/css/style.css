@@ -47,15 +47,15 @@ body {
     .header-nav #slogan h1 {
       text-transform: uppercase;
       color: #314a5b;
-      font-size: 1,333333333333333em;
+      font-size: 2.71429em;
       font-family: "Montserrat", sans-serif;
       font-weight: bold;
-      font-margin-bottom: 26px; }
+      margin-bottom: 26px; }
       .header-nav #slogan h1 span {
         color: #fa5c65; }
     .header-nav #slogan p {
       color: #314a5b;
-      font-size: 1,428571428571429em;
+      font-size: 1.428571428571429em;
       margin-bottom: 41px; }
     .header-nav #slogan #read-more {
       margin: 0;
@@ -92,7 +92,7 @@ body {
     font-size: 1.071428571428571em;
     line-height: 1.466666666666667em;
     margin-top: 24px; }
-  .main .row .article .aticle__more-text {
+  .main .row .article .article__more-text {
     display: inline-block;
     color: #f0454c;
     margin-right: 7px;
@@ -171,11 +171,11 @@ footer .footer {
     text-align: right; }
 
 /* end footer */
-/* For large screen devices */
+/* For extra-large screen devices */
 @media (min-width: 1200px) {
   .header-nav {
     max-width: 100%; } }
-/* For medium screen devices */
+/* For large screen devices */
 @media (min-width: 992px) and (max-width: 1199px) {
   .header-nav {
     max-width: 100%; }
@@ -185,8 +185,15 @@ footer .footer {
     .header-nav .row #nav-list {
       margin-right: 14%; }
       .header-nav .row #nav-list li a {
-        font-size: 0.8571428571428571em; } }
-/* For small screen devices */
+        font-size: 0.8571428571428571em; }
+
+  .main .preparing .article:last-of-type .article__heading {
+    text-align: center; }
+  .main .preparing .article:last-of-type .article__text {
+    text-align: center; }
+  .main .preparing .article:last-of-type .more-text {
+    text-align: center; } }
+/* For medium screen devices */
 @media (min-width: 768px) and (max-width: 991px) {
   .header-nav .row #brand h4 {
     height: 55px; }
@@ -199,17 +206,160 @@ footer .footer {
       font-size: 0.8571428571428571em; }
   .header-nav .row #social-icons span {
     margin-right: 18.650794%;
-    color: #fa5c65; } }
-/* For extra-small screen devices */
-@media (max-width: 767px) {
+    color: #fa5c65; }
+
+  .main .preparing .article:last-of-type .article__heading {
+    text-align: center; }
+  .main .preparing .article:last-of-type .article__text {
+    text-align: center; }
+  .main .preparing .article:last-of-type .more-text {
+    text-align: center; }
+  .main .portfolio .article .article__heading {
+    margin-bottom: 0; }
+  .main .portfolio .article .article__heading-slogan {
+    margin-top: -15px; }
+  .main .portfolio .article .article__text {
+    margin-top: 0; }
+  .main .portfolio .article .article__more-text {
+    margin-top: 10px; }
+  .main .our-team .team-persons .human:nth-child(3) {
+    margin-top: 50px; }
+    .main .our-team .team-persons .human:nth-child(3) .human__photo--mike {
+      margin-left: 15%; }
+    .main .our-team .team-persons .human:nth-child(3) .human__info .human__info__name {
+      text-align: center; }
+    .main .our-team .team-persons .human:nth-child(3) .human__info .human__info__profession {
+      display: block;
+      text-align: center; }
+    .main .our-team .team-persons .human:nth-child(3) .human__info .human__info__hobbies {
+      text-align: center; }
+    .main .our-team .team-persons .human:nth-child(3) .team-persons__more-text {
+      margin-top: 0; } }
+/* For small screen devices */
+@media (min-width: 574px) and (max-width: 767px) {
   .header-nav {
     max-width: 100%; }
     .header-nav .row #brand h4 {
       height: 55px; }
       .header-nav .row #brand h4 a {
-        font-size: 2.2vw;
+        font-size: 2vw;
         line-height: 5.11111111111em; }
     .header-nav #slogan a#read-more {
-      font-size: 0.8em; } }
+      font-size: 0.8em; }
+
+  .main .preparing hr {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto; }
+  .main .preparing .article {
+    margin-top: 0; }
+    .main .preparing .article .article__heading {
+      text-align: center; }
+    .main .preparing .article .article__text {
+      text-align: center; }
+    .main .preparing .article .more-text {
+      text-align: center; }
+  .main .portfolio .article {
+    margin-top: 0; }
+    .main .portfolio .article .article__heading {
+      text-align: center; }
+    .main .portfolio .article .article__heading-slogan {
+      text-align: center; }
+    .main .portfolio .article .article__text {
+      text-align: center; }
+    .main .portfolio .article .more-text {
+      text-align: center; }
+  .main .our-team .article.intro {
+    text-align: center; }
+  .main .our-team .team-persons {
+    margin-top: 0; }
+    .main .our-team .team-persons .human {
+      margin-top: 50px; }
+      .main .our-team .team-persons .human .human__photo--mike {
+        margin-left: 6%; }
+      .main .our-team .team-persons .human .human__photo--joey {
+        margin-left: 6%; }
+      .main .our-team .team-persons .human .human__photo--matt {
+        margin-left: 6%; }
+      .main .our-team .team-persons .human .human__info .human__info__name {
+        text-align: center; }
+      .main .our-team .team-persons .human .human__info .human__info__profession {
+        display: block;
+        text-align: center; }
+      .main .our-team .team-persons .human .human__info .human__info__hobbies {
+        text-align: center; }
+      .main .our-team .team-persons .human .human:first-child {
+        margin-top: 0; }
+    .main .our-team .team-persons .team-persons__block-more-text {
+      margin-top: 0;
+      float: none !important;
+      text-align: center; }
+
+  footer .footer .social-icons {
+    text-align: center;
+    margin-bottom: 25px; }
+  footer .footer .copyright {
+    text-align: center; } }
+/* For extra-small screen devices */
+@media (max-width: 575px) {
+  .header-nav {
+    max-width: 100%; }
+    .header-nav .row #brand h4 {
+      min-width: 84px;
+      height: 40px; }
+      .header-nav .row #brand h4 a {
+        font-size: 0.58333em;
+        line-height: 5.11111111111em; }
+    .header-nav .row #collapsable-nav {
+      text-align: center; }
+    .header-nav #slogan {
+      margin-top: 0;
+      width: 100%; }
+      .header-nav #slogan h1 {
+        font-size: 2em;
+        text-align: center; }
+      .header-nav #slogan p {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 20px; }
+      .header-nav #slogan #read-more {
+        height: 40px;
+        margin-left: 29%;
+        min-width: 126px;
+        font-size: 0.71429em; }
+
+  .main .preparing hr {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto; }
+  .main .preparing .article {
+    margin-top: 0; }
+    .main .preparing .article .article__heading {
+      text-align: center; }
+    .main .preparing .article .article__text {
+      text-align: center; }
+    .main .preparing .article .more-text {
+      text-align: center; }
+  .main .portfolio .article {
+    margin-top: 0; }
+    .main .portfolio .article .article__heading {
+      text-align: center;
+      margin-top: 0; }
+    .main .portfolio .article .article__heading-slogan {
+      text-align: center; }
+    .main .portfolio .article .article__text {
+      text-align: center; }
+    .main .portfolio .article .more-text {
+      text-align: center; }
+  .main .our-team .team-persons .team-persons__block-more-text {
+    margin-top: 0;
+    float: none !important;
+    text-align: center; }
+
+  footer .footer .social-icons {
+    text-align: center;
+    margin-bottom: 25px; }
+  footer .footer .copyright {
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */
