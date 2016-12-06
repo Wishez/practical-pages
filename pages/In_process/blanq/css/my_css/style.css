@@ -18,7 +18,7 @@ body {
   background: -ms-linear-gradient(top, #606060 0%, #606060 25%, #a3a3a3 100%);
   position: relative; }
 
-.logo {
+.logo, .footer__logo {
   margin-top: 76px; }
 
 .logo__text {
@@ -85,7 +85,7 @@ body {
   bottom: 5%;
   text-align: center; }
 
-.footer-logo__diviver {
+.footer-logo__diviver, .footer__diviver {
   border: 1px solid #fff;
   margin-left: auto;
   margin-right: auto;
@@ -160,6 +160,21 @@ body {
   END MAIN
 
 **********/
+/********* 
+
+  FOOTER
+
+**********/
+.footer {
+  margin-top: 2px;
+  background: #a1a1a1;
+  height: 226px; }
+
+/********* 
+
+  END FOOTER
+
+**********/
 @media (min-width: 1200px) {
   /********* 
 
@@ -219,7 +234,7 @@ body {
     bottom: 5%;
     text-align: center; }
 
-  .footer-logo__diviver {
+  .footer-logo__diviver, .footer__diviver {
     width: 40%; }
 
     /********* 
@@ -274,7 +289,7 @@ body {
     bottom: 5%;
     text-align: center; }
 
-  .footer-logo__diviver {
+  .footer-logo__diviver, .footer__diviver {
     width: 52%; }
 
      /********* 
@@ -356,7 +371,7 @@ body {
     bottom: 5%;
     text-align: center; }
 
-  .footer-logo__diviver {
+  .footer-logo__diviver, .footer__diviver {
     width: 52%; }
 
     /********* 
@@ -382,6 +397,9 @@ body {
   .article__text {
     margin: 0 0 20px; }
 
+  .a-thing-is-described:nth-child(4) {
+    margin-bottom: 20px; }
+
     /********* 
 
       END MAIN
@@ -396,7 +414,7 @@ body {
   .header {
     min-height: 475px; }
 
-  .logo {
+  .logo, .footer__logo {
     text-align: center; }
 
   .logo__text {
@@ -438,7 +456,7 @@ body {
     box-sizing: border-box;
     border: 20px solid rgba(168, 168, 168, 0.5); }
 
-  .footer-logo__diviver {
+  .footer-logo__diviver, .footer__diviver {
     width: 65%; }
 
   .footer-logo__copyright {
@@ -478,6 +496,9 @@ body {
 
   .thing__heading {
     margin-top: 0; }
+
+  .a-thing-is-described:nth-child(4) {
+    margin-bottom: 20px; }
 
     /********* 
 

@@ -189,6 +189,29 @@ body {
 
 **********/
 
+/********* 
+
+  FOOTER
+
+**********/
+.footer{
+    margin-top: 2px;
+    background: hsl(0,0,63);
+    height: 226px;
+}
+.footer__logo {
+    @extend .logo;
+}
+.footer__diviver {
+    @extend .footer-logo__diviver;
+}
+
+/********* 
+
+  END FOOTER
+
+**********/
+
 
 @media (min-width: 1200px) { 
   /********* 
@@ -460,11 +483,15 @@ body {
         margin: 0 0 20px;
     }
     
+    .a-thing-is-described:nth-child(4){
+        margin-bottom: 20px;
+    }
     /********* 
 
       END MAIN
 
      **********/
+    
 }
 
 @media (max-width: 575px) {
@@ -574,6 +601,10 @@ body {
     
     .thing__heading {
       margin-top: 0;
+    }
+    
+    .a-thing-is-described:nth-child(4){
+        margin-bottom: 20px;
     }
     
    
