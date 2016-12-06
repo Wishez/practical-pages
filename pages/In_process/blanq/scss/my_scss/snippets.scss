@@ -1,0 +1,22 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -o-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+}
+@mixin perspective($value) {
+  perspective: $value;
+  -webkit-perspective: $value;
+  -moz-perspective: $value;
+  -o-perspective: $value;
+  -ms-perspective: $value;
+}
+
+@mixin transform-rotateX($deg) {
+  transform: rotateX($deg);
+  -webkit-transform: rotateX($deg);
+  -moz-transform: rotateX($deg);
+  -ms-transform: rotateX($deg);
+  -o-transform: rotateX($deg);
+}
