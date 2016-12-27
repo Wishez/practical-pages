@@ -1,0 +1,15 @@
+.section__heading {
+  text-transform: uppercase;
+  text-align: center;
+  font: {
+    size: (20rem / 16);      
+    family: $stackCentury;
+    weight: 600;
+  }
+  @media (max-width: 768px){
+    border-width: 1px 0;
+    border-style: solid;
+    border-image:  linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) 1;
+    padding: .9em 0;
+  }
+}

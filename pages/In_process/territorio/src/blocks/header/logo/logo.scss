@@ -1,0 +1,32 @@
+.header{
+    .container{
+          .logo {
+            text-align: center;
+            width: 100%;
+            margin: 0 auto 50px;  
+            color: hsl(330, 100%, 0%);
+          } 
+        }
+    }
+
+.logo__img {
+  background: url(../../../img/raven.png) no-repeat;
+  background-size: cover;
+  width: 57px;height: 34px;
+  margin: 0 auto; 
+}
+.logo__name {
+  font-family: $stackCastellar;
+  margin: 0;
+  font-size: (60rem / 16);
+}
+.logo__slogan {
+  font-size: (18em / 24);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.logo__button.navbar-toggle {
+  float: none;
+  margin: 15px auto;
+}

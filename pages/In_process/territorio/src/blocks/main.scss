@@ -1,0 +1,22 @@
+/**********
+
+  THIRD PARTY
+
+***********/
+@import "../fonts/font-awesome.min.css";
+@import "../../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "../../bower_components/normalize-css/normalize.css";
+//@import "../../bower_components/slick-carousel/slick/slick.css";
+//@import "../../bower_components/slick-carousel/slick/slick-theme.css";
+
+/**********
+
+  CUSTOM
+
+***********/
+
+@import "../fonts/fonts.scss";
+@import "custom/custom.scss";
+@import "header/header.scss";
+@import "footer/footer.scss";
+@import "main/main.scss";

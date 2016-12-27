@@ -1,0 +1,16 @@
+.section__paragraph {
+  width: 75%;
+  margin: 50px auto 0;
+  line-height: (24em / 14);
+  color: #020001;
+  & > span {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    margin-top: 20px;      
+  }
+}
+
+@import "date/date.scss";
+@import "heading/heading.scss";
+@import "more/more.scss";

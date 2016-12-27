@@ -1,0 +1,35 @@
+$stackCentury: 'Century', cursive;
+$stackCastellar: 'Castellar', Arial, monospace;
+
+
+body {
+    font-family: 'Century', cursive;
+    font-size: 14px;
+    background-position: 0px 5px, 10px 0px, 0px 10px, 10px 5px, 0% 0%, 0% 0%; 
+    background-image: linear-gradient(27deg, rgb(223, 224, 219) 5px, transparent 5px), linear-gradient(207deg, rgb(223, 224, 219) 5px, transparent 5px), linear-gradient(27deg, rgb(231, 232, 229) 5px, transparent 5px), linear-gradient(207deg, rgb(231, 232, 229) 5px, transparent 5px), linear-gradient(90deg, rgb(231, 232, 229) 10px, transparent 10px), linear-gradient(rgb(230, 230, 226) 25%, rgb(227, 228, 226) 25%, rgb(227, 228, 226) 50%, transparent 50%, transparent 75%, rgb(235, 235, 235) 75%, rgb(235, 235, 235));
+    background-attachment: scroll, scroll, scroll, scroll, scroll, scroll; background-repeat: repeat, repeat, repeat, repeat, repeat, repeat; background-size: 20px 20px;
+    background-origin: padding-box, padding-box, padding-box, padding-box, padding-box, padding-box; 
+    background-clip: border-box, border-box, border-box, border-box, border-box, border-box; 
+    background-color: rgb(227, 228, 226);
+    color:#030102;
+    padding: 150px 0 200px;
+}
+
+a {
+  color: #030102;
+  &:hover {
+    color:#030102;
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;    
+  }
+}
+
+.info, .jumbotron__slides,  {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  
+}

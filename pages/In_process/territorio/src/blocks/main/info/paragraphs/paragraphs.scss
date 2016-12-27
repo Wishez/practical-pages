@@ -1,0 +1,20 @@
+.paragraphs__paragraph {
+  width: 30%;
+}
+.paragraph__text {
+  margin: 20px auto 0;
+}
+.section__text {
+  & > span {
+    display: block;
+  }
+  .text__date {
+    margin: 20px auto 0;
+    clear: both;
+  }
+  &:last-child {
+    .text__date{  
+      margin-top: 30px;      
+    }
+  }
+}

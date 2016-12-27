@@ -1,0 +1,18 @@
+.headingBorder {
+  height: 40px;
+  width: 100%;
+  border-width: 1px 0;
+  border-style: solid;
+  border-image:  linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)) 1;
+}
+.info__section {
+  width: 33%;
+  position:relative;
+  top: -35px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+@import 'heading/heading.scss';
+@import 'paragraph/paragraph.scss';

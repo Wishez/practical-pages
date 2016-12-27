@@ -1,0 +1,45 @@
+.main__jumbotron {
+  background-color: hsl(60, 2%, 70%);
+  border-radius: 0;
+  max-width: 960px;
+  height: 421px;
+  margin: 25px auto 40px;
+}
+.jumbotron__slides {
+
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+.slides__addSlide {
+  width: 75px;height: 75px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  cursor: pointer;
+  position: relative;
+  box-shadow:  0 0 5px rgba(0, 0, 0, .8);
+  &:hover {
+    box-shadow:  0 0 10px rgba(0, 0, 0, .8);        
+  }
+  &:active {
+    position: relative;
+    top: 5px;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 10%;
+    height: 75%;
+    top: 12%;
+    left: 45%;
+  }
+  &::after {
+    @extend .slides__addSlide::before;
+    width: 75%;
+    height: 10%;
+    top: 45%;
+    left: 12%;
+  }
+}

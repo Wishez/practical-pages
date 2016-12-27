@@ -1,0 +1,15 @@
+.contact__row {
+  color: #898386;
+  font-size: (13em / 14);
+  & a {
+    color: #898386;
+  }
+}
+@each $refer, $color in
+(tel, #0f0),
+(privacy, #000),
+(info, #00f) {
+  .row__#{$refer}:hover{
+    color: $color;
+  }
+}
