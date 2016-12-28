@@ -8,9 +8,12 @@
   border: 3px double #fff;
   background-color: #7b7875;
   margin: 0 5px;
-}
-.fa {
   color: #fff;
+  @media (max-width: 768px) {
+    display: block;
+    position: relative;
+    bottom: 20px;
+  }
 }
 @each $icon, $color in 
 (twitter, #1da1f2),
