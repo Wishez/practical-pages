@@ -1,4 +1,7 @@
 .navItem__refer {
+  color: $white $i;
+  @extend %fs-14;
+  @include smooth-transition-button($yellow $i);
   @include breakpoint($sm) {
      
   }

@@ -1,3 +1,25 @@
-//- Use in django's templates.
-| {% block nav %}
-| {% endblock %}
+nav.navigaton.navbar.navbar-default(role="navigation")
+  .container
+    .navbar-header.navHeader
+      button.navigaton__openMenuButton.navbar-toggle( 
+        type="button",  
+        data-toggle="collapse",
+        data-target="#navbar_collapse"
+      )
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+      include ./../brand/brand.pug
+    .navbarCollaps.collapse.navbar-collapse#navbar_collapse
+      ul.nav.navbar-nav.navList.navbar-right.text-uppercase.text-center
+        li.navItem.active
+          a.navItem__refer(href="#") Home
+        li.navItem
+          a.navItem__refer(href="#") Services
+        li.navItem
+          a.navItem__refer(href="#") Portfolio
+        li.navItem
+          a.navItem__refer(href="#") About
+        li.navItem
+          a.navItem__refer(href="#") Contact

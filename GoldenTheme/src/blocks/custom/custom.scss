@@ -8,28 +8,7 @@ $i: !important;
 @import 'config/flex.scss';
 @import 'config/mixins.scss';
 
-@import 'short_hand_classes/margins.scss';
-@import 'short_hand_classes/visible.scss';
-// @import 'short_hand_classes/aligned.scss';
-@import 'short_hand_classes/links.scss';
-@import 'short_hand_classes/buttons.scss';
-// @import 'short_hand_classes/float.scss';
-@import 'short_hand_classes/image.scss';
-@import 'short_hand_classes/paddings.scss';
-@import 'short_hand_classes/form.scss';
-@import 'short_hand_classes/shadows.scss';
-@import 'short_hand_classes/perspective.scss';
-@import 'short_hand_classes/display.scss';
-@import 'short_hand_classes/position.scss';
-@import 'short_hand_classes/image.scss';
-@import 'short_hand_classes/sizes.scss';
-@import 'short_hand_classes/proportion.scss';
-@import 'short_hand_classes/indexes.scss';
-@import 'short_hand_classes/offsets.scss';
-@import 'short_hand_classes/transitions.scss';
-@import 'short_hand_classes/borders.scss';
-@import 'short_hand_classes/cursores.scss';
-@import 'short_hand_classes/overflow.scss';
+
 
 
 // Custom styles
@@ -75,21 +54,61 @@ body {
   background-color: $bodyColorBg;
 }
 
+@import 'short_hand_classes/transitions.scss';
+@import 'short_hand_classes/margins.scss';
+@import 'short_hand_classes/borders.scss';
+@import 'short_hand_classes/backgrounds.scss';
+@import 'short_hand_classes/visible.scss';
+// @import 'short_hand_classes/aligned.scss';
+@import 'short_hand_classes/links.scss';
+@import 'short_hand_classes/buttons.scss';
+// @import 'short_hand_classes/float.scss';
+@import 'short_hand_classes/image.scss';
+@import 'short_hand_classes/paddings.scss';
+@import 'short_hand_classes/form.scss';
+@import 'short_hand_classes/shadows.scss';
+@import 'short_hand_classes/perspective.scss';
+@import 'short_hand_classes/display.scss';
+@import 'short_hand_classes/position.scss';
+@import 'short_hand_classes/image.scss';
+@import 'short_hand_classes/sizes.scss';
+@import 'short_hand_classes/proportion.scss';
+@import 'short_hand_classes/indexes.scss';
+@import 'short_hand_classes/offsets.scss';
+@import 'short_hand_classes/cursores.scss';
+@import 'short_hand_classes/overflow.scss';
+@import 'short_hand_classes/font.scss';
+
 h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
+  hyphens: none;
 }
 h1 {
-  @extend %fs-36;
+  font-size: (72em / $baseSizeFont);
   color: $white;
+  @extend %bold;
 }
 h2 {
-  @extend %fs-24;
+  @extend %fs-36;
+  @extend %bold;
+  @include breakpoint($sm) {
+    font-size: (24em / 16);
+    }
+  @include breakpoint($xs) {
+    font-size: 4vw;
+    }
+  @include breakpoint($xxs) {
+    font-size: 4vw;
+  }
 }
 h4 {
   @extend %fs-18;
 }
 h5 {
   @extend %fs-16;
+  @extend %secondFont;
+  @extend %italic;
+  @extend %defaultTopMargin;
 }
 
 ul {

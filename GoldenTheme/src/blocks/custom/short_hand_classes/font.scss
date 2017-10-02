@@ -1,3 +1,16 @@
 %normalWeight {
 	font-weight: normal;
 }
+%bold {
+	font-weight: bold;
+}
+%italic {
+	font-style: italic;
+}
+%thirdFont {
+	font-family: $additionalSecondFont;
+}
+
+%secondFont {
+	font-family: $additionalFont;
+}

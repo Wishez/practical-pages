@@ -1,0 +1,13 @@
+.greeting__niceToMeet {
+	margin-top: 0.2em;
+	@include breakpoint($sm) {
+		font-size: (62em / 16);
+    }
+	@include breakpoint($xs) {
+		font-size: 6vw;
+    }
+	@include breakpoint($xxs) {
+		font-size: 11vw;
+	}
+
+}

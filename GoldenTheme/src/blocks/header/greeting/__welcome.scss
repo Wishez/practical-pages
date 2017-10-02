@@ -1,0 +1,5 @@
+.greeting__welcome {
+	@extend %secondFont;
+    @extend %italic;
+	color: $white;
+}

@@ -98,17 +98,6 @@
   }
 }
 
-@mixin base-perspective-roof($bg: false) {
-  @extend %basePerspectiveRoof;
-  &::after {
-    @if $bg {
-      background-color: $bg;  
-    } @else {
-      background-color: $gray; 
-    }
-  }
-}
-
 @mixin placehodler-color($color) {
 
   ::-webkit-input-placeholder {

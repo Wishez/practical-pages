@@ -1,3 +1,4 @@
 .brand__name {
-  @extend %fs-28; 
+  @include responsive-background($url: './../img/logo.png', $padding-bottom: (28% / 79 * 100));
+  @extend %fullWidth;
 }

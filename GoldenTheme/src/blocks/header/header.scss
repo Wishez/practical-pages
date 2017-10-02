@@ -1,5 +1,20 @@
 .header {
+  @include responsive-background($url: './../img/header.png', $padding-bottom: (700% / 1400 * 100));
+  @extend %fullWidth;
+  @extend %negativeIndex;
+  @extend %relative;
+  max-height: 700px;
+  &:after {
+  	content: '';
+  	@extend %absolute;
+  	@extend %fullWidth;
+  	@extend %fullHeight;
+  	@extend %negativeIndex;
+  	@extend %zeroTop;
+  	background-color: rgba(0, 0, 0, .5);
+  }
 }
 
 @import 'brand/brand.scss';
 @import 'navigation/navigation.scss';
+@import 'greeting/greeting.scss';

@@ -2,13 +2,17 @@
 
 %button {
   @extend .btn;
-  color: $white;
+  color: $darkGray;
   background-color: $yellow;
-  min-width: 240px;
+  max-width: 240px;
   min-height: 65px;
   @extend %roundBorder3;
   @extend .text-uppercase;
   @include smooth-transition-button;
-  
+  @extend %fullWidth;
+  @include breakpoint($xs) {
+		max-width: 190px;
+		min-height: 55px;
+  }
 }
 

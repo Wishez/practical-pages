@@ -1,0 +1,4 @@
+.greeting__button {
+	@extend %button;
+	@extend %bigestTopMargin;
+}
