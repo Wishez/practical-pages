@@ -1,2 +1,2 @@
-# practical-pages
-The pages is what i am making for improving my developer skills.
+# Pages with my layout
+The pages are those i built for improving my developer skills.
