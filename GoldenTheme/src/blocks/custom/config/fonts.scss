@@ -1,11 +1,11 @@
 // Fonts
-$mainFont: 'Proxima Nova', serif;
+$mainFont: 'Montserrat', serif;
 
 // $additionalFont: '', cursive;
 $nameFont: 'Proxima Nova';
 $normalFont: '../fonts/ProximaNova/ProximaNovaR';
-$italicFont: '../fonts/ProximaNova/ProximaNovaRI';
 $boldFont: '../fonts/ProximaNova/ProximaNovaB';
+$italicFont: '../fonts/ProximaNova/ProximaNovaRI';
 $boldItalicFont: '../fonts/ProximaNova/ProximaNovaBI';
 $lightFont: '../fonts/ProximaNova/ProximaNovaL';
 $lightItalicFont: '../fonts/ProximaNova/ProximaNovaLI';
@@ -73,71 +73,67 @@ $lightItalicFont: '../fonts/ProximaNova/ProximaNovaLI';
     url('#{$lightItalicFont}.svg') format('svg');
 }
 
+// Semantic-ui
+// @font-face {
+//   font-family: 'octicons';
+//   font-weight: normal;
+//   font-style: normal;
+//   src: url('octicons.eot');
+//   src: local('../fonts/octicons-local.ttf'),
+//     url('../fonts/octicons.woff') format('woff'),
+//     url('../fonts/octicons.ttf') format('truetype'),
+//     url('../fonts/octicons.svg') format('svg');
+// }
 
 
+
+
+
+
+$secondNameFont: 'DriodSerif';
+$secondItalicFont: '../fonts/DriodSerif/DriodSerif-Italic';
 
 
 @font-face {
-  font-family: 'octicons';
+  font-family: $secondNameFont;
+  font-weight: normal;
+  font-style: italic;
+  src: url('#{$secondItalicFont}.eot');
+  src: local('#{$secondNameFont}'), 
+    url('#{$secondItalicFont}.woff') format('woff'),
+    url('#{$secondItalicFont}.ttf') format('truetype'),
+    url('#{$secondItalicFont}.svg') format('svg');
+}
+ 
+
+$thirdNameFont: 'Montserrat';
+$thirdNormalFont: '../fonts/Montserrat/Montserrat-Regular';
+$thirdBoldFont: '../fonts/Montserrat/Montserrat-Bold';
+
+@font-face {
+  font-family: $thirdNameFont;
   font-weight: normal;
   font-style: normal;
-  src: url('octicons.eot');
-  src: local('../fonts/octicons-local.ttf'),
-    url('../fonts/octicons.woff') format('woff'),
-    url('../fonts/octicons.ttf') format('truetype'),
-    url('../fonts/octicons.svg') format('svg');
+  src: url('#{$thirdNormalFont}.eot');
+  src: local('#{$thirdNameFont}'),
+    url('#{$thirdNormalFont}.woff') format('woff'),
+    url('#{$thirdNormalFont}.ttf') format('truetype'),
+    url('#{$thirdNormalFont}.svg') format('svg');
+}
+
+@font-face {
+  font-family: $thirdNameFont;
+  font-weight: bold;
+  font-style: normal;
+  src: url('#{$thirdBoldFont}.eot');
+  src: local('#{$thirdNameFont}'),
+    url('#{$thirdBoldFont}.woff') format('woff'),
+    url('#{$thirdBoldFont}.ttf') format('truetype'),
+    url('#{$thirdBoldFont}.svg') format('svg');
 }
 
 
 
-
-
-
-//$secondNameFont: 'inglobal';
-//$secondNormalFont: '../fonts/inglobal/inglobal';
-//$secondItalicFont: '../fonts/inglobal/inglobali';
-//$secondBoldFont: '../fonts/inglobal/inglobalb';
-//$secondBoldItalicFont: '../fonts/inglobal/inglobalbi';
-//@font-face {
-//   font-family: $secondNameFont;
-//   font-weight: bold;
-//   font-style: normal;
-//   src: url('#{$secondBoldFont}.eot');
-//   src: local('#{$secondNameFont}'),
-//     url('#{$secondBoldFont}.woff') format('woff'),
-//     url('#{$secondBoldFont}.ttf') format('truetype'),
-//     url('#{$secondBoldFont}.svg') format('svg');
-// }
-// @font-face {
-//   font-family: $secondNameFont;
-//   font-weight: bold;
-//   font-style: italic;
-//   src: url('#{$secondBoldItalicFont}.eot');
-//   src: local('#{$secondNameFont}'),
-//     url('#{$secondBoldItalicFont}.woff') format('woff'),
-//     url('#{$secondBoldItalicFont}.ttf') format('truetype'),
-//     url('#{$secondBoldItalicFont}.svg') format('svg');
-// }
-// @font-face {
-//   font-family: $secondNameFont;
-//   font-weight: normal;
-//   font-style: italic;
-//   src: url('#{$seconItalicFont}.eot');
-//   src: local('#{$secondNameFont}'), 
-//     url('#{$secondItalicFont}.woff') format('woff'),
-//     url('#{$secondItalicFont}.ttf') format('truetype'),
-//     url('#{$secondItalicFont}.svg') format('svg');
-// }
-// @font-face {
-//   font-family: $secondNameFont;
-//   font-weight: normal;
-//   font-style: normal;
-//   src: url('#{$secondNormalFont}.eot');
-//   src: local('#{$secondNameFont}'),
-//     url('#{$secondNormalFont}.woff') format('woff'),
-//     url('#{$secondNormalFont}.ttf') format('truetype'),
-//     url('#{$secondNormalFont}.svg') format('svg');
-// } 
 // Uncomment, if you need to use font-awsome.
 // @font-face {
 //   font-family:'FontAwesome';

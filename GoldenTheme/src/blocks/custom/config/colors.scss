@@ -1,20 +1,33 @@
-$lightGray: #ececec;
+$lightGray: #bbbbbb;
 $darkenLightGray: #e0e0e0;
-$darkGray:  #1c1b1b;
-$white: #fefeff;
-$gray: #9c9c9c;
-$shadow: rgba(0, 0, 0, .6);
-$darkRed: #6c4040;
+$darkGray:  #222222;
+$darkenGray: #333333;
+$white: #f9f9f9;
+$black: #080808;
+$gray: #737373;
+$darkenWhite: #fefeff;
+
+$shadow: rgba(0, 0, 0, .8);
+
+// 058d71
+// $darkRed: #6c4040;
+$orange: #da2713;
+$paleOrange: #d95232;
+$red: #cb2028;
+$skyBlue: #00aced;
+$blue: #3b5998;
+$yellow: #fed136;
 
 
 // Links 
-$baseColorFont: $darkGray;
-$baseLinkColor: $gray !important;
-$baseHoverLinkColor: $lightGray !important;
-$baseHoverLinkBackgroundColor:  #ad966e;
-$baseVisitedLinkColor:$darkGray;
-$baseActiveLinkColor: $darkGray;
-$baseFocusLinkColor: $darkGray;
+$baseColorFont: $black;
+$baseLinkColor: $gray $i;
+$baseHoverLinkColor: $gray;
+$baseHoverLinkBackgroundColor: transparent;
+$baseVisitedLinkColor: $black;
+$baseActiveLinkColor: $black;
+$baseFocusLinkColor: $black;
+
 
 // Base Body Background
 $bodyColorBg: $white;

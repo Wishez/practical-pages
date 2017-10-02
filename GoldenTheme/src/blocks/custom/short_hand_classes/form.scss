@@ -1,25 +1,42 @@
-%formInput {
-	width: 100%;
-	background-color: $gray;
-	font-size: (12em / 16);
-	color: $lightGray;
-	height: 40px;
-	padding-left: 15px;
-	@extend %navItemShadow--active;
-	transition: box-shadow 0.5s, background-color 0.5s, color 0.5s;
-	@include placehodler-color-focus($gray);
-	&:focus {
-		color: $darkGray;
-		@extend %buttonShadow;
-		background-color: $darkenLightGray;
+%baseInput {
+	@extend %fullWidth;
+	@extend %fs-14;
+	padding: 20px 0 0 19px;
+	@extend .text-uppercase;
+	// transition: box-shadow 0.5s, background-color 0.5s, color 0.5s $i;
+	@extend %roundBorder3;
+	@extend %innerShadow;
+	// @include placehodler-color-focus($gray);
+	@extend %solidBorder;
+	@extend %widthBorder2;
+	&:required {
+		border-color: $paleOrange;
+	}
+	&:valid {
+		border-color: $blue;
+	}
+	&:invalid {
+		border-color: $red;	
 	}
 }
 
+%formInput {
+	@extend %baseInput;
+	height: 50px;
+}
+
+
+%formTextarea {
+	@extend %baseInput;
+	height: 210px;
+	max-height: 210px;
+}
+
+
 %formError {
-	color: $darkRed;
-	font-size: (13em / 16);
+	
 }
 
 %controller {
-	@extend %largeTopMargin;
+	
 }

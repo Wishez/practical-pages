@@ -5,7 +5,9 @@
 %absolute {
 	position: absolute;
 }
-
+%absoluteImportant {
+	position: absolute $i;
+}
 %fixed {
 	position: fixed;
 }

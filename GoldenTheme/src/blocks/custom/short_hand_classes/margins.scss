@@ -1,3 +1,16 @@
+%largeRightMargin {
+	margin-right: 1em;
+}
+%extraLargeRightMargin {
+	margin-right: 2em;
+}
+%defaultRightMargin {
+	margin-right: 0.5em;
+}
+
+%refusedTopMargin {
+	margin-top: 0.5em;
+}
 %defaultTopMargin {
 	margin-top: 1em;
 }
@@ -12,4 +25,25 @@
 
 %largeTopMargin {
 	margin-top: 2em;
+}
+%bigTopMargin {
+	margin-top: 2.5em;
+}
+
+%extraBigTopMargin {
+	margin-top: 3em;
+}
+
+%leftMargin27 {
+	margin-left: 27%;
+}
+
+%largeBottomMargin {
+	margin-bottom: 2em;
+}
+
+%center-block {
+   margin-left: auto !important;
+   margin-right: auto !important;
+   display: block;
 }

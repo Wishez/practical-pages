@@ -2,7 +2,22 @@
 	padding-left: 1%;
   	padding-right: 1%;
 }
-
+%refusedTopPadding {
+	padding-top: 0.5em;
+}
 %defaultTopPadding {
 	padding-top: 1em;
 }
+
+%defaultBottomPadding {
+	padding-bottom: 1em;
+}
+
+%extraSmalltBottomPadding {
+	padding-bottom: 0.3em;
+}
+
+%defaultTopBottomPaddings {
+	padding-top: 65px;
+	padding-bottom: 75px;
+} 

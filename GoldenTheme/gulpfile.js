@@ -230,29 +230,29 @@ gulp.task('manifest', () => {
 /* Predefined
 /* ----------------- */
 // Uncomment if you need front-end server, but then you need to change pathes in html templates.
-// gulp.task('serve', () => {
-//   browserSync.init({
-//     server: {
-//       baseDir: settings.build
-//     },
-//     open: false,
-//     port: 9020,
-//     reloadDelay: 2200
-//   });
-// });
+gulp.task('serve', () => {
+  browserSync.init({
+    server: {
+      baseDir: settings.build
+    },
+    open: false,
+    port: 9020,
+    reloadDelay: 2200
+  });
+});
 
 gulp.task('watch', () => {
-  gulp.watch(settings.src + '/**/*.scss', ['faststyles']);
-  gulp.watch(settings.src + '/img/**/*.*', ['fastimages']);
-  gulp.watch(settings.src + '/fonts/**/*.*', ['fonts']);
-  gulp.watch(settings.src + '/**/*.pug', ['html']);
-  gulp.watch(settings.src + '/**/*.js', ['fastjs']);
+  gulp.watch(settings.src + '/**/*.scss', ['faststyles']).on('change', browserSync.reload);
+  gulp.watch(settings.src + '/img/**/*.*', ['fastimages']).on('change', browserSync.reload);
+  gulp.watch(settings.src + '/fonts/**/*.*', ['fonts']).on('change', browserSync.reload);
+  gulp.watch(settings.src + '/**/*.pug', ['html']).on('change', browserSync.reload);
+  gulp.watch(settings.src + '/**/*.js', ['fastjs']).on('change', browserSync.reload);
 });
 
 gulp.task('lintfastjs', ['lintsource', 'fastjs']);
 gulp.task('fastlintdevelop', ['html', 'lintfastjs', 'faststyles', 'fastmedia']);
 
-gulp.task('fastdevelop', ['html', 'fastjs', 'faststyles', 'fastmedia']); 
+gulp.task('fastdevelop', ['html', 'fastjs', 'faststyles', 'fastmedia', 'serve']); 
 gulp.task('production', ['source', 'styles', 'media', 'html', 'manifest']);
 
 

@@ -4,3 +4,54 @@
 %inline-block {
 	display: inline-block;
 }
+
+%flex {
+	display: flex;
+}
+
+%justifyCenter {
+	justify-content: center;
+}
+
+%justifyBetween {
+	justify-content: space-between;
+}
+
+%justifyArround {
+	justify-content: space-arround;
+}
+
+%alignCenter {
+	align-items: center;
+}
+
+%alignStart {
+	align-items: flex-start;
+}
+
+%alignEnd {
+	align-items: flex-end;
+}
+
+%defaultRowFlow {
+	flex-flow: row wrap;
+}
+%defaultColumnFlow {
+	flex-flow: column wrap;
+}
+
+%columnDirection { 
+	flex-direction: column;
+}
+
+%rowDirection { 
+	flex-direction: row;
+}
+
+%flexNoWrap { 
+	flex-wrap: nowrap;
+}
+
+%flexWrap { 
+	flex-wrap: wrap;
+}

@@ -7,6 +7,22 @@
 %fs-24 {
 	font-size: $secondSizeHeading;
 }
+%fs-26 {
+	font-size: (26em / 16);
+}
 %fs-28 {
 	font-size: $thirdSizeHeading;
+}
+%fs-16 {
+	font-size: (16em / $baseSizeFont);	
+}
+%fs-14 {
+	font-size: (14em / $baseSizeFont);	
+}
+%fs-13 {
+	font-size: (13em / $baseSizeFont);	
+}
+
+%fs-36 {
+	font-size: $thirdSizeHeading;	
 }

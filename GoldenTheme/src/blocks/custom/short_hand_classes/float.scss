@@ -5,3 +5,7 @@
 %floatRight {
 	float: right;
 }
+
+%clearfix {
+	@include susy-clearfix;
+}
