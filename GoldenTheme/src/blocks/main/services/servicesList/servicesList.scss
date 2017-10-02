@@ -1,4 +1,5 @@
 .servicesList {
-	
+	margin-top: (40% / 568 * 100);
+	@extend .clearfix;
 }
 @import 'servicesListItem/servicesListItem.scss';

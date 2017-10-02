@@ -1,8 +1,6 @@
 .main  {
 	height: 100vh;
-	@include breakpoint($xs) {
-		padding: 15% 0;
-	}
+	
 } 
 
 @import 'services/services.scss';

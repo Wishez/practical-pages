@@ -1,7 +1,44 @@
 .servicesListItem {
-	
+	@include span(4);
+	@include gutters(3em inside);
+	@include breakpoint($lg) {
+  
+}
+	@include breakpoint($md) {
+	  
+	}
+	@include breakpoint($sm) {
+		width: span(6);
+	  	
+	}
+	@include breakpoint($xs) {
+		width: span(12);
+		margin-top: 2em;
+
+	}
+	@include breakpoint($xxs) {
+	  
+	}
+}
+.servicesListItem:first-of-type {
+	@include breakpoint($xs) {
+		margin-top: 0; 
+	}
+}
+.servicesListItem:last-child {
+	@include breakpoint($sm) {
+		width: span(12);
+		margin-top: 3em;
+	}
+	& .servicesListItem__paragraph {
+		@include breakpoint($sm) {
+			max-width: 300px;
+			margin: 1em auto 0;
+		}
+
+	}
 }
 
-@import '__icon.scss';
 @import '__title.scss';
 @import '__paragraph.scss';
+@import 'serviceItemIconCover.scss';

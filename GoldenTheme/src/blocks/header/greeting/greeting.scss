@@ -1,5 +1,14 @@
 .greeting {
 	margin-top: (550% / 240 * 10);
+	@include breakpoint($bigScreen) {
+		margin-top: 25%;
+    }
+	@include breakpoint($lg) {
+		margin-top: 20%;
+    }
+	@include breakpoint($md) {
+		margin-top: (550% / 200 * 10);
+    }
 	@include breakpoint($xs) {
 		margin-top: 0;
 		position: relative;

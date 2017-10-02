@@ -1,3 +1,13 @@
-.servicesListItem__icon {
-	
+.serviceItemIconCover__icon {
+	@include responsive-background($padding-bottom: 100%);
+	@extend %fullWidth;
+}
+
+@each $iconName, $file in 
+	(trash, s_icon1),
+	(laptop, s_icon2),
+	(block, s_icon3) {
+	.serviceItemIconCover__icon--name_#{$iconName} {
+		background-image: url('./../img/#{$file}.png');
+	}
 }

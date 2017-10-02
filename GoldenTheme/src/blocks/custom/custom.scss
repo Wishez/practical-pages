@@ -62,7 +62,7 @@ body {
 // @import 'short_hand_classes/aligned.scss';
 @import 'short_hand_classes/links.scss';
 @import 'short_hand_classes/buttons.scss';
-// @import 'short_hand_classes/float.scss';
+@import 'short_hand_classes/float.scss';
 @import 'short_hand_classes/image.scss';
 @import 'short_hand_classes/paddings.scss';
 @import 'short_hand_classes/form.scss';
@@ -98,21 +98,26 @@ h2 {
     font-size: 4vw;
     }
   @include breakpoint($xxs) {
-    font-size: 4vw;
+    font-size: 6vw;
   }
 }
 h4 {
   @extend %fs-18;
+  @extend %bold;
+  @extend %largeTopMargin;
 }
 h5 {
   @extend %fs-16;
   @extend %secondFont;
   @extend %italic;
   @extend %defaultTopMargin;
+  @include breakpoint($xs) {
+    font-size: 3vw;
+  }
 }
 
 ul {
-  list-style: none;
+  // list-style: none;
 }
 p {
  @extend %defaultTopMargin;

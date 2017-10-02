@@ -1,4 +1,6 @@
-$lg: 1200px;
+$bigScreen: 1600px;
+$lg: 1200px 1599px;
+$lg-up: 1200px;
 $md-up: 992px;
 $md: 992px 1199px;
 $md-less: max-width 1199px;
@@ -10,7 +12,6 @@ $xs-only: 480px 800px;
 $xs: max-width 800px;
 $xxs: max-width 445px;
 $xxs-iphone: max-width 320px;
-
 // @include breakpoint($lg) {
   
 // }

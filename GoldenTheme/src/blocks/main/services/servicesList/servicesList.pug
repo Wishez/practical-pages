@@ -1,0 +1,10 @@
+-
+	var titles = ['E-Commerce', 'Rsponsive Web', 'Web Security']
+	var icons = ['trash', 'laptop', 'block']
+ul.servicesList.list-unstyled
+	each icon, i in icons
+		li.servicesListItem
+			div.serviceItemIconCover.center-block
+				figure(class="serviceItemIconCover__icon serviceItemIconCover__icon--name_"+icon)
+			h4.servicesListItem__title.text-center= titles[i]
+			p.servicesListItem__paragraph  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla et quasi fuga voluptas quae praesentium, quod unde in aut repudiandae vel sapiente, quaerat beatae iusto minima repellendus accusantium cum pariatur.
