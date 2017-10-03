@@ -1,0 +1,25 @@
+.chronologyImageContainer {
+	max-width: 169px;
+	@include gutters(5 after) 
+	@extend %relative;
+}
+.chronology:not(:first-of-type) {
+
+	.chronologyImageContainer::after {
+		
+		content: "";
+		@extend %absolute;
+		width: 3px;
+		height: 94px;
+		background-color: $lightGray;
+		bottom: 99%;
+		left: 50%;
+		left: calc(50% - 3px);
+		@include breakpoint($xs) {
+			content: none;
+		}
+	
+	}
+}
+
+@import '__image.scss';

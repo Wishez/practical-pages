@@ -1,0 +1,13 @@
+-
+	var titles = ['Ebony & Ivory', 'Smart Stationary', 'Clever Poster',
+				  'Vinyl Record', 'Treehous Template', 'Burned Logo']
+	var subtitles = ['Branding', 'Print Design', 'Print Design',
+					 'Product Mock-Up', 'Web Design', 'Branding']
+
+ul.list-unstyled.worksList
+	each title, i in titles
+		li.work.text-center
+			img.work__image.responsive-image(src='./img/p'+(i+1)+'.png')
+			h4.work__title= title
+			h5.work__subtitle= subtitles[i]
+

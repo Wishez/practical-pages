@@ -1,0 +1,7 @@
+.worksList {
+	@extend %increasedTopMargin;
+	@include flexable(flex, row wrap, space-around, center);
+	
+}
+
+@import 'work/work.scss';

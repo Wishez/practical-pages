@@ -1,0 +1,15 @@
+.chronologyImageContainer__image {
+	@include responsive-background();
+	@extend %fullBttomPadding;
+	@extend %fullWidth;
+}
+
+@each $imageName, $file in 
+	(desk, a1),
+	(nature, a2),
+	(stage, a3),
+	(mountain, a4) {
+	.chronologyImageContainer__image--name_#{$imageName} {
+		background-image: url('./../img/#{$file}.png');
+	}
+}

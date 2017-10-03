@@ -1,5 +1,5 @@
 .services {
-	padding-top: (60% / 568 * 100);
+	@extend %sectionPaddings;
 }
 @import 'servicesList/servicesList.scss';
 @import '__title.scss';

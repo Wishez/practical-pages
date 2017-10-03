@@ -1,0 +1,23 @@
+.work {
+	width: 25%;
+	@include gutters(0.5em);
+	@extend %whiteBg;
+	@extend %bigTopMargin;
+	padding-bottom: 27px;
+	max-width: 291px;
+	@include breakpoint($sm) {
+	  width: span(6);
+	}
+	@include breakpoint($xs) {
+		
+	  width: span(12);
+	}
+}
+.work:first-of-type {
+	@include breakpoint($xxs) {
+	  margin-top: 0;
+	}
+}
+@import '__title.scss';
+@import '__subtitle.scss';
+@import '__image.scss';

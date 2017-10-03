@@ -1,0 +1,30 @@
+.chronology:nth-child(odd) {
+	@extend .text-right;
+	& .chronologyData {
+		float: left;
+	}
+}
+.chronology:nth-child(even) {
+	& .chronologyData {
+		float: right;
+	}
+}
+
+.chronologyData {
+	width: span(4);
+	@extend %relative;
+	top: -200px;
+	@include breakpoint($xs) {
+		position: static;
+		margin: 1em auto 0;
+		float: none $i;
+		width: span(12);
+		max-width: 400px;
+		text-align: center;
+	}
+}
+
+
+@import '__date.scss';
+@import '__title.scss';
+@import '__paragraph.scss';

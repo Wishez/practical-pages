@@ -9,6 +9,7 @@
 	// @include placehodler-color-focus($gray);
 	@extend %solidBorder;
 	@extend %widthBorder2;
+	@extend %whiteBg;
 	&:required {
 		border-color: $paleOrange;
 	}

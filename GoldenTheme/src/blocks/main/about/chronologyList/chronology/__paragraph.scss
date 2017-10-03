@@ -1,0 +1,5 @@
+.chronologyData__paragraph {
+	@include breakpoint($xs) {
+		text-align: left;
+	}
+}

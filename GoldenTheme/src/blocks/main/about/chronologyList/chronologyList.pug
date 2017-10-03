@@ -1,0 +1,19 @@
+-
+	var dates = ['July 2010', 'Januar 2011', 'December 2012', 'February 2014']
+	var titles = [
+	 'Our humble beginnings',
+	 'Facing startup battles', 
+	 'Enter the dark days',
+	 'Our triumph']
+	var icons = ['desk', 'nature', 'stage', 'mountain']
+	var texts = ['', '', '', '']
+
+ul.chronologyList.list-unstyled
+	each title, i in titles
+		li.chronology
+			.chronologyImageContainer.center-block
+				figure(class="chronologyImageContainer__image chronologyImageContainer__image--name_"+icons[i])
+			.chronologyData
+				h4.chronologyData__date.text-uppercase= dates[i]
+				h4.chronologyData__title.text-capitalize= title
+				p.chronologyData__paragraph  Ut, sint doloribus at sit ab eos ratione magnam. Quaerat dolore saepe nostrum asperiores eos eveniet!

@@ -21,3 +21,9 @@
 	padding-top: 65px;
 	padding-bottom: 75px;
 } 
+%fullBttomPadding {
+	padding-bottom: 100%;
+}
+%sectionPaddings {
+	padding: (60% / 568 * 100) 0;
+}

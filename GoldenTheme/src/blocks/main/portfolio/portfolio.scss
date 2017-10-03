@@ -1,0 +1,8 @@
+.portfolio {
+	@extend %sectionPaddings;
+	background-color: $darkenWhite;
+}
+
+@import '__title.scss';
+@import '__subtitle.scss';
+@import 'worksList/worksList.scss';

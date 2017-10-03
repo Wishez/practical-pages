@@ -1,0 +1,7 @@
+.about {
+	@extend %sectionPaddings;
+}
+
+@import '__title.scss';
+@import '__subtitle.scss';
+@import 'chronologyList/chronologyList.scss';
