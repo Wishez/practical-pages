@@ -1,0 +1,9 @@
+.worker {
+	@extend %four;
+	@extend .pull-left;
+}
+
+@import '__post.scss';
+@import '__name.scss';
+@import 'sotials.scss';
+@import 'workerImageContainer.scss';

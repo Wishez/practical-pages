@@ -1,0 +1,27 @@
+-
+	var names = ['Kimberly Tompson', 'Rico Massimo', 'Uku Mason']
+	var photos = ['kimberly', 'rico', 'uku']
+	var posts = ['Marketer', 'Coder', 'Graphic Designer']
+	var socialIcons = [
+		{'twiiter': 'https://twitter.com', 
+		'facebook': 'https://facebook.com', 
+		'pinterest-p': 'https://pinterest.com/'},
+		{'twiiter': 'https://twitter.com', 
+		'facebook': 'https://facebook.com', 
+		'google': 'https://pinterest.com/'},
+		{'twiiter': 'https://twitter.com',  
+		'pinterest-p': 'https://pinterest.com/'},
+		]
+
+ul.list-unstyled.teamList
+	each icons, i in socialIcons
+		li.worker.text-center
+			.workerImageContainer.center-block
+				figure(class="workerImageContainer__image workerImageContainer__image--name_"+photos[i])
+			h4.worker__title= names[i]
+			h5.worker__post= posts[i]
+			ul.list-unstyled.sotials
+				each ref, icon in icons
+					a.not-follow(href= ref)
+					i(aria-hidden="true", class="sotials__icon fa fa-1x fa-"+icon)
+

@@ -1,6 +1,6 @@
 .chronologyImageContainer__image {
 	@include responsive-background();
-	@extend %fullBttomPadding;
+	@extend %fullBottomPadding;
 	@extend %fullWidth;
 }
 

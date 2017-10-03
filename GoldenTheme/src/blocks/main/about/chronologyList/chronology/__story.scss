@@ -1,0 +1,10 @@
+.chronologyImageContainer__story {
+	width: 169px;
+	height: 169px;
+	@extend %yellowBg;
+	@extend %round;
+	border: 5px solid $lightGray;
+	@extend %solidBorder;
+	line-height: 145%;
+	@extend %increasedTopPadding;
+}

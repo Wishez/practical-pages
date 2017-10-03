@@ -1,0 +1,8 @@
+.team {
+	@extend %sectionPaddings;
+}
+
+@import 'teamList/teamList.scss';
+@import '__paragraph.scss';
+@import '__subtitle.scss';
+@import '__title.scss';

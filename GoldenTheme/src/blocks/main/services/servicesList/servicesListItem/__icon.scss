@@ -1,7 +1,7 @@
 .serviceItemIconCover__icon {
 	@include responsive-background();
 	@extend %fullWidth;
-	@extend %fullBttomPadding;
+	@extend %fullBottomPadding;
 }
 
 @each $iconName, $file in 

@@ -3,7 +3,7 @@
 %button {
   @extend .btn;
   color: $darkGray;
-  background-color: $yellow;
+  @extend %yellowBg;
   max-width: 240px;
   min-height: 65px;
   @extend %roundBorder3;
