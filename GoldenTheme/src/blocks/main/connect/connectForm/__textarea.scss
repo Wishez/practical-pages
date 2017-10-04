@@ -1,0 +1,10 @@
+.connectForm__textarea {
+	@extend %formTextarea;
+	@extend %relative;
+	top: -220px;
+	@include breakpoint($sm-less) {
+		float: none $i;
+		top: 0;
+		margin-top: 2em;
+	}
+}

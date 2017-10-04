@@ -1,0 +1,17 @@
+.connectForm__button {
+	@extend %button;
+	@extend %bigTopMargin;
+	color: $white;
+	@extend %relative;
+	left: 100%;
+	margin-left: -690px;
+	@include breakpoint($md) {
+		margin-left: -590px;
+	}
+	@include breakpoint($sm-less) {
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}

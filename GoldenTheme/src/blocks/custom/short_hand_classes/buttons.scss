@@ -10,6 +10,8 @@
   @extend .text-uppercase;
   @include smooth-transition-button;
   @extend %fullWidth;
+  @extend %bold;
+  @extend %block;
   @include breakpoint($xs) {
 		max-width: 190px;
 		min-height: 55px;

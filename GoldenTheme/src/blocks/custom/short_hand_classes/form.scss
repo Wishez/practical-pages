@@ -1,36 +1,59 @@
 %baseInput {
 	@extend %fullWidth;
 	@extend %fs-14;
-	padding: 20px 0 0 19px;
-	@extend .text-uppercase;
-	// transition: box-shadow 0.5s, background-color 0.5s, color 0.5s $i;
+	max-width: 455px;
+	padding-left: 19px;
 	@extend %roundBorder3;
-	@extend %innerShadow;
-	// @include placehodler-color-focus($gray);
-	@extend %solidBorder;
-	@extend %widthBorder2;
 	@extend %whiteBg;
-	&:required {
-		border-color: $paleOrange;
-	}
-	&:valid {
-		border-color: $blue;
+	&:focus {
+		&:valid {
+			border-color: $blue;
+		}
 	}
 	&:invalid {
 		border-color: $red;	
+	}
+	&:required {
+		border-color: $paleOrange;
+	}
+
+	&::-webkit-input-placeholder {
+      text-transform: uppercase;
+  	}
+
+  	&:-ms-input-placeholder {
+      text-transform: uppercase;
+  	}
+
+	&::-moz-placeholder {
+	  text-transform: uppercase;
+
+	}
+
+	&:-moz-placeholder {
+	  text-transform: uppercase;
+	}
+	@include breakpoint($sm-less) {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
 	}
 }
 
 %formInput {
 	@extend %baseInput;
 	height: 50px;
+	@extend %block;
+	@extend %bigTopMargin;
 }
 
 
 %formTextarea {
 	@extend %baseInput;
-	height: 210px;
-	max-height: 210px;
+	height: 218px;
+	max-height: 218px;
+	padding-top: 10px;
+	
 }
 
 

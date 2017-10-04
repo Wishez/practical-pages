@@ -1,0 +1,24 @@
+.connect {
+	@extend %sectionPaddings;
+	@extend %relative;
+	@extend %darkGrayBg;
+		
+}
+
+.connectImageContainer {
+	@extend %absolute;
+	@extend %zeroBottom;
+	@extend %zeroRight;
+	max-width: 646px;
+	@extend %fullWidth;
+}
+.connectImageContainer__image {
+	@extend %fullWidth;
+	@include responsive-background(
+		(614% / 646 * 100),
+		'../img/map.png'
+	);
+}
+@import '__subtitle.scss';
+@import '__title.scss';
+@import 'connectForm/connectForm.scss';
