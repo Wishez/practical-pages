@@ -1,0 +1,18 @@
+.sotials__icon {
+	@extend %inline-block;
+	@extend %solidBorder;
+	@extend %widthBorder2;
+	border-color: $darkGray;
+	@extend %round;
+	width: 41px;
+	height: 41px;
+	&:not(:last-child) {
+		@extend %defaultRightMargin;
+	}
+	& .fa {
+		color: $darkGray;
+		line-height: 2.4em;
+	}
+
+	
+}

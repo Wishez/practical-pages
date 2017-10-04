@@ -3,13 +3,13 @@
 	var photos = ['kimberly', 'rico', 'uku']
 	var posts = ['Marketer', 'Coder', 'Graphic Designer']
 	var socialIcons = [
-		{'twiiter': 'https://twitter.com', 
+		{'twitter': 'https://twitter.com', 
 		'facebook': 'https://facebook.com', 
 		'pinterest-p': 'https://pinterest.com/'},
-		{'twiiter': 'https://twitter.com', 
+		{'twitter': 'https://twitter.com', 
 		'facebook': 'https://facebook.com', 
 		'google': 'https://pinterest.com/'},
-		{'twiiter': 'https://twitter.com',  
+		{'twitter': 'https://twitter.com',  
 		'pinterest-p': 'https://pinterest.com/'},
 		]
 
@@ -22,6 +22,7 @@ ul.list-unstyled.teamList
 			h5.worker__post= posts[i]
 			ul.list-unstyled.sotials
 				each ref, icon in icons
-					a.not-follow(href= ref)
-					i(aria-hidden="true", class="sotials__icon fa fa-1x fa-"+icon)
+					li.sotials__icon
+						a.not-follow(href= ref)
+							i(aria-hidden="true", class="fa fa-1x fa-"+icon)
 

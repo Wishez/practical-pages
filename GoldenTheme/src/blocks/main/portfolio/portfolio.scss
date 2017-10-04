@@ -1,6 +1,6 @@
 .portfolio {
 	@extend %sectionPaddings;
-	background-color: $darkenWhite;
+	@extend %darkWhiteBg;
 }
 
 @import '__title.scss';

@@ -6,7 +6,9 @@
   "license": "ISC",
   "private": true,
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "gulp",
+    "build": "gulp deploy"
   },
   "browserify": {
     "transform": [

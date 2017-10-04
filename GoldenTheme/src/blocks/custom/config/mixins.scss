@@ -66,6 +66,13 @@
   align-items: #{$align};
 }
 
+@mixin default-flex {
+  @extend %flex;
+  @extend %defaultRowFlow;
+  @extend %alignCenter;
+  @extend %justifyArround;
+}
+
 @mixin link-colors(
   $color: $baseLinkColor,
   $hover-color: $baseHoverLinkColor,

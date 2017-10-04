@@ -1,0 +1,8 @@
+.customersList {
+	@include default-flex;
+	@include breakpoint($xs) {
+		flex-direction: column;
+	}
+}
+
+@import 'customersListFirm.scss';

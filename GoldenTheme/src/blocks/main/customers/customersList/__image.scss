@@ -1,0 +1,15 @@
+.customersListFirm__image {
+	@include responsive-background();
+	@extend %fullWidth;
+}
+
+@each $firmName, $width, $height in 
+	(envato, 161, 30%),
+	(wp, 186, 42%),
+	(tuts, 131, 41%),
+	(ml, 167, 42%) {
+	.customersListFirm__image--name_#{$firmName} {
+		padding-bottom: ($height / $width * 100);
+		background-image: url("../img/#{$firmName}.png");
+	}
+}

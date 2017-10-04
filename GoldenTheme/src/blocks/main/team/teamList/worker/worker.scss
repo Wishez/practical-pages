@@ -1,6 +1,19 @@
 .worker {
 	@extend %four;
 	@extend .pull-left;
+	@include breakpoint($xs) {
+		width: span(12);
+	
+	}
+// @include breakpoint($xxs) {
+  
+// }
+}
+
+.worker:not(:first-of-type) {
+	@include breakpoint($xs) {
+		margin-top: 2em;
+	}
 }
 
 @import '__post.scss';

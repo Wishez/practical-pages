@@ -1,0 +1,9 @@
+.customersListFirm {
+	max-width: 167px;
+	@extend %fullWidth;
+	@include breakpoint($xs) {
+		margin-top: 1em;
+	}
+}
+
+@import '__image.scss';
