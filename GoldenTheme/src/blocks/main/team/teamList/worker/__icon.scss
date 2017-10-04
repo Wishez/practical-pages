@@ -1,11 +1,10 @@
-.sotials__icon {
+.socials__icon {
 	@extend %inline-block;
 	@extend %solidBorder;
 	@extend %widthBorder2;
 	border-color: $darkGray;
+	@extend %iconProportions;
 	@extend %round;
-	width: 41px;
-	height: 41px;
 	&:not(:last-child) {
 		@extend %defaultRightMargin;
 	}

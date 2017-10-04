@@ -1,12 +1,10 @@
+
+- var icons = {'twitter': 'https://twitter.com', 'facebook': 'https://facebook.com','pinterest-p': 'https://pinterest.com/', 'google': 'https://pinterest.com/'}
 footer.footer 
   .container 
-    .footerContacts
-      li.footerContactsItem
-        a.footerContactsItem__refer(href='mailto:renome@intrenalmail.ru')
-          i.footerContacts__icon.fa.fa-envelope.fa-1x
-           span shiningfinger@list.ru
-      li.footerContactsItem
-        a.not-follow.footerContactsItem__refer(href='skype:shiningfinger?chat')
-          i.footerContacts__icon.fa.fa-envelope.fa-1x
-          span shiningfinger
-    p.copyright &copy;&nbsp;Filipp Zhuravlev &mdash; my template for quickly starting new project
+    p.copyright.pull-left &copy;&nbsp;Copyright 2017 shining-present.ru
+    ul.list-unstyled.footerSocials.pull-left
+        each ref, icon in icons
+          li.footerSocials__icon.text-center
+            a.not-follow(href= ref)
+              i(aria-hidden="true", class="fa fa-1x fa-"+icon)

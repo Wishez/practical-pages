@@ -1,0 +1,17 @@
+.footerSocials__icon {
+	@extend %inline-block;
+	@extend %round;
+	@extend %darkGrayBg;
+	@extend %defaultRightMargin;
+	@extend %iconProportions;
+	& .fa {
+		line-height: 2.5em;
+		color: $white;
+	}
+	@include breakpoint($sm) {
+		float: right;
+	}
+	@include breakpoint($xs) {
+		text-align: center;
+	}
+}

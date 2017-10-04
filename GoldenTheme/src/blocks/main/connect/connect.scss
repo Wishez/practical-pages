@@ -2,23 +2,14 @@
 	@extend %sectionPaddings;
 	@extend %relative;
 	@extend %darkGrayBg;
+	padding-bottom: 0;
+	@include breakpoint($sm-less) {
+		padding-bottom: (57.5% / 677 * 100);
+	}
 		
 }
 
-.connectImageContainer {
-	@extend %absolute;
-	@extend %zeroBottom;
-	@extend %zeroRight;
-	max-width: 646px;
-	@extend %fullWidth;
-}
-.connectImageContainer__image {
-	@extend %fullWidth;
-	@include responsive-background(
-		(614% / 646 * 100),
-		'../img/map.png'
-	);
-}
 @import '__subtitle.scss';
 @import '__title.scss';
 @import 'connectForm/connectForm.scss';
+@import 'connectImageContainer.scss';

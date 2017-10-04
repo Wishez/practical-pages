@@ -1,10 +1,11 @@
 .copyright {
-	padding-top: 20px;
-	@include breakpoint($xs) {
-		font-size: (13em / 16);
+	color: $gray;
+	// @extend %bold;
+	@extend %four;
+	@include breakpoint($sm) {
+		width: span(6);
 	}
-	@include breakpoint($xxs) {
-		padding-top: 10px;
-		font-size: 3vw;
+	@include breakpoint($xs) {
+		width: span(12);
 	}
 }

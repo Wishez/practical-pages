@@ -1,5 +1,6 @@
 .connectForm {
-
+	@extend %bigestTopMargin;
+	@extend %clearfix;
 }
 
 @import '__input.scss';

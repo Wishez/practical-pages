@@ -1,0 +1,7 @@
+.connectImageContainer__image {
+	@extend %fullWidth;
+	@include responsive-background(
+		(614% / 646 * 100),
+		'../img/map.png'
+	);
+}

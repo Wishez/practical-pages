@@ -1,7 +1,9 @@
 .footer {
-  
-  
+  padding: 20px 0;
+  @include breakpoint($xs) {
+  	text-align: center;
+  }
 }
 
-@import 'footerContacts/footerContacts.scss';
+@import 'footerSocials/footerSocials.scss';
 @import 'copyright/copyright.scss';

@@ -45,7 +45,13 @@
 	height: 50px;
 	@extend %block;
 	@extend %bigTopMargin;
+	&:first-of-type {
+		@include breakpoint($sm-less) {
+			margin-top: 0;
+		}
+	}
 }
+
 
 
 %formTextarea {

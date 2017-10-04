@@ -1,6 +1,9 @@
 .chronology {
 	margin-top: 92px;
 	width: span(12);
+	@include breakpoint($xs) {
+		margin-top: 3em;
+	}
 }
 @import 'chronologyImageContainer.scss';
 @import 'chronologyData.scss';

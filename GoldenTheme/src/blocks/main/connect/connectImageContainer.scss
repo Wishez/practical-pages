@@ -1,0 +1,10 @@
+.connectImageContainer {
+	@extend %absolute;
+	@extend %zeroBottom;
+	@extend %zeroRight;
+	max-width: 646px;
+	@extend %fullWidth;
+}
+
+
+@import '__image.scss';
