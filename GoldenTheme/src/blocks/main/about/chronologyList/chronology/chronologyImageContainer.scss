@@ -2,6 +2,8 @@
 	@extend %maxImageWidth;
 	@include gutters(5 after) 
 	@extend %relative;
+	opacity: 0;
+	transition: opacity 1s;
 }
 .chronology:not(:first-of-type) {
 

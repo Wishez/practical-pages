@@ -7,18 +7,19 @@
 	 'Our triumph']
 	var icons = ['desk', 'nature', 'stage', 'mountain']
 	var texts = ['', '', '', '']
+	var ids = ['firstHistory', 'secondHistory', 'thirdHistory', 'fourthHistory']
 
 ul.chronologyList.list-unstyled
 	each title, i in titles
 		li.chronology
-			.chronologyImageContainer.center-block
+			.chronologyImageContainer.center-block(class= ids[i])
 				figure(class="chronologyImageContainer__image chronologyImageContainer__image--name_"+icons[i])
-			.chronologyData
+			.chronologyData(class= ids[i])
 				h4.chronologyData__date.text-uppercase= dates[i]
 				h4.chronologyData__title.text-capitalize= title
 				p.chronologyData__paragraph  Ut, sint doloribus at sit ab eos ratione magnam. Quaerat dolore saepe nostrum asperiores eos eveniet!
 	li.chronology.center-block
-		.chronologyImageContainer.center-block
+		.chronologyImageContainer.center-block(class= ids[3])
 			h4.chronologyImageContainer__story.text-uppercase.text-center Our 
 				br
 				| story

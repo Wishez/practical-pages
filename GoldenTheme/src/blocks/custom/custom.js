@@ -41,6 +41,8 @@ $(function() {
     {el: '#connect', tweenConf: {y: '30%'}, sceneConf: {triggerHook: 'onEnter'}}, 
     {el: '#customers', tweenConf: {}, sceneConf: {duration: '250px'}}
   ];
+  const chronologyDataIds = ['.firstHistory', '.secondHistory', '.thirdHistory', '.fourthHistory'];
+
 
   let parallaxController = new ScrollMagic.Controller({globalSceneOptions: baseOptions});
 
@@ -58,41 +60,58 @@ $(function() {
   })
   
  let controller = new ScrollMagic.Controller();
- let tl = new TimelineMax();
- tl.to('.servicesListItem', 1, {
+
+ let services = new TimelineMax();
+ services.to('.servicesListItem', 1, {
   scale: 1
  }, 0.5);
- tl.to('.work', 1, {rotationY: '360_cw'}, 0.8)
+
+ let flip = new TimelineMax();
+ flip
+    .to('.work', 1, {rotationY: '360_cw'}, 0.7);
+
+ let fadeInData = new TimelineMax();
+ let fadeOutData = new TimelineMax();
+
+ chronologyDataIds.forEach(id => {
+    fadeInData.to(id, 1, {opacity: '1'}, '+=3')
+    fadeOutData.to(id, 1, {opacity: '0'}, '+=3')
+    new ScrollMagic.Scene({
+     triggerElement: id,
+     triggerHook: 'onEnter',
+     offset: -300,
+     duration: 500
+   })
+     .setTween(fadeInData)
+     .addIndicators({name: id})
+     .addTo(controller);
+ });
+
  new ScrollMagic.Scene({
           duration: 352,    
           triggerElement: '.servicesListItem',
           triggerHook: 0.90,
-          reverse: true     
+          reverse: true,
+          tweenChanges: true     
       })
-      .setTween(tl)
+      .setTween(services)
       .addIndicators({name: '.servicesListItem'})
       .addTo(controller);   
 
   new ScrollMagic.Scene({
-          duration: 399,    
+          duration: 390,    
           triggerElement: '.work',
-          triggerHook: 0.90,
-          reverse: true     
+          triggerHook: 0.8,
+          reverse: true,
+          tweenChanges: true
       })
-      .setTween(tl)
+      .setTween(flip)
       .addIndicators({name: '.work'})
       .addTo(controller);  
-
+   
+  
   $(document).on('click', '.not-follow', openUrlInNewWindow);
-  $('.chronologyData').each(function(){
-    
-     new ScrollMagic.Scene({
-       triggerElement: this,
-       triggerElement: 0.5
-     })
-     .setClassToggle(this, 'fade-in')
-     .addTo(controller);
-  });
+
   $('.curtain')
     .css('width', 0)
     .find('.sk-double-bounce')
