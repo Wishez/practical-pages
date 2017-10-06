@@ -1,6 +1,7 @@
 .servicesListItem {
 	@include span(4);
 	@include gutters(3em inside);
+	transform: scale(0.5);
 	@include breakpoint($lg) {
   
 }

@@ -3,10 +3,10 @@
   @extend %zeroBorders;
   @extend %relative;
   @extend %index3;
-  top: 55px;
+  top: 50px;
   @include breakpoint($lg) {
 		top: 70px;
-    }
+  }
 }
 
 @import '__openMenuButton.scss';

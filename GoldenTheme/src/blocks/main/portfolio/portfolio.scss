@@ -1,6 +1,7 @@
 .portfolio {
 	@extend %sectionPaddings;
 	@extend %darkWhiteBg;
+	z-index: 3;
 }
 
 @import '__title.scss';

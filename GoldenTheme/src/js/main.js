@@ -7,6 +7,7 @@
 import 'jquery';
 import 'bootstrap-sass';
 import 'babel-polyfill';
+// import 'scrollmagic';
 // import 'whatwg-fetch';
 // import 'semantic-ui-sass';
 // import './modernizr.min.js';

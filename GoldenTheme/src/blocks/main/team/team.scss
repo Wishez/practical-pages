@@ -1,6 +1,7 @@
 .team {
 	@extend %sectionPaddings;
 	@extend %darkWhiteBg;
+	z-index: 5;
 }
 
 @import 'teamList/teamList.scss';

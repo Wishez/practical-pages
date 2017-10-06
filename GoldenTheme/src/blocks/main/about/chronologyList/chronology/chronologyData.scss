@@ -14,6 +14,7 @@
 	width: span(4);
 	@extend %relative;
 	top: -200px;
+	opacity: 0;
 	@include breakpoint($xs) {
 		position: static;
 		margin: 1em auto 0;

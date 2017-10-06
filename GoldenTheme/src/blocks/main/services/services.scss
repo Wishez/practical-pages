@@ -1,5 +1,6 @@
 .services {
 	@extend %sectionPaddings;
+	z-index: 2;
 }
 @import 'servicesList/servicesList.scss';
 @import '__title.scss';

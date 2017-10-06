@@ -113,6 +113,7 @@
     "redux-form": "^6.6.3",
     "redux-thunk": "^2.2.0",
     "rimraf": "^2.5.4",
+    "scrollmagic": "^2.0.5",
     "semantic-ui-react": "^0.68.3",
     "semantic-ui-sass": "^2.2.10-5",
     "superagent": "^3.5.2",
