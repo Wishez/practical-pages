@@ -1,5 +1,5 @@
 {
-  "name": "Template",
+  "name": "Golden Theme",
   "version": "4.1.0",
   "description": "",
   "author": "Filipp Zhuravlev",
@@ -17,9 +17,13 @@
   },
   "browser": {
     "bootstrap": "./node_modules/bootstrap-sass/assets/javascript/bootstrap.js",
-    "jquery": "./node_modules/jQuery/dist/jquery.js"
+    "jquery": "./node_modules/jQuery/dist/jquery.js",
+    "adaptivemagic": "./src/js/AdaptiveMagic.js",
+    "localutils": "./src/js/U.js"
   },
   "browserify-shim": {
+    "adaptivemagic": "AM",
+    "localutils": "U",
     "jquery": "$",
     "bootstrap": {
       "exports": null,

@@ -3,6 +3,7 @@
 	@extend %relative;
 	@extend %darkGrayBg;
 	padding-bottom: 0;
+	@extend %overflowHidden;
 	@include breakpoint($sm-less) {
 		padding-bottom: (57.5% / 677 * 100);
 	}

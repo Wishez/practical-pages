@@ -1,14 +1,14 @@
 .worker {
 	@extend %four;
 	@extend .pull-left;
+	@extend %relative;
+	top: 200px;	
 	@include breakpoint($xs) {
 		width: span(12);
 	
 	}
-// @include breakpoint($xxs) {
-  
-// }
 }
+
 
 .worker:not(:first-of-type) {
 	@include breakpoint($xs) {

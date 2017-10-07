@@ -6,17 +6,7 @@
 	@extend %roundBorder3;
 	@extend %whiteBg;
 	@extend %block;
-	&:focus {
-		&:valid {
-			border-color: $blue;
-		}
-	}
-	&:invalid {
-		border-color: $red;	
-	}
-	&:required {
-		border-color: $paleOrange;
-	}
+	
 
 	&::-webkit-input-placeholder {
       text-transform: uppercase;

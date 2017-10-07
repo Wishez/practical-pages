@@ -3,7 +3,7 @@
   @extend %fullWidth;
   @extend %negativeIndex;
   @extend %relative;
-  z-index: 1;
+  z-index: -1;
   max-height: 700px;
   &:after {
   	content: '';

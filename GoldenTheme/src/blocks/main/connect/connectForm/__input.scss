@@ -1,3 +1,27 @@
 .connectForm__input {
 	@extend %formInput;
+	// &:focus {
+	// 	&:valid {
+	// 		border-color: $blue;
+	// 	}
+	// }
+}
+.connectForm__input, .connectForm__textarea {
+	display: block;
+	// for IE
+	border-width: 3px;
+	border-style: solid;
+	
+	&:focus {
+		&:invalid {
+			border-color: #87393D;//#5C1D31;	
+		}
+		&:valid {
+			border-color: #437A67;	
+		}
+	}
+}
+
+.connectForm.submitted .connectForm__input:required {
+	// border-color: $paleOrange;
 }

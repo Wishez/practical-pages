@@ -1,5 +1,6 @@
 .customers {
 	padding: (60% / 164 * 10) 0;
+	@extend %overflowHidden;
 }
 
 @import 'customersList/customersList.scss';

@@ -12,10 +12,11 @@
 		{'twitter': 'https://twitter.com',  
 		'pinterest-p': 'https://pinterest.com/'},
 		]
+	var ids = ['firstPerson', 'secondPerson', 'thirdPerson']
 
 ul.list-unstyled.teamList
 	each icons, i in socialIcons
-		li.worker.text-center
+		li.worker.text-center(id= ids[i])
 			.workerImageContainer.center-block
 				figure(class="workerImageContainer__image workerImageContainer__image--name_"+photos[i])
 			h4.worker__title= names[i]

@@ -1,20 +1,35 @@
-form.connectForm
+form.connectForm#connectForm(
+	method='post'
+)
 	.container
 		input.connectForm__input(
 			placeholder='Your name *'
-			type='text'
+			type='text',
+			name='name',
+			required,
+			max-length='100',
+			pattern='[A-zА-я]*'
 		)
 		input.connectForm__input(
 			placeholder='Your e-mail *'
-			type='email'
+			type='email',
+			name='email',
+			required,
+			max-length='100'
 		)
 		input.connectForm__input(
 			placeholder='Subject *'
-			type='text'
+			type='text',
+			name='subject',
+			required,
+			max-length='120'
 		)
 
 		textarea.connectForm__textarea.pull-right(
-			placeholder='Your message *'
+			placeholder='Your message *',
+			max-length='350',
+			name='message',
+			required
 		)
 
 		button.connectForm__button.text-uppercase(type='submit') Send message

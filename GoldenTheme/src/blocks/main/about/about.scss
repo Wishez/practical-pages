@@ -1,6 +1,7 @@
 .about {
 	@extend %sectionPaddings;
 	z-index: 4;
+	@extend %overflowHidden;
 }
 
 @import '__title.scss';

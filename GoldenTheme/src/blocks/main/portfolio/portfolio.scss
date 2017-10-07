@@ -2,6 +2,7 @@
 	@extend %sectionPaddings;
 	@extend %darkWhiteBg;
 	z-index: 3;
+	@extend %overflowHidden;
 }
 
 @import '__title.scss';

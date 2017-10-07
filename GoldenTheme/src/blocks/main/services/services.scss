@@ -1,6 +1,8 @@
 .services {
 	@extend %sectionPaddings;
-	z-index: 2;
+	z-index: 1;
+	@extend %whiteBg;
+	@extend %overflowHidden;
 }
 @import 'servicesList/servicesList.scss';
 @import '__title.scss';
