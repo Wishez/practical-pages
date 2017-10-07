@@ -12,7 +12,7 @@
   const _defaultCustoms = [
         {el: '#header' , tweenConf: {}, sceneConf: {}, scene: {}},
         {el:'#services' , tweenConf: {}, sceneConf: {}, scene: {}},
-        {el:'#portfolio', tweenConf: {}, sceneConf: {}, scene: {}}, 
+        {el:'#portfolio', tweenConf: {y: "25%"}, sceneConf: {}, scene: {}}, 
         {el: '#about', tweenConf: {y: '10%'}, sceneConf: {}, scene: {}}, 
         {el: '#team', tweenConf: {y: '40%'}, sceneConf: {}, scene: {}},
         {el: '#customers', tweenConf: {}, sceneConf: {duration: '250px'}, scene: {}},
