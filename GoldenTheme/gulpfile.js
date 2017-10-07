@@ -119,14 +119,13 @@ gulp.task('source', ['lintsource'], () => {
        'transform-class-properties',
        'transform-decorators-legacy',
        'transform-object-rest-spread'],
-      presets: ['latest', 'react'],
-      sourceMapsAbsolute: false
+      presets: ['latest', 'react']
     })
     .bundle()
     .pipe(source('main.js'))
     .pipe(buffer())
-    .pipe(uglify()).on('error', gutil.log)
     .pipe(sourcemaps.init())
+    .pipe(uglify()).on('error', gutil.log)
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(settings.build + '/js'));
 });
