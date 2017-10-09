@@ -1,0 +1,17 @@
+%buttonShadow {
+	box-shadow: 0 5px 10px $shadow $i;
+}
+%beneathShadow {
+	box-shadow: 0 10px 15px $shadow;
+}
+%importantbeneathShadow {
+	box-shadow: 0 10px 15px $shadow $i;
+}
+
+%spreadShadow {
+	box-shadow: 0 0 15px $shadow;	
+}
+
+%innerShadow {
+	box-shadow: inset 0 0 15px $shadow $i;
+}

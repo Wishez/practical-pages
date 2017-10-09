@@ -1,0 +1,150 @@
+$i: !important;
+@import 'config/grid.scss';
+@import 'config/fonts.scss';
+@import 'config/colors.scss';
+@import 'config/breakpoints.scss';
+@import 'config/sizes.scss';
+@import 'config/animation.scss';
+@import 'config/flex.scss';
+@import 'config/mixins.scss';
+
+
+
+// Custom styles
+html, body {
+  min-height: 100%;
+  width: 100%;
+}
+body {
+  z-index: 0;
+  & * {
+    // Styles for testing 
+    // background: #000 !important;
+    // color: #0f0 !important;
+    // outline: solid #f00 1px !important;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    &:active {
+      outline: 0;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
+  @extend %relative;
+  font: {
+    family: $mainFont;
+    size: #{$baseSizeFont}px;
+  }
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  font-feauture-settings: "kern", "ling", "clig", "calt";
+  line-height: 145%;
+  font-size-adjust: 100%;
+  word-break: break-word;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  color: $baseColorFont;
+  background-color: $bodyColorBg;
+}
+
+@import 'short_hand_classes/transitions.scss';
+@import 'short_hand_classes/margins.scss';
+@import 'short_hand_classes/borders.scss';
+@import 'short_hand_classes/backgrounds.scss';
+@import 'short_hand_classes/visible.scss';
+// @import 'short_hand_classes/aligned.scss';
+@import 'short_hand_classes/links.scss';
+@import 'short_hand_classes/buttons.scss';
+@import 'short_hand_classes/float.scss';
+@import 'short_hand_classes/image.scss';
+@import 'short_hand_classes/paddings.scss';
+@import 'short_hand_classes/form.scss';
+@import 'short_hand_classes/shadows.scss';
+@import 'short_hand_classes/perspective.scss';
+@import 'short_hand_classes/display.scss';
+@import 'short_hand_classes/position.scss';
+@import 'short_hand_classes/image.scss';
+@import 'short_hand_classes/sizes.scss';
+@import 'short_hand_classes/proportion.scss';
+@import 'short_hand_classes/indexes.scss';
+@import 'short_hand_classes/offsets.scss';
+@import 'short_hand_classes/cursores.scss';
+@import 'short_hand_classes/overflow.scss';
+@import 'short_hand_classes/font.scss';
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  hyphens: none;
+}
+
+h1 {
+  font-size: $firstSizeHeading;
+  font-weight: normal;
+
+}
+h2 {
+  font-size: $secondSizeHeading;
+  color: $gray;
+  @include breakpoint($sm) {
+      font-size: (24em / 16);
+    }
+  @include breakpoint($xs) {
+      font-size: 4vw;
+    }
+  @include breakpoint($xxs) {
+     font-size: 6vw;
+  }
+}
+ul {
+  list-style: none;
+}
+p {
+ @extend %defaultTopMargin;
+}
+a {
+  border-radius: 5px;
+  @include smooth-transition-link;
+  @include link-colors;
+  // Без параметров - базовые цвета ссылок по умолчанию.
+  &:hover, &:visited, &:active, &:focus {
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: $baseHoverLinkBackgroundColor;
+  }
+}
+
+@include placehodler-color($lightGray);
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background-color: $darkGray $i;
+  -webkit-text-fill-color: $darkGray $i;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  margin-right: 10px;
+  @extend %block;
+  @extend %pointIt;
+}
+
+input[type=number]:hover::-webkit-inner-spin-button, 
+input[type=number]:hover::-webkit-outer-spin-button {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,75 @@
+// Fonts
+$mainFont: 'Raleway', serif;
+$additionalFont:  'Droid Serif', serif;
+
+// $additionalFont: '', cursive;
+$nameFont: 'Raleway';
+$normalFont: '../fonts/Raleway/Raleway-Regular';
+$boldFont: '../fonts/Raleway/Raleway-Bold';
+
+@font-face {
+  font-family: $nameFont;
+  font-weight: normal;
+  font-style: normal;
+  src: url('#{$normalFont}.eot');
+  src: local('#{$nameFont}'),
+    url('#{$normalFont}.woff') format('woff'),
+    url('#{$normalFont}.ttf') format('truetype'),
+    url('#{$normalFont}.svg') format('svg');
+}
+@font-face {
+  font-family: $nameFont;
+  font-weight: bold;
+  font-style: normal;
+  src: url('#{$boldFont}.eot');
+  src: local('#{$nameFont}'),
+    url('#{$boldFont}.woff') format('woff'),
+    url('#{$boldFont}.ttf') format('truetype'),
+    url('#{$boldFont}.svg') format('svg');
+}
+
+
+
+
+
+// Semantic-ui
+// @font-face {
+//   font-family: 'octicons';
+//   font-weight: normal;
+//   font-style: normal;
+//   src: url('octicons.eot');
+//   src: local('../fonts/octicons-local.ttf'),
+//     url('../fonts/octicons.woff') format('woff'),
+//     url('../fonts/octicons.ttf') format('truetype'),
+//     url('../fonts/octicons.svg') format('svg');
+// }
+
+
+
+
+
+
+$secondNameFont: 'DriodSerif';
+$secondNormalFont: '../fonts/DriodSerif/DriodSerif-Regular';
+
+
+@font-face {
+  font-family: $secondNameFont;
+  font-weight: normal;
+  font-style: normal;
+  src: url('#{$secondNormalFont}.eot');
+  src: local('#{$secondNameFont}'), 
+    url('#{$secondNormalFont}.woff') format('woff'),
+    url('#{$secondNormalFont}.ttf') format('truetype'),
+    url('#{$secondNormalFont}.svg') format('svg');
+}
+
+// Uncomment, if you need to use font-awsome.
+@font-face {
+  font-family:'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2') format('woff2'),url('../fonts/fontawesome-webfont.woff') format('woff'),url('../fonts/fontawesome-webfont.ttf') format('truetype'),url('../fonts/fontawesome-webfont.svg') format('svg');
+}
+

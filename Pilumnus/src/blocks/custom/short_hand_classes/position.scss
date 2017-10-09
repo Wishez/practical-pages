@@ -1,0 +1,17 @@
+%relative {
+	position: relative;
+}
+
+%absolute {
+	position: absolute;
+}
+%absoluteImportant {
+	position: absolute $i;
+}
+%fixed {
+	position: fixed;
+}
+
+%static {
+	position: static;
+}

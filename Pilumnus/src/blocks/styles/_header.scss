@@ -1,0 +1,74 @@
+// Header
+.header {
+
+}
+/* START BRAND */
+.brandContainer {
+	
+}
+.brand {
+	
+}
+.brand__name {
+
+}
+/* END BRAND */
+
+/* START NAVIGATION */
+.navHeader {
+
+}
+.navigaton {
+  
+}
+.navigation__openMenuButton {
+  
+}
+
+.navList {
+  
+  width: span(12);
+  @include breakpoint($xs) {
+    display: none;
+    position: fixed;
+    top: 44px;
+    left: 0;
+    height: 100%;
+    height: calc(100% - 44px);
+    background-color: $darkGray;
+    width: 100%;
+    flex-direction: column;
+    align-items: space-between;
+    z-index: 100;
+    padding-top: 50%;
+    
+  }
+}
+/* END NAV ITEMS */
+
+/* START NAV ITEMS */
+.navItem {
+  &.active .navItem__refer {
+    
+  }
+} 
+
+.navItem__refer {
+  @include breakpoint($sm) {
+     
+  }
+  @include breakpoint(max-width 992px) {
+    
+  }
+  @include breakpoint($xs) {
+    
+  }
+  @include breakpoint($xxs) {
+    
+  }
+  &:hover {
+    
+   
+  }
+}
+/* END NAV ITEMS */
