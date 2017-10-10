@@ -1,74 +1,37 @@
-// Header
-.header {
+// START HEADER 
+.header {  
 
 }
-/* START BRAND */
-.brandContainer {
-	
-}
-.brand {
-	
-}
-.brand__name {
 
-}
-/* END BRAND */
-
-/* START NAVIGATION */
-.navHeader {
-
-}
-.navigaton {
-  
-}
-.navigation__openMenuButton {
-  
+.travel {
+  border: 5px solid $lightBrown;
+  max-width: 964px;
+  @extend %fs-24;
+  padding: (22.5% /  471 * 100) 0 (28.5% / 471 * 100) 0 ;
 }
 
-.navList {
-  
-  width: span(12);
-  @include breakpoint($xs) {
-    display: none;
-    position: fixed;
-    top: 44px;
-    left: 0;
-    height: 100%;
-    height: calc(100% - 44px);
-    background-color: $darkGray;
-    width: 100%;
-    flex-direction: column;
-    align-items: space-between;
-    z-index: 100;
-    padding-top: 50%;
-    
-  }
+.travel__superTitle {
+  @extend %relative;
+  &:after {
+      content: '';
+      left: 100%;
+      margin-left: -55%;
+      @extend %absolute;
+      @extend %whiteBg;
+      @extend  %borderWidth;
+      @extend  %borderHeigth;
+      @extend %bottomBorder;
+      
+    }
 }
-/* END NAV ITEMS */
-
-/* START NAV ITEMS */
-.navItem {
-  &.active .navItem__refer {
-    
-  }
-} 
-
-.navItem__refer {
-  @include breakpoint($sm) {
-     
-  }
-  @include breakpoint(max-width 992px) {
-    
-  }
-  @include breakpoint($xs) {
-    
-  }
-  @include breakpoint($xxs) {
-    
-  }
-  &:hover {
-    
-   
-  }
+.travel__superTitle, .travel__title  {
+  color: $white;
 }
-/* END NAV ITEMS */
+.travel__title {
+  font-size: (185em /  $baseSizeFont); 
+  @extend %secondFont;
+}
+.travel__subTitle {
+  color: $lightBrown;
+}
+/* END HEADER */

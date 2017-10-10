@@ -51,6 +51,19 @@ body {
   hyphenate-lines: 3;
   color: $baseColorFont;
   background-color: $bodyColorBg;
+  &::after {
+    content: '';
+    @extend %absolute;
+    @extend %zeroTop;
+    @extend %zeroLeft;
+    @extend %fullWidth;
+    @include responsive-background(
+        $padding-bottom: (5503% / 2000 * 100)
+    );
+    background-image: url('./../img/background.png') $i;
+    @extend %negativeIndex;
+  }
+  // padding-bottom: (5503% / 2000 * 100); 
 }
 
 @import 'short_hand_classes/transitions.scss';
@@ -91,22 +104,31 @@ h1 {
 }
 h2 {
   font-size: $secondSizeHeading;
-  color: $gray;
-  @include breakpoint($sm) {
-      font-size: (24em / 16);
-    }
-  @include breakpoint($xs) {
-      font-size: 4vw;
-    }
-  @include breakpoint($xxs) {
-     font-size: 6vw;
+  color: $lightBrown;
+  @extend %relative;
+  max-width: 300px;
+  font-size: (60em / $baseSizeFont); 
+  @extend %secondFont;
+  &:after {
+    content: '';
+    @extend %absolute;
+    @extend %zeroLeft;
+    @extend %lightBrownBg;
+    @extend  %borderWidth;
+    @extend  %borderHeigth;
+    @extend %bottomBorder;
   }
-}
-ul {
-  list-style: none;
+  // @include breakpoint($xs) {
+  //     font-size: 4vw;
+  //   }
+  // @include breakpoint($xxs) {
+  //    font-size: 6vw;
+  // }
 }
 p {
  @extend %defaultTopMargin;
+ @extend %fs-18;
+ max-width: 468px;
 }
 a {
   border-radius: 5px;
