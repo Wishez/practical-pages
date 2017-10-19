@@ -49,3 +49,8 @@
 %fullHeight {
 	height: 100%;
 }
+%fullWidth-xs {
+	@include breakpoint($xs) {
+		width: 100%
+	}
+}

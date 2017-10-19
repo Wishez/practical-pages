@@ -102,21 +102,25 @@ h1 {
   font-weight: normal;
 
 }
-h2 {
-  font-size: $secondSizeHeading;
+h2, h4 {
   color: $lightBrown;
   @extend %relative;
-  max-width: 300px;
-  font-size: (60em / $baseSizeFont); 
-  @extend %secondFont;
   &:after {
     content: '';
     @extend %absolute;
     @extend %zeroLeft;
     @extend %lightBrownBg;
+    @extend %bottomBorder;
+  }
+}
+
+h2 {
+  font-size: $secondSizeHeading;
+  font-size: (60em / $baseSizeFont); 
+  @extend %secondFont;
+  &:after {
     @extend  %borderWidth;
     @extend  %borderHeigth;
-    @extend %bottomBorder;
   }
   // @include breakpoint($xs) {
   //     font-size: 4vw;
@@ -124,6 +128,12 @@ h2 {
   // @include breakpoint($xxs) {
   //    font-size: 6vw;
   // }
+}
+h4 {
+  &:after {
+    @extend %fullWidth;
+    height: 1px;
+  }
 }
 p {
  @extend %defaultTopMargin;

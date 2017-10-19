@@ -4,10 +4,18 @@
 }
 
 .travel {
+  margin-top: (173% / 1000 * 100);
   border: 5px solid $lightBrown;
   max-width: 964px;
   @extend %fs-24;
   padding: (22.5% /  471 * 100) 0 (28.5% / 471 * 100) 0 ;
+   @include breakpoint($xs) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  @include breakpoint($sm) {
+  
+  }
 }
 
 .travel__superTitle {
@@ -22,6 +30,15 @@
       @extend  %borderHeigth;
       @extend %bottomBorder;
       
+      @include breakpoint($sm) {
+        margin-left: -56%;
+      }
+      @include breakpoint($xs) {
+        margin-left: -58%;
+      }
+      @include breakpoint($xxs) {
+        margin-left: -65%;
+      }
     }
 }
 .travel__superTitle, .travel__title  {
@@ -30,8 +47,20 @@
 .travel__title {
   font-size: (185em /  $baseSizeFont); 
   @extend %secondFont;
+  @include breakpoint($sm) {
+    font-size: (165em /  $baseSizeFont); 
+  }
+  @include breakpoint($xs) {
+    font-size: (100em /  $baseSizeFont); 
+  }
+  @include breakpoint($xxs) {
+    font-size: (70em /  $baseSizeFont); 
+  }
 }
 .travel__subTitle {
   color: $lightBrown;
+   @include breakpoint($xxs) {
+    font-size: (16em /  $baseSizeFont); 
+  }
 }
 /* END HEADER */

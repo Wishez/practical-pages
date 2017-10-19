@@ -7,8 +7,8 @@ main
 					p.aboutInfo__paragraph  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt id explicabo quidem nostrum maxime et, ad temporibus ratione ex quibusdam reiciendis.
 					p.aboutInfo__paragraph Sit doloribus, dignissimos praesentium corporis facilis. Consectetur, inventore, ducimus.
 					button.button.aboutInfo__paragraph(type='button') Read more
-				.section__imageContainer.containerImage.aboutSectionContainer
-					figure.aboutSectionContainer__image
+				.sectionImageContainer.aboutSectionImageContainer
+					figure.aboutSectionImageContainer__image.sectionImageContainer__image
 					
 
 		-
@@ -23,15 +23,15 @@ main
 			var articlesHrefs = ['#', '#', '#']
 		section.articles
 			.container
-				h2.articles__title.text-center Latest articles
-				ul.articlesList
+				h2.articles__title.center-block Latest articles
+				ul.articlesList.list-unstyled
 					each modifier, i in articlesModifiers 
 						li.articlesList__item(class= modifier)
 							article.article
-								div.articleImageContainer.articleImageContainer_name-a1.imageContainer(class="articleImageContainer_name-"+articlesImages[i])
+								div.articleImageContainer.imageContainer(class="articleImageContainer_name-"+articlesImages[i])
 									figure.articleImageContainer__image.imageContainer__image(class="articleImageContainer__image_name-"+articlesImages[i])
 								h4.article__title= articlesTitles[i]
-								p.article__parahraph= articlesTexts[i]
+								p.article__paragraph= articlesTexts[i]
 								a.article__readMore.text-uppercase(href= articlesHrefs[i]) Read more
 
 		-
@@ -44,42 +44,44 @@ main
 						li.galleryImageContainer.imageContainer(class= "galleryImageContainer_name-"+name)
 							figure.articleImageContainer__image.imageContainer__image(class= "galleryImageContainer__image_name-"+name)
 				button.button.gallery__button(type='button') Show more
-
+		
 		section.contactMe.section
 			.container
-				.section__imageContainer.imageContainer.contactMeImageContainer
-					figure.contactMeImageContainer__image
-				h2.contactMe__title Contact
-				form.contactMeForm#contactMeForm(method='post')
-					.contactMeFormController
-						input.contactMeFormController__input.formInput(
-							type='text',
-							name='name',
-							pattern='[A-Za-zА-Яа-я]*',
-							required,
-							placeholder='Your name',
-							max-length=100,
-							min-length=3
-						)
-					.contactMeFormController
-						input.contactMeFormController__input.formInput(
-							type='text',
-							name='email',
-							required,
-							placeholder='Your email',
-							max-length=100,
-							min-length=7
-						)
-					.contactMeFormController
-						textarea.contactMeFormController__textarea.formInput_textarea(
-							type='text',
-							name='message',
-							required,
-							placeholder='Your message',
-							max-length=300,
-							min-length=1
-						)
-					button.contactMeForm__button.button(type='submit') Send message
+				.sectionImageContainer.contactMeSectionImageContainer
+					figure.contactMeSectionImageContainer__image.sectionImageContainer__image
+				.connectMeFormContainer
+					h2.contactMe__title.pull-right Contact
+					.clearfix
+					form.contactMeForm.pull-right#contactMeForm(method='post')
+						.contactMeFormController
+							input.contactMeFormController__input.formInput(
+								type='text',
+								name='name',
+								pattern='[A-Za-zА-Яа-я]*',
+								required,
+								placeholder='Your name',
+								max-length=100,
+								min-length=3
+							)
+						.contactMeFormController
+							input.contactMeFormController__input.formInput(
+								type='text',
+								name='email',
+								required,
+								placeholder='Your email',
+								max-length=100,
+								min-length=7
+							)
+						.contactMeFormController
+							textarea.contactMeFormController__textarea.formInput_textarea(
+								type='text',
+								name='message',
+								required,
+								placeholder='Your message',
+								max-length=300,
+								min-length=1
+							)
+						button.contactMeForm__button.button(type='submit') Send message
 
 
 
