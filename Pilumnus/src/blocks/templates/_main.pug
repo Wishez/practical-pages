@@ -40,9 +40,38 @@ main
 			.container
 				h2.gallery__title Gallery
 				ul.galleryList.list-unstyled
-					each name in imageNames 
-						li.galleryImageContainer.imageContainer(class= "galleryImageContainer_name-"+name)
-							figure.articleImageContainer__image.imageContainer__image(class= "galleryImageContainer__image_name-"+name)
+						li.galleryImagesContainer.galleryImagesContainer_numRow-1
+							img.galleryImageContainer__image.img-reponsive(
+								src='./../img/g1.png',
+								alt= 'g1', 
+								class= 'galleryImageContainer__image_name-g1')
+							img.galleryImageContainer__image.img-reponsive(
+								src='./../img/g2.png',
+								alt= 'g2', 
+								class= 'galleryImageContainer__image_name-g2')
+							img.galleryImageContainer__image.img-reponsive(
+								src='./../img/g3.png',
+								alt= 'g3', 
+								class= 'galleryImageContainer__image_name-g3')
+						li.galleryImagesContainer.galleryImagesContainer_numRow-2
+							img.galleryImageContainer__image.img-reponsive(
+								src='./../img/g5.png',
+								alt= 'g5', 
+								class= 'galleryImageContainer__image_name-g5')
+						li.galleryImagesContainer.galleryImagesContainer_numRow-3
+							img.galleryImageContainer__image.img-fluid(
+								src='./../img/g4.png',
+								alt= 'g4', 
+								class= 'galleryImageContainer__image_name-g4')
+							img.galleryImageContainer__image.img-fluid(
+								src='./../img/g6.png',
+								alt= 'g6', 
+								class= 'galleryImageContainer__image_name-g6')
+							img.galleryImageContainer__image.img-fluid(
+								src='./../img/g7.png',
+								alt= 'g7', 
+								class= 'galleryImageContainer__image_name-g7')
+
 				button.button.gallery__button(type='button') Show more
 		
 		section.contactMe.section

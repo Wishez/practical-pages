@@ -178,8 +178,155 @@
 	}
 }
 
-.galleryList {
+.gallery {
+	margin-top: (326% / 1183 * 100);
+}
+.galleryList, .galleryImagesContainer {
 	display: grid;
-	grid-template-columns: 370px 370px 370px;
-	grid-template-rows: 419px 728px;
+}
+
+ .galleryImagesContainer {
+
+	@include breakpoint($sm-less) {
+		display: block $i;
+	}
+ }
+
+.galleryList {
+	// @extend %defaultFlex;
+	@extend %relative;
+	@include breakpoint($md-less) {
+		right: 5%;
+		grid-template-rows: 349px 349px 376px;
+		grid-row-gap: 35px;
+		
+	}
+	@include breakpoint($sm) {
+		grid-template-rows: 412px 262px 535px;
+	}
+}
+.galleryImagesContainer {
+	@include breakpoint($bigScreen) {
+		grid-template-columns: 370px 370px 370px;
+	}
+	@include breakpoint($lg) {
+		grid-template-columns: 325px 325px 325px;
+	}
+
+	@include breakpoint($md) {
+		grid-template-columns: 255px 255px 255px;
+	}
+	@include breakpoint($md-up) {
+		grid-gap: 35px;
+		
+	}
+	&_numRow-3 {
+	}
+	&_numRow-2 {
+	
+	}
+	&_numRow-1 {
+	
+		
+	}
+}
+.galleryImageContainer__image {
+
+
+	@extend %relative;
+	// max-width: 370px;
+	
+}
+.galleryImageContainer__image_name- {
+	&g2, &g3, &g1, &g4, &g6, &g7 {
+		@include breakpoint($lg) {
+			max-width: 470px;	
+		}
+		@include breakpoint($md) {
+			max-width: 370px;	
+		}
+		@include breakpoint($sm-less) {
+			width: 50%;
+		}
+	}
+	&g5, &g2 {
+		@include breakpoint($bigScreen) {
+			top: -20%;
+		}
+		
+	}
+	&g5 {
+		@include breakpoint($lg) {
+			max-width: 900px;
+			top: -30%;
+		}
+		@include breakpoint($md) {
+			// max-width: 370px;	
+			max-width: 735px;
+		}
+		@include breakpoint($md) {
+			top: -40%;
+		}
+		@include breakpoint($sm-less) {
+			width: 100%;
+		}
+	}
+	&g2 {
+		@include breakpoint($lg) {
+			top: -18%;
+		}
+		@include breakpoint($md) {
+			top: -10%;
+		}
+	}
+	&g6, &g7 {
+		@include breakpoint($bigScreen) {
+			top: -18%;
+		}
+		@include breakpoint($lg) {
+			top: -41%;
+		}
+		@include breakpoint($md) {
+			top: -63%;
+		}
+	}
+	&g3  {
+		@include breakpoint($md-up) {
+			top: 20%;
+		}
+		@include breakpoint($sm-less) {
+			top: -17%;
+		}
+	}
+	&g5 {
+		@include breakpoint($md-up) {
+			grid-column-start: 2;
+		}
+	}
+	&g4 {
+		@include breakpoint($bigScreen) {
+			top: -102%;
+			left: -70px;
+		}
+		@include breakpoint($lg) {
+			top: -111%;
+			left: -8px
+		}
+		@include breakpoint($md) {
+			top: -127%;
+			left: -6px
+		}
+	}
+	&g7, &g3 {
+		@include breakpoint($sm) {
+			margin: 0 auto;
+			display: block;
+		}	
+	}
+	&g7 {
+		@include breakpoint($sm) {
+			top: -12%;
+		}	
+	}
+
 }
