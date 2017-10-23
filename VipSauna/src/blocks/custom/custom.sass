@@ -1,0 +1,150 @@
+$i: !important
+@import './config/_variables.sass'
+@import './config/colors.sass'
+@import './config/breakpoints.sass'
+@import './config/sizes.sass'
+@import './config/animation.sass'
+@import './config/flex.sass'
+@import './short_hand_classes/backgrounds.sass'
+@import './config/mixins.sass'
+@import './config/fonts.sass'
+@import './config/grid.sass'
+
+// // Blocks
+
+// Elemets
+
+// Custom styles
+html, body 
+  min-height: 100%
+  width: 100%
+
+body 
+  z-index: 0
+  & * 
+    // Styles for testing 
+    // background: #000 !important
+    // color: #0f0 !important
+    // outline: solid #f00 1px !important
+    margin: 0
+    padding: 0
+    outline-color: #8BBDBD
+    border: 0
+    &:active 
+      outline: 0
+    
+    &:focus 
+      outline: 0
+    
+  
+  @extend %relative
+  font: 
+    family: $mainFont
+    size: #{$baseSizeFont}px
+  
+  text-rendering: optimizeLegibility
+  font-kerning: normal
+  font-variant-ligatures: common-ligatures contextual
+  font-feauture-settings: "kern", "ling", "clig", "calt"
+  line-height: 145%
+  font-size-adjust: 100%
+  word-break: break-word
+  hyphens: auto
+  -webkit-hyphenate-before: 2
+  -webkit-hyphenate-after: 3
+  hyphenate-lines: 3
+  color: $baseColorFont
+  background-color: $bodyColorBg
+  @include responsive-background($url: $bodyImgUrl, $attachment: fixed)
+
+
+@import './short_hand_classes/transitions.sass'
+@import './short_hand_classes/margins.sass'
+@import './short_hand_classes/borders.sass'
+@import './short_hand_classes/visible.sass'
+@import './short_hand_classes/aligned.sass'
+@import './short_hand_classes/links.sass'
+@import './short_hand_classes/buttons.sass'
+@import './short_hand_classes/float.sass'
+@import './short_hand_classes/image.sass'
+@import './short_hand_classes/paddings.sass'
+@import './short_hand_classes/form.sass'
+@import './short_hand_classes/shadows.sass'
+@import './short_hand_classes/perspective.sass'
+@import './short_hand_classes/display.sass'
+@import './short_hand_classes/position.sass'
+@import './short_hand_classes/image.sass'
+@import './short_hand_classes/sizes.sass'
+@import './short_hand_classes/proportion.sass'
+@import './short_hand_classes/indexes.sass'
+@import './short_hand_classes/offsets.sass'
+@import './short_hand_classes/cursores.sass'
+@import './short_hand_classes/overflow.sass'
+@import './short_hand_classes/font.sass'
+
+
+h1, h2, h3, h4, h5, h6 
+  font-family: inherit
+  hyphens: none
+
+
+h1 
+  font-size: $firstSizeHeading
+  font-weight: normal
+
+
+h2 
+  font-size: $secondSizeHeading
+  color: $white
+  @include breakpoint($sm) 
+      font-size: (24em / 16)
+    
+  @include breakpoint($xs) 
+      font-size: 7vw
+    
+  @include breakpoint($xxs) 
+     font-size: 8vw
+  
+
+ul 
+  list-style: none
+
+p 
+
+a 
+  border-radius: 5px
+  @include smooth-transition-link
+  @include link-colors
+  // Без параметров - базовые цвета ссылок по умолчанию.
+  &:hover, &:visited, &:active, &:focus 
+    text-decoration: none
+  
+
+
+@include placehodler-color($lightGray)
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus 
+  background-color: $darkGray $i
+  -webkit-text-fill-color: $darkGray $i
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+  margin-right: 10px
+  @extend %block
+  @extend %pointIt
+
+
+input[type=number]:hover::-webkit-inner-spin-button, 
+input[type=number]:hover::-webkit-outer-spin-button 
+  width: 20px
+  height: 20px
+

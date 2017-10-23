@@ -1,0 +1,31 @@
+header.header
+	.container
+		nav.navigation.navbar.navbar-default(role="navigation", aria-labelledby="headerNav")
+			.container
+				span.sr-only#headerNav The header's navigation
+				.navbar-header.navHeader.col-lg-4.col-sm-12
+					button.navigaton__openMenuButton.navbar-toggle( 
+						type="button",  
+						data-toggle="collapse",
+						data-target="#navbar_collapse"
+					)
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.brand.navbar-brand.visible-block.center-block.zoom(href="#", rel='up') 
+						figure.brand__name
+				.navbarCollaps.collapse.navbar-collapse.col-lg-8#navbar_collapse
+					ul.nav.navbar-nav.navList
+						li.navItem.active
+							a.navItem__refer(href="#") Главная
+						li.navItem
+							a.navItem__refer(href="#") Турецкий храм
+						li.navItem
+							a.navItem__refer(href="#") Финская парная
+						li.navItem
+							a.navItem__refer(href="#") 
+								span New! 
+								| Новый зал!
+						li.navItem
+							a.navItem__refer(href="#", rel='contact') Контакты

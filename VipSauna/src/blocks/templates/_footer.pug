@@ -1,0 +1,52 @@
+footer.footer(itemscope, itemtype='http://schema.org/Person')
+    span.sr-only(itemprop="name") vip-sauna6.ru
+    <!-- begin footerNav -->
+    nav.footerNav(role="navigation", aria-labelledby="footerNav")
+        span.sr-only#footerNav The footer's navigation
+        ul.footerNavList.list-unstyled
+            li.footerNavItem.zoom
+                a(href='/finskaya', role='menuitem').footerNavItemRefer
+                    figure.footerNavItemRefer__image.footerNavItemRefer__image_name-finskaya
+            li.footerNavItem.zoom
+                a(href='/turkish', role='menuitem').footerNavItemRefer
+                    figure.footerNavItemRefer__image.footerNavItemRefer__image_name-turkish
+            li.footerNavItem.zoom
+                a(href='/contact', role='menuitem').footerNavItemRefer
+                    figure.footerNavItemRefer__image.footerNavItemRefer__image_name-contact
+    <!-- end footerNav -->
+    <!-- begin footerInfo -->
+    .footerInfo
+      .container 
+        <!-- begin footerContacts -->
+        .footerContacts.col-lg-4.col-md-4.col-sm-6.col-xs-12
+        
+            li.footerContactsItem(itemscope, itemtype="http://schema.org/PostalAddress" )
+                a.footerContactsItem__refer.not-follow(href='https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%9F%D0%B5%D1%80%D0%B2%D0%BE%D0%BC%D0%B0%D0%B9%D1%81%D0%BA%D0%B0%D1%8F,+77,+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3,+%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+620062/@56.8459859,60.639357,17z/data=!3m1!4b1!4m5!3m4!1s0x43c16c2be5298e21:0x77522d799d8f3f75!8m2!3d56.8459859!4d60.6415457')
+                    span(itemprop="addressLocality") г. Екатеринбург
+                    span(itemprop="streetAddress") ул.Первомайская, 77
+            li.footerContactsItem
+                a.not-follow.footerContactsItem__refer(href='tel:+73433616911')
+                    i.footerContacts__icon.fa.fa-phone.fa-2x
+                    span(itemprop="telephone") +7 (343) 36-16-911
+        <!-- end footerContacts -->
+        <!-- begin shares -->
+        .shares.col-lg-4.col-md-4.col-sm-6.col-xs-12
+            h2.title Акции!
+            ol.sharesList 
+                li.sharesList__item При заказе от 4-ех часов - кальян в подарок!
+                li.sharesList__item Постоянным клиентам - дисконтные карты!
+        <!-- end shares -->
+        <!-- begin friends -->
+        .friends.col-lg-4.col-md-4.col-sm-12.col-xs-12
+            h2.title.title_blue.text-right Наши друзья:
+            ul.firendsList
+                li.firendsListItem
+                    a.friendImageContainer.not-follow(href='http://xn----7sbarfsulg5axs7h.xn--p1ai/', rel='colleague')
+                        span.sr-only(itemprop="colleague") Оздоравительный центр "Дельфин"
+                        figure.friendImageContainer__image
+                li.firendsListItem
+                    a.friendImageContainer.not-follow(href='http://xn----7sbabar8cnf6axg.xn--p1ai/', rel='colleague')
+                        span.sr-only(itemprop="colleague") Laguna клуб саун
+                        figure.friendImageContainer__image
+        <!-- end friends -->
+    <!-- end footerInfo -->

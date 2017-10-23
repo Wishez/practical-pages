@@ -1,0 +1,27 @@
+// Fonts
+$firstName: 'Open Sans'
+$secondName: 'PT Sans'
+$mainFont: $firstName, serif
+$additionalFont: $secondName, serif
+
+// $additionalFont: '', cursive
+// PT Sans
+$firstPath: './../fonts/OpenSans/'
+$secondPath: '../fonts/PTSans/'
+
+// @include font-face('slick', './../fonts/slick')
+
+@include font-face($firstName, '#{$firstPath}OpenSans-Italic', italic)
+@include font-face($firstName, '#{$firstPath}OpenSans-Regular')
+@include font-face($firstName, '#{$firstPath}OpenSans-Bold', bold)
+@include font-face($firstName, '#{$firstPath}OpenSans-BoldItalic', bold, italic)
+
+@include font-face($secondPath, '#{$secondPath}PTSans-Regular')
+@include font-face($secondPath, '#{$secondPath}PTSans-Italic', italic)
+@include font-face($secondPath, '#{$secondPath}PTSans-Bold', bold)
+@include font-face($secondPath, '#{$secondPath}PTSans-BoldItalic', bold, italic)
+@include font-face('FontAwesome', './../fonts/fontawesome-webfont');
+
+// @include font-face('Montserrat', './../fonts/Montserrat/Montserrat-Regular')
+// @include font-face('Montserrat', './../fonts/Montserrat/Montserrat-Bold', bold)
+

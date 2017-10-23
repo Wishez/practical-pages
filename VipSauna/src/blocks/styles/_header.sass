@@ -1,0 +1,91 @@
+// Header
+.header 
+  margin-top: 3%
+  @extend %clearfix
+
+/* START BRAND */
+a.brand.navbar-brand
+    padding: 0
+    max-width: 370px
+    @extend %fullWidth
+    @include breakpoint($md-less)
+        float: none $i
+        margin-left: auto $i
+
+
+
+
+.brand__name 
+
+  @include responsive-background((85% / 475 * 100), './../img/logo.png')
+  &:hover
+    @extend %noneBg
+
+/* END BRAND */
+
+/* START NAVIGATION */
+.navigation
+  @extend %noneBg
+  @extend %zeroBorders
+  
+
+.navigation__openMenuButton 
+
+
+
+.navigation__closeMenuButton 
+    
+.navbarCollaps
+    @include breakpoint($xs)
+        margin-top: 1.5em
+
+.navList 
+    // @extend %fullWidth
+    // @extend %zeroOpacity
+    // @extend %fixed
+    // @extend %zeroLeft
+    // @extend %zeroTop
+    // @extend %fullHeight
+    // transition: opacity 1.5s, width 1s 
+    // width: 0
+    // background-color: $white
+    // flex-direction: column
+    // align-items: space-between
+    // z-index: 10
+    // padding-top: 35vh
+    // @extend %text-center
+    // @extend %fs-21
+
+/* END NAV ITEMS */
+
+/* START NAV ITEMS */
+.navItem 
+  @extend %defaultTopMargin
+  &.active .navItem__refer 
+    background-color: $blue $i
+     
+  
+ 
+
+.navItem__refer 
+  &:hover 
+      background-color: $baseHoverLinkBackgroundColor
+  @include breakpoint($sm) 
+     
+  
+  @include breakpoint(max-width 992px) 
+    
+  
+  @include breakpoint($xs) 
+        text-align: center
+  
+  @include breakpoint($xxs) 
+    
+  
+  &:hover 
+    
+   
+  
+
+/* END NAV ITEMS */
+
