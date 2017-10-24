@@ -4,7 +4,7 @@
   @extend %clearfix
 
 /* START BRAND */
-a.brand.navbar-brand
+.brand.navbar-brand
     padding: 0
     max-width: 370px
     @extend %fullWidth
@@ -14,9 +14,7 @@ a.brand.navbar-brand
 
 
 
-
 .brand__name 
-
   @include responsive-background((85% / 475 * 100), './../img/logo.png')
   &:hover
     @extend %noneBg
@@ -30,7 +28,9 @@ a.brand.navbar-brand
   
 
 .navigation__openMenuButton 
-
+    @include breakpoint($xs)
+        order: 3
+        margin-top: 1em
 
 
 .navigation__closeMenuButton 
@@ -40,21 +40,6 @@ a.brand.navbar-brand
         margin-top: 1.5em
 
 .navList 
-    // @extend %fullWidth
-    // @extend %zeroOpacity
-    // @extend %fixed
-    // @extend %zeroLeft
-    // @extend %zeroTop
-    // @extend %fullHeight
-    // transition: opacity 1.5s, width 1s 
-    // width: 0
-    // background-color: $white
-    // flex-direction: column
-    // align-items: space-between
-    // z-index: 10
-    // padding-top: 35vh
-    // @extend %text-center
-    // @extend %fs-21
 
 /* END NAV ITEMS */
 
@@ -67,24 +52,26 @@ a.brand.navbar-brand
   
  
 
-.navItem__refer 
-  &:hover 
+.navItem__refer
+    @extend %fs-16-sm
+    &:hover 
       background-color: $baseHoverLinkBackgroundColor
-  @include breakpoint($sm) 
+    @include breakpoint($sm) 
+
      
-  
-  @include breakpoint(max-width 992px) 
-    
-  
-  @include breakpoint($xs) 
+
+    @include breakpoint(max-width 992px) 
+
+
+    @include breakpoint($xs) 
         text-align: center
-  
-  @include breakpoint($xxs) 
-    
-  
-  &:hover 
-    
-   
+
+    @include breakpoint($xxs) 
+
+
+    &:hover 
+
+
   
 
 /* END NAV ITEMS */

@@ -1,8 +1,101 @@
-/* START FOOTER	*/
-.footerInfo 
-	min-height: 320px;
+
+
+.footerInfo, .footer
 	@extend %relative
+
+.footerContacts, .footerInfo, .friends
+	@extend %increasedTopPadding
+
+.shares, .footerInfo
+	@extend %relative
+	&:after
+		content: ''
+		@extend %absolute
+		@extend %zeroTop
+		@extend %zeroLeft
+		@extend %fullWidth
+/* START footer	*/
+.footer 
+	z-index: -3
+/* END footer */
+
+/* START footerNav	*/
+.footerNav
+
+.footerNavList
+	@extend %flex
+	@extend %defaultRowFlow
+	@extend %justifyAround
+	@extend %alignCenter
+	padding: 0 2em 2em
+	@include breakpoint($lg)
+		padding-bottom: 2.6em
+	@include breakpoint($xs)
+		padding: 0 0 1em
+	@extend %relative
+	&::after
+		content: ''
+		@extend %absolute
+		@include responsive-background($url: './../img/candles.png')
+		height: 77px;
+		width: 119px
+		right: 2em
+		bottom: 2.1em
+		@include breakpoint($lg)
+			bottom: 2.5em
+		@include breakpoint($xxs)
+			bottom: 1em
+			width: 100px
+			height: 65px
+	background: url('./../img/desk.png') bottom no-repeat
+	background-size: contain
+
+.footerNavItem
+	// @extend %four
+	max-width: 395px
+	&:first-of-type
+		@include breakpoint($sm-less)
+			background: url('./../img/cloud.png') bottom no-repeat
+			background-size: contain
+			padding-bottom: 2.5em
+	&:first-of-type, &:last-child
+		@include breakpoint($xs)
+			background: url('./../img/cloud.png') bottom no-repeat
+			background-size: contain
+			padding-bottom: 2.5em
+	&:nth-child(2)
+		order: -1
+		@include breakpoint($sm)
+			order: 2
+		@include breakpoint($xs)
+			order: 3
+	&:last-child
+		@include breakpoint($sm)
+			order: 3
+.footerNavItemRefer__image
+	@include responsive-background((210% / 380 * 100))
+
+.footerNavItemRefer__image_name
+	&-finskaya
+		background-image: url('./../img/main1.png')
+		
+	&-turkish
+		background-image: url('./../img/main2.png')
+	&-contact
+		background-image: url('./../img/main3.png')
+/* END footerNav	*/
+
+.footerInfo > .container, .navHeader
+		@include breakpoint($xs)
+			display: flex
+			flex-flow: column nowrap
+			justify-content: center
+			align-items: center
+.footerInfo
+	min-height: 320px;
 	background: url('./../img/footer-bg.png') center repeat;
+	z-index: -2
+	padding: 2em 0
 	&:after
 		content: ''
 		@extend %absolute
@@ -11,52 +104,72 @@
 		height: 5px;
 		@extend %fullWidth
 		@include responsive-background($url: './../img/footer-top.png');
+.footerContacts
+	@include breakpoint($xs)
+		max-width: 425px
+		text-align: center
+		padding-top: 0
+.footerContactsItem
+	line-height: 145%
+	@extend %defaultTopMargin
+.footerContactsItem__refer
+	&:hover
+		color: $blue $i
+.footerContactsItem__label
+	@extend %fs-21
 
-	// border-left: 0
-	// border-bottom: 0
-	// border-right: 0
-  
+/* START shares */
+.shares
+	padding: 30px 30px 0 45px
+	min-height: 264px
+	max-width: 350px
+	color: $darkGray
+	@include breakpoint($xs)
+		margin-top: 1em
+	&:after
+	  	@include responsive-background($url: './../img/footer-paper.png')
+	  	@extend %fullHeight
+	  	@extend %negativeIndex
+.shares__title 
+	color: $blue
 
-/* 
-	END FOOTER
-							*/
-/* 
-	START FOOTER CONTACTS 
-										*/
-									
-.footer__paragraph, .footerContacts, .copyright	
+.title
+	@extend %bold
+	@extend %fs-24
+	@extend %increasedTopMargin
+
+.sharesList__item
+	@extend %defaultTopMargin
+	list-style-position: inside
+
+/* END shares */
+
+/* START friends */	
+.friends
+	@include breakpoint($sm-less)
+		margin-top: 1em
+.friends__title
+	@extend %fs-24-xs
+	@include breakpoint($sm-less)
+		text-align: center
+
+.firendsListItem	
+	@extend %clearfix
+	@extend %defaultTopMargin
+.friendImageContainer
+	max-width: 185px
+	@extend %fullWidth
+	@extend %block
+	@include breakpoint($sm-less)
+		float: none $i
+.friendImageContainer__image_name
+	&-dolphin, &-laguna
+		@include responsive-background((51% / 185 * 100))
+
+	&-dolphin
+		background-image: url('./../img/footer-logo2.png')
+	&-laguna
+		background-image: url('./../img/footer-logo1.png')
 
 
-
-.footer__paragraph 
-
-	
-
-.footerContacts 
-
-	
-	
- 
-
-.footerContactsItem 
-
-
-.footerContactsItem__label 
-
-
-
-.footerContactsItem__contact 
-
-
-/* 
-	END FOOTER CONTACTS 
-										*/
-/* 
-	STANRT FOOTER COPYRIGHT 
-											*/					
-.copyright 
-
-.copyright__refer 
-
-// END FOOTER COPYRIGHT 
-											
+/* END friends */

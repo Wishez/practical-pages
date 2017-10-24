@@ -2,4 +2,34 @@
 	transition: transform 0.8s
 	&:hover
 		transform: scale(1.2, 1.2)
+.banner, .greeting__paragraph
+	@extend %defaultTopMargin
+.greeting
+	max-width: 730px
 .main
+	padding: 3.5% 0 5%
+.jumbotron
+	@extend %noneBg
+	padding: 0 $i
+
+.jumbotronTitle
+	@extend %bold
+	@extend %fs-28
+	@include breakpoint($xs)
+		font-size: 5vw
+.jumbotronTitle__refer
+	&:hover
+		color: darken($white, 10%) $i
+.banner
+	@extend %inline-block
+	@extend %fullWidth
+	@extend %largeTopMargin
+	@include breakpoint($xs)
+		margin-top: 1em
+
+.banner__image
+	@extend %defaultBorderRadius
+	@include responsive-background((350% / 960 * 100), './../img/jumbotron.jpg')
+
+.greeting__paragraph
+	@extend %fs-21-sm

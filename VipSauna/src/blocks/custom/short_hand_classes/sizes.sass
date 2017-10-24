@@ -6,7 +6,6 @@
 
 %fs-16 
 	font-size: (16em / $baseSizeFont)	
-
 %fs-18 
 	font-size: $subHeadings
 
@@ -22,6 +21,16 @@
 %fs-28 
 	font-size: $thirdSizeHeading
 
-
 %fs-36 
 	font-size: $thirdSizeHeading	
+
+%fs-16-sm 
+	@include breakpoint($sm)
+		font-size: (16em / $baseSizeFont)	
+
+%fs-21-sm
+	@include breakpoint($sm)
+		font-size: $secondSizeHeading
+%fs-24-xs
+	@include breakpoint($xs)
+		font-size: $secondSizeHeading
