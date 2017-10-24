@@ -2,7 +2,7 @@ header.header
 	.container
 		nav.navigation.navbar.navbar-default(role="navigation", aria-labelledby="headerNav")
 			.container
-				span.sr-only#headerNav The header's navigation
+				span.sr-only#headerNav The header"s navigation
 				.navbar-header.navHeader.col-lg-4.col-sm-12
 					button.navigation__openMenuButton.navbar-toggle#toggle( 
 						type="button",  
@@ -13,29 +13,29 @@ header.header
 						span.icon-bar
 						span.icon-bar
 						span.icon-bar
-					a.brand.navbar-brand.visible-block.center-block.zoom(href= homeUrl, rel='up') 
+					a.brand.navbar-brand.visible-block.center-block.zoom(href= homeUrl, rel="up") 
 						figure.brand__name
 				.navbarCollaps.collapse.navbar-collapse.col-lg-8#navbar_collapse
 					ul.nav.navbar-nav.navList
-						if active == 'home'
+						if active == "home"
 							li.navItem.active
 								a.navItem__refer(href= homeUrl) Главная
 						else
 							li.navItem
 								a.navItem__refer(href= homeUrl) Главная
-						if active == 'turkish'
+						if active == "turkish"
 							li.navItem.active
 								a.navItem__refer(href= turkishUrl) Турецкий хамам
 						else
 							li.navItem
 								a.navItem__refer(href= turkishUrl) Турецкий хамам
-						if active == 'finskaya'
+						if active == "finskaya"
 							li.navItem.active
 								a.navItem__refer(href= finskayaUrl) Финская парная
 						else
 							li.navItem
 								a.navItem__refer(href= finskayaUrl) Финская парная
-						if active == 'newHall'
+						if active == "newHall"
 							li.navItem.active
 								a.navItem__refer(href= newHallUrl) 
 									span New! 
@@ -45,9 +45,9 @@ header.header
 								a.navItem__refer(href= newHallUrl) 
 									span New! 
 									| Новый зал!
-						if active == 'contact'
+						if active == "contact"
 							li.navItem.active
-								a.navItem__refer(href= contactUrl, rel='contact') Контакты
+								a.navItem__refer(href= contactUrl, rel="contact") Контакты
 						else
 							li.navItem
-								a.navItem__refer(href= contactUrl, rel='contact') Контакты
+								a.navItem__refer(href= contactUrl, rel="contact") Контакты

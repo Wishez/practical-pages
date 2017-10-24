@@ -1,5 +1,6 @@
 import lozad from 'lozad';
-import Zooming from 'zooming'
+// import Zooming from 'zooming'
+
 
 $(function() {
   $(document).on('click', '.not-follow', openUrlInNewWindow);
@@ -8,11 +9,32 @@ $(function() {
        $("#navbar_collapse").collapse('hide');
   });
   // Zoom
-  const zooming = new Zooming({
-    bgColor: '#212121'
+  // const zooming = new Zooming({
+  //   bgColor: '#212121'
+  // });
+  $('.photosList').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+      verticalFit: true
+    },
+    gallery: {
+      enabled: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300, // don't foget to change the duration also in CSS
+      opener: function(element) {
+        return element.find('img');
+      }
+    }
+    
   });
 
-  zooming.listen('.photoContainer__photo');
+  // zooming.listen('.photoContainer__photo');
 
   function openUrlInNewWindow(e) {
     e.preventDefault();

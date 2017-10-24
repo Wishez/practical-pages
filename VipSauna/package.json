@@ -88,6 +88,7 @@
     "js-cookie": "^2.1.4",
     "jshint": "^2.9.5",
     "lozad": "^1.0.8",
+    "magnific-popup": "^1.1.0",
     "rimraf": "^2.5.4",
     "superagent": "^3.5.2",
     "susy": "^2.2.12",

@@ -3,7 +3,7 @@ h1.mainTitle.text-center= saunaName
 h2.saunaTitle.saunaTitle_big Финская сауна + Турецкий хамам + Бильярд!
 section.schedule.col-lg-8
 	if active == 'newHall'
-		h2.schedule__title.saunaTitle Будние дни с ПН по ЧТ
+		h2.schedule__title.saunaTitle.col-lg-12 Будние дни с ПН по ЧТ
 	ul.list-unstyled.daysList
 		li.daysList__day с 9:00 до 17:00 &mdash; 500 руб.\час
 		li.daysList__day с 17:00 до 09:00 – 1000 руб.\час
@@ -24,8 +24,8 @@ section.services.col-lg-4
 <!-- begin photos -->
 section.photos
 	h2.photos__title.blueContainer.text-center Фотографии
-	ul.photosList.list-unstyled
+	.photosList
 		each photoUrl in photosList
-			li.photoContainer
+			a.photoContainer(href= bp + photoUrl)
 				img.photoContainer__photo(data-src= bp + photoUrl, alt='Апартаменты')
 <!-- end photos -->

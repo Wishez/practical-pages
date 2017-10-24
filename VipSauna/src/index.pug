@@ -1,8 +1,15 @@
-- var contactUrl = '/contact.html'
-- var newHallUrl = '/new-zal.html'
-- var homeUrl = '/'
-- var finskayaUrl = '/finskaya.html'
-- var turkishUrl = '/turkish.html'
+| {% load static %}
+
+- var contactUrl = "{% url 'contact' %}"
+- var newHallUrl = "{% url 'new-zal' %}"
+- var homeUrl = "{% url 'home' %}"
+- var finskayaUrl = "{% url 'finskaya' %}"
+- var turkishUrl = "{% url 'turkish' %}"
+//- var contactUrl = '/contact.html'
+//- var newHallUrl = './new-zal.html'
+//- var homeUrl = '/'
+//- var finskayaUrl = '/finskaya.html'
+//- var turkishUrl = '/turkish.html'
 - var active = 'home'
 doctype
 html.no-js(lang="ru", manifest="app.manifest")
@@ -14,7 +21,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     )
     meta(
       name="description",
-      content="Финская парная, Турецкий хамам с хорошими залами, в городе Екатеринбурге, по адресу г. Екатеринбург ул.Первомайская, 77"
+      content="Сауна Девятка Екатеринбург, ул.Первомайская, 77"
     )
     meta(
       http-equive="X-UA-Compatible",
@@ -23,8 +30,10 @@ html.no-js(lang="ru", manifest="app.manifest")
     link(
         rel="shortcut icon", 
         type="image/x-icon", 
-        href="/img/favicon.ico"
+        href="{% static '/public/img/favicon.ico' %}"
     )
+    link(href="/cache/widgetkit/widgetkit-5dcf5de3.css", rel="stylesheet", type="text/css")
+    script(src="/cache/widgetkit/widgetkit-95847c13.js", type="text/javascript")
     title Вип-сауна
     include ./blocks/templates/_curtainStyles.pug
   body
@@ -33,16 +42,16 @@ html.no-js(lang="ru", manifest="app.manifest")
     include ./blocks/templates/_main.pug
     include ./blocks/templates/_footer.pug
       
-    script(async, src="/js/main.js")
+    script(async, src="./../static/public/js/main.js")
     link(
       rel="stylesheet",
-      href="/css/main.css",
+      href="./../static/public/css/main.css",
       media='none',
       onload='if (media == "none") media = "all"'
     ) 
     link(
       rel="stylesheet",
-      href="/css/ie-10-up.css",
+      href="./../static/public/css/ie-10-up.css",
       media='none',
       onload='if (media == "none") media = "all"'
     ) 
@@ -50,5 +59,4 @@ html.no-js(lang="ru", manifest="app.manifest")
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
     <![endif]-->
-    <!--[if IE]><link type="text/css" rel="stylesheet" href="public/css/ie9.css" lazyload="1" /><![endif]-->
-
+    <!--[if IE]><link type="text/css" rel="stylesheet" href="./../static/public/css/ie9.css" lazyload="1" /><![endif]-->

@@ -6,7 +6,8 @@
 
 import 'jquery';
 import 'bootstrap-sass';
-import 'babel-polyfill';
+import './jquery.magnific-popup.js';
+// import 'babel-polyfill';
 // import 'whatwg-fetch';
 // import 'semantic-ui-sass';
 // import './modernizr.min.js';

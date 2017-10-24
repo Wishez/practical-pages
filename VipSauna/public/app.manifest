@@ -26,6 +26,8 @@ fonts/slick.eot
 fonts/slick.svg
 fonts/slick.ttf
 fonts/slick.woff
+img/bg-palm2-.jpg
+img/bg-palm2-1.jpg
 img/bg-palm2.jpg
 img/candles.png
 img/cloud.png
@@ -98,15 +100,7 @@ img/fp/bassein1.jpg
 img/fp/room1.jpg
 img/fp/room2.jpg
 img/fp/sauna1.jpg
-img/fp/Thumbs.db
 img/fp/tv1.jpg
-img/th/bassein1.jpg
-img/th/bassein2.jpg
-img/th/dining1.jpg
-img/th/room1.jpg
-img/th/room2.jpg
-img/th/sauna1.jpg
-img/th/tv1.jpg
 img/nh/bassein1%20(1).jpg
 img/nh/bassein1.jpg
 img/nh/bassein2.jpg
@@ -122,7 +116,13 @@ img/nh/sauna1%20(1).jpg
 img/nh/sauna1.jpg
 img/nh/sauna2.jpg
 img/nh/sauna3.jpg
-img/nh/Thumbs.db
+img/th/bassein1.jpg
+img/th/bassein2.jpg
+img/th/dining1.jpg
+img/th/room1.jpg
+img/th/room2.jpg
+img/th/sauna1.jpg
+img/th/tv1.jpg
 
 NETWORK:
 *
@@ -130,4 +130,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: ebde9f29fa92f60abd326d56c0e5662f7a2e44c8a0c9fd511c047e0c3bdf1294
+# hash: 834087a11245bc9fce56d214845ee8df0c7e9152557c4f3caebbbf684c8b42d9

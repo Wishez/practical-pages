@@ -49,7 +49,8 @@ scssPathes = [
   'node_modules/bootstrap-sass/assets/stylesheets',
   'node_modules/font-awesome-sass/assets/stylesheets/',
   'node_modules/semantic-ui-sass/',
-  'node_modules/slick-carousel/slick'
+  'node_modules/slick-carousel/slick',
+  'node_modules/magnific-popup/src/css/'
 ];
 
 

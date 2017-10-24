@@ -44,7 +44,7 @@
 	@extend %darkBlueBg
 	padding: 1em 0
 .contactInfoPhones, .contactInfoAddress, .aboutSauna__paragraph, 
-.photoContainer, .daysList__day, .daysList, .servicesList
+.photoContainer, .daysList__day, .daysList, .servicesList, .schedule__warn
 	@extend %defaultTopMargin
 .mapContainer, .banner, .photosList, .saunaTitle
 	@extend %largeTopMargin
@@ -63,6 +63,11 @@
 	cursor: pointer
 	@include breakpoint($xs)
 		justify-content: center
+.mfp-image-holder .mfp-content
+	transition: transform 0.8s
+	transform: scale(2)
+	@include breakpoint($xs)
+		transform: scale(1.3)
 .photoContainer
 	@include breakpoint($xs)
 		@include gutters(1em)
