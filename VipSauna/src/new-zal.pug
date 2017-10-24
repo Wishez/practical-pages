@@ -1,3 +1,14 @@
+- var contactUrl = '/contact.html'
+- var newHallUrl = './new-zal.html'
+- var homeUrl = '/'
+- var finskayaUrl = '/finskaya.html'
+- var turkishUrl = '/turkish.html'
+- var active = 'newHall'
+- var  saunaName = 'NEW! Новый зал!'
+- var saunaServices = ['Турецкий хамам', 'Финская парная', 'Бассейн 2х2, глубина 1,8 м', '2 комнаты отдыха', 'Кальян', 'Нарды', 'Бар', 'Караоке', 'Парковка']
+//- Base path
+- var bp = './img/nh/'
+- var photosList = ['bassein1.jpg', 'bassein1.jpg', 'bassein1.jpg', 'billiard1.jpg', 'billiard2.jpg', 'dining1.jpg', 'dining2.jpg', 'dush1.jpg', 'room1.jpg', 'sauna1.jpg', 'sauna2.jpg']
 doctype
 html.no-js(lang="ru", manifest="app.manifest")
   head
@@ -8,7 +19,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     )
     meta(
       name="description",
-      content=""
+      content="Новый зал в вип-сауне, находящийся в Екатеринбурге, включающий в себя Финскую парную, Турецкий хамам и просторные бассейны."
     )
     meta(
       http-equive="X-UA-Compatible",
@@ -20,7 +31,9 @@ html.no-js(lang="ru", manifest="app.manifest")
         href="/img/favicon.ico"
     )
     title Главная
+    include ./blocks/templates/_curtainStyles.pug
   body
+    include ./blocks/templates/_curtain.pug
     include ./blocks/templates/_header.pug
     include ./blocks/templates/_newHall.pug
     include ./blocks/templates/_footer.pug

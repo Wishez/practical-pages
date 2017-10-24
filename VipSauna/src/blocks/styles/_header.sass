@@ -3,6 +3,7 @@
   margin-top: 3%
   @extend %clearfix
 
+
 /* START BRAND */
 .brand.navbar-brand
     padding: 0
@@ -40,7 +41,8 @@
         margin-top: 1.5em
 
 .navList 
-
+.navbar-default .navbar-toggle .icon-bar
+    @extend %whiteBg
 /* END NAV ITEMS */
 
 /* START NAV ITEMS */
@@ -53,7 +55,7 @@
  
 
 .navItem__refer
-    @extend %fs-16-sm
+    @extend %fs-16
     &:hover 
       background-color: $baseHoverLinkBackgroundColor
     @include breakpoint($sm) 

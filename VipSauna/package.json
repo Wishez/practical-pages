@@ -87,12 +87,14 @@
     "jquery.easing": "^1.4.1",
     "js-cookie": "^2.1.4",
     "jshint": "^2.9.5",
+    "lozad": "^1.0.8",
     "rimraf": "^2.5.4",
     "superagent": "^3.5.2",
     "susy": "^2.2.12",
     "symbol-observable": "^1.0.4",
     "watchify": "^3.9.0",
     "waypoints": "^4.0.1",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "zooming": "^1.2.5"
   }
 }

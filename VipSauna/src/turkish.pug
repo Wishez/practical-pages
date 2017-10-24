@@ -1,3 +1,14 @@
+- var contactUrl = '/contact.html'
+- var newHallUrl = './new-zal.html'
+- var homeUrl = '/'
+- var finskayaUrl = '/finskaya.html'
+- var turkishUrl = '/turkish.html'
+- var active = 'turkish'
+- var  saunaName = 'Сауна Девятка: Турецкий хамам'
+- var saunaServices = ['Турецкий хамам', 'Бассейн 2х2, глубина 1,8 м', '2 комнаты отдыха', 'Кальян', 'Нарды', 'Бар', 'Караоке', 'Парковка']
+//- Base path
+- var bp = './img/th/'
+- var photosList = ['bassein1.jpg', 'bassein2.jpg', 'bassein2.jpg', 'dining1.jpg' , 'room1.jpg', 'room2.jpg', 'sauna1.jpg', 'tv1.jpg']
 doctype
 html.no-js(lang="ru", manifest="app.manifest")
   head
@@ -20,7 +31,9 @@ html.no-js(lang="ru", manifest="app.manifest")
         href="/img/favicon.ico"
     )
     title Главная
+    include ./blocks/templates/_curtainStyles.pug
   body
+    include ./blocks/templates/_curtain.pug
     include ./blocks/templates/_header.pug
     include ./blocks/templates/_turkish.pug
     include ./blocks/templates/_footer.pug

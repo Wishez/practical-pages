@@ -2,6 +2,14 @@
 	transition: transform 0.8s
 	&:hover
 		transform: scale(1.2, 1.2)
+.fadeIn
+	transition: opacity 1s
+	@extend %fullOpacity
+.hightlight
+	&:hover
+		color: darken($white, 10%) $i	
+
+/* Start main page */
 .banner, .greeting__paragraph
 	@extend %defaultTopMargin
 .greeting
@@ -12,24 +20,68 @@
 	@extend %noneBg
 	padding: 0 $i
 
-.jumbotronTitle
+.mainTitle
 	@extend %bold
 	@extend %fs-28
 	@include breakpoint($xs)
 		font-size: 5vw
-.jumbotronTitle__refer
-	&:hover
-		color: darken($white, 10%) $i
+
 .banner
 	@extend %inline-block
 	@extend %fullWidth
-	@extend %largeTopMargin
 	@include breakpoint($xs)
 		margin-top: 1em
 
 .banner__image
-	@extend %defaultBorderRadius
 	@include responsive-background((350% / 960 * 100), './../img/jumbotron.jpg')
 
 .greeting__paragraph
 	@extend %fs-21-sm
+
+/* END main page */
+/* START contact */
+.blueContainer
+	@extend %darkBlueBg
+	padding: 1em 0
+.contactInfoPhones, .contactInfoAddress, .aboutSauna__paragraph, 
+.photoContainer, .daysList__day, .daysList, .servicesList
+	@extend %defaultTopMargin
+.mapContainer, .banner, .photosList, .saunaTitle
+	@extend %largeTopMargin
+
+.mapContainer__map,
+.banner__image, 
+.contactInfoPhones, 
+.contactInfoAddress
+	@extend %defaultBorderRadius
+
+.photosList
+	@extend %flex
+	@extend %defaultRowFlow
+	@extend %justifyBetween
+	@extend %alignCenter
+	cursor: pointer
+	@include breakpoint($xs)
+		justify-content: center
+.photoContainer
+	@include breakpoint($xs)
+		@include gutters(1em)
+.photoContainer__photo 
+	border: 4px solid $white
+	@extend %defaultBorderRadius
+	@extend %zeroOpacity
+	min-height: 205px
+
+.saunaTitle 
+	color: $darkBlue
+	@extend %fs-24
+	@extend %bold
+
+.servicesList__service 
+	@extend %refusedTopMargin
+	list-style: square
+	list-style-position: inside
+
+.photos, .aboutSauna 
+	@extend %bigestTopMargin
+/* END contact */

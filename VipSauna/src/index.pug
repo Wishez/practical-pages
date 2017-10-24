@@ -1,3 +1,9 @@
+- var contactUrl = '/contact.html'
+- var newHallUrl = '/new-zal.html'
+- var homeUrl = '/'
+- var finskayaUrl = '/finskaya.html'
+- var turkishUrl = '/turkish.html'
+- var active = 'home'
 doctype
 html.no-js(lang="ru", manifest="app.manifest")
   head
@@ -8,7 +14,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     )
     meta(
       name="description",
-      content=""
+      content="Финская парная, Турецкий хамам с хорошими залами, в городе Екатеринбурге, по адресу г. Екатеринбург ул.Первомайская, 77"
     )
     meta(
       http-equive="X-UA-Compatible",
@@ -19,8 +25,10 @@ html.no-js(lang="ru", manifest="app.manifest")
         type="image/x-icon", 
         href="/img/favicon.ico"
     )
-    title Главная
+    title Вип-сауна
+    include ./blocks/templates/_curtainStyles.pug
   body
+    include ./blocks/templates/_curtain.pug
     include ./blocks/templates/_header.pug
     include ./blocks/templates/_main.pug
     include ./blocks/templates/_footer.pug
