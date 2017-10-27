@@ -26,6 +26,7 @@ fonts/slick.eot
 fonts/slick.svg
 fonts/slick.ttf
 fonts/slick.woff
+img/Akkaunt.psd
 img/bg-palm2-.jpg
 img/bg-palm2-1.jpg
 img/bg-palm2.jpg
@@ -130,4 +131,4 @@ NETWORK:
 SETTINGS:
 prefer-online
 
-# hash: 834087a11245bc9fce56d214845ee8df0c7e9152557c4f3caebbbf684c8b42d9
+# hash: 806de9969073006067dba0a7d34ecb6bc4ddd5ad9f2412b6cb670c65b8f9182e

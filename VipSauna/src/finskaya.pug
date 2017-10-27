@@ -5,20 +5,15 @@
 - var homeUrl = "{% url 'home' %}"
 - var finskayaUrl = "{% url 'finskaya' %}"
 - var turkishUrl = "{% url 'turkish' %}"
-//- var contactUrl = '/contact.html'
-//- var newHallUrl = './new-zal.html'
-//- var homeUrl = '/'
-//- var finskayaUrl = '/finskaya.html'
-//- var turkishUrl = '/turkish.html'
 
 - var active = 'finskaya'
 - var  saunaName = 'Сауна Девятка: Финская парная'
 - var saunaServices = ['Финская парная', 'Бассейн 2х2, глубина 1,8 м', '2 комнаты отдыха', 'Кальян', 'Нарды', 'Бар', 'Караоке', 'Парковка']
 //- Base path
-- var bp = './../../static/public/img/fp/'
+- var bp = '../../../static/public/img/fp/'
 - var photosList = ['bassein1.jpg', 'room1.jpg', 'room2.jpg', 'sauna1.jpg', 'tv1.jpg']
 doctype
-html.no-js(lang="ru", manifest="app.manifest")
+html.no-js(lang="ru")
   head
     meta(charset="UTF-8")
     meta(
@@ -27,7 +22,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     )
     meta(
       name="description",
-      content="Сауна Девятка Екатеринбург, ул.Первомайская, 77"
+      content="Адаптивная Кроссбраузерная Вёрстка Филипп Журавлёв"
     )
     meta(
       http-equive="X-UA-Compatible",
@@ -36,7 +31,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     link(
         rel="shortcut icon", 
         type="image/x-icon", 
-        href="/img/favicon.ico"
+        href="./../../static/public/img/favicon.ico"
     )
     title Финская парная
     include ./blocks/templates/_curtainStyles.pug

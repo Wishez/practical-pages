@@ -6,14 +6,9 @@
 - var finskayaUrl = "{% url 'finskaya' %}"
 - var turkishUrl = "{% url 'turkish' %}"
 
-//- var contactUrl = '/contact.html'
-//- var newHallUrl = './new-zal.html'
-//- var homeUrl = '/'
-//- var finskayaUrl = '/finskaya.html'
-//- var turkishUrl = '/turkish.html'
 - var active = 'contact'
 doctype
-html.no-js(lang="ru", manifest="app.manifest")
+html.no-js(lang="ru")
   head
     meta(charset="UTF-8")
     meta(
@@ -22,7 +17,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     )
     meta(
       name="description",
-      content="Сауна Девятка Екатеринбург, ул.Первомайская, 77"
+      content="Адаптивная Кроссбраузерная Вёрстка Филипп Журавлёв"
     )
     meta(
       http-equive="X-UA-Compatible",
@@ -31,7 +26,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     link(
         rel="shortcut icon", 
         type="image/x-icon", 
-        href="/img/favicon.ico"
+        href="./../../static/public/img/favicon.ico"
     )
     title Контакты
     include ./blocks/templates/_curtainStyles.pug

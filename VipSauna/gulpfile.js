@@ -160,22 +160,23 @@ gulp.task('styles', () => {
     .pipe(gulp.dest(settings.build + '/css'));
 });
 
-
 /* ----------------- */
 /* HTML
 /* ----------------- */
 
 gulp.task('html', () => {
   return gulp.src(settings.src + '/*.pug')
-    .pipe(pug())
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(gulp.dest(templatesPath));
 });
 
 
 /* ----------------- */
+
 /* FONTS
 /* ----------------- */
-
 gulp.task('fonts', () => {
   return gulp.src(settings.src + '/fonts/**/*.*')
     .pipe(gulp.dest(settings.build + '/fonts'));

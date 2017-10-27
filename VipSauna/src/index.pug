@@ -5,14 +5,9 @@
 - var homeUrl = "{% url 'home' %}"
 - var finskayaUrl = "{% url 'finskaya' %}"
 - var turkishUrl = "{% url 'turkish' %}"
-//- var contactUrl = '/contact.html'
-//- var newHallUrl = './new-zal.html'
-//- var homeUrl = '/'
-//- var finskayaUrl = '/finskaya.html'
-//- var turkishUrl = '/turkish.html'
-- var active = 'home'
+
 doctype
-html.no-js(lang="ru", manifest="app.manifest")
+html.no-js(lang="ru")
   head
     meta(charset="UTF-8")
     meta(
@@ -21,7 +16,7 @@ html.no-js(lang="ru", manifest="app.manifest")
     )
     meta(
       name="description",
-      content="Сауна Девятка Екатеринбург, ул.Первомайская, 77"
+      content="Адаптивная Кроссбраузерная Вёрстка Филипп Журавлёв"
     )
     meta(
       http-equive="X-UA-Compatible",
@@ -32,8 +27,7 @@ html.no-js(lang="ru", manifest="app.manifest")
         type="image/x-icon", 
         href="{% static '/public/img/favicon.ico' %}"
     )
-    link(href="/cache/widgetkit/widgetkit-5dcf5de3.css", rel="stylesheet", type="text/css")
-    script(src="/cache/widgetkit/widgetkit-95847c13.js", type="text/javascript")
+  
     title Вип-сауна
     include ./blocks/templates/_curtainStyles.pug
   body

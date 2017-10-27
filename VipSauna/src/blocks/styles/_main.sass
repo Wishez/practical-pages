@@ -12,7 +12,7 @@
 /* Start main page */
 .banner, .greeting__paragraph
 	@extend %defaultTopMargin
-.greeting
+.greeting, .aboutSauna 
 	max-width: 730px
 .main
 	padding: 3.5% 0 5%
@@ -41,10 +41,11 @@
 /* END main page */
 /* START contact */
 .blueContainer
-	@extend %darkBlueBg
+	background-color: $brown
 	padding: 1em 0
+	@extend %bold
 .contactInfoPhones, .contactInfoAddress, .aboutSauna__paragraph, 
-.photoContainer, .daysList__day, .daysList, .servicesList, .schedule__warn
+.daysList__day, .daysList, .servicesList, .schedule__warn
 	@extend %defaultTopMargin
 .mapContainer, .banner, .photosList, .saunaTitle
 	@extend %largeTopMargin
@@ -68,17 +69,42 @@
 	transform: scale(2)
 	@include breakpoint($xs)
 		transform: scale(1.3)
+
+.photoContainer, .photoContainer__photo 
+	@extend %relative
+	&::after	
+		content: ''
+		@extend %absolute
+		@extend %fullWidth
+		@extend %fullHeight
+
+
+
 .photoContainer
+	@extend %bigestTopMargin
 	@include breakpoint($xs)
 		@include gutters(1em)
+	&::after
+		@extend %negativeIndex
+		@extend %defaultBorderRadius
+		background-color: lighten($darkGray, 10%)
+		box-shadow: 40px 40px 15px $shadow
+		top: -15px
+		left: -15px
 .photoContainer__photo 
-	border: 4px solid $white
+	
+	border: 5px solid $brown
 	@extend %defaultBorderRadius
 	@extend %zeroOpacity
 	min-height: 205px
+	border-color: $brown
+	transition: transform 0.7s, background-color 0.6s
+	&:hover
+		transform: scale(1.02)
+
 
 .saunaTitle 
-	color: $darkBlue
+	color: $brown
 	@extend %fs-24
 	@extend %bold
 

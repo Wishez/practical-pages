@@ -91,19 +91,21 @@
 			flex-flow: column nowrap
 			justify-content: center
 			align-items: center
-.footerInfo
-	min-height: 320px;
+.footerInfo, .header
 	background: url('./../img/footer-bg.png') center repeat;
-	z-index: -2
-	padding: 2em 0
 	&:after
 		content: ''
 		@extend %absolute
-		@extend %zeroTop
 		@extend %zeroLeft
 		height: 5px;
 		@extend %fullWidth
 		@include responsive-background($url: './../img/footer-top.png');
+.footerInfo
+	min-height: 320px;
+	z-index: -2
+	padding: 2em 0
+	&:after
+		@extend %zeroTop
 .footerContacts
 	@include breakpoint($xs)
 		max-width: 425px
