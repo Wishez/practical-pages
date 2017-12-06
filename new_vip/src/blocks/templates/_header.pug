@@ -1,0 +1,29 @@
+header.header
+	.container
+		nav.navigation.navbar.navbar-default(role="navigation")
+			.container
+				.navbar-header.navHeader.col-lg-5.col-md-4.col-sm-12.col-xs-12
+					button#openMenuButton.navigation__openMenuButton.navbar-toggle( 
+						type="button",  
+						data-toggle="collapse",
+						data-target="#navbar_collapse"
+					)
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.brand.navbar-brand(href="#").text-center
+						h1.brandName 
+							span.brandName_beneath.text-uppercase Сауна 
+							br
+							span.brandName_beneath.brandName_big Острова
+				.navbarCollaps.collapse.navbar-collapse#navbar_collapse
+					ul.nav.navbar-nav.navList.col-lg-7.col-md-8.col-sm-12.col-xs-12.text-center
+						li.navItem.navItem_name-home 
+							a.navItem__refer(href="#") Главная
+						li.navItem.navItem_name-services
+							a.navItem__refer(href="#") Услуги
+						li.navItem.navItem_name-prices
+							a.navItem__refer(href="#") Цены
+						li.navItem.navItem_name-contacts
+							a.navItem__refer(href="#") Контакты

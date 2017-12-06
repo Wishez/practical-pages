@@ -1,0 +1,156 @@
+// Header
+.header 
+  padding: 4em 0
+
+  &:after
+    @extend %zeroBottom
+.navbarCollaps
+    @extend %fullWidth-xs
+        
+.navHeader, .brand
+    padding-right: 0 $i
+    @include breakpoint($xs)
+/* AFTER content */
+.brandName, .navItem, .navigation
+    &:after
+        content: ""
+        @extend %absolute
+        @extend %zeroLeft 
+        @extend %fullWidth
+        @extend %negativeIndex1
+        overflow: hidden
+/* START BRAND */
+.brand, .brandName_beneath, .header, .navItem, .brandName, .header 
+    @extend %relative
+.brand
+    @extend %fullWidth
+    top: -40px
+    @include breakpoint($xs)
+        top: -100px
+    
+
+.brandName
+    @extend %centerBlock-sm
+    color: $darkestRed
+    @extend %whiteTextShadow
+    max-width: 420px
+    font-family: $additionalFont
+    line-height: 2em
+    padding-top: 5px   
+    @extend %fs-14-md
+    // @extend %fs-14-sm
+    @extend %fs-16-sm
+    @include breakpoint($lg)
+    @include breakpoint($md)
+        padding-top: 15px   
+
+    @include breakpoint($sm)
+        max-width: 330px
+    @include breakpoint($xxs)
+        font-size: 3.5vw
+
+    &:after
+        top: 5px
+        @include responsive-background((108% / 372 * 100), './../img/brand.png')
+        @include breakpoint($md)
+            top: 16px
+
+.brandName_beneath
+    &:first-of-type
+      @extend %fs-21
+      // top: 15px 
+      @include breakpoint($md)
+            // top: 23px 
+    &:last-of-type
+      font-size: (44.5em / $baseSizeFont)
+      // top: 40px
+/* END BRAND */
+
+/* START NAVIGATION */
+.navigation 
+  background-color: transparent $i
+  border: 0
+  @extend %clearfix
+  &:after
+    @extend %negativeIndex2
+    @include responsive-background((68% / 975 * 100), './../img/header.png')
+    top: 10px
+    @include breakpoint($xxs)
+        top: 5px    
+  
+.navigation__openMenuButton 
+    @extend %index1
+    background-color: #f5e7d7
+    &:focus
+        background-color: $darkestRed $i
+
+.navList 
+  font-family: 'Georgia'
+  font-style: italic
+
+  @extend %flex
+  @extend %defaultRowFlow 
+  align-items: space-between
+  @extend %index5
+  @extend %fs-21
+  @extend %justifyBetween
+  @extend %alignCenter 
+  @include breakpoint($sm)
+    margin-top: 36px
+/* END NAV ITEMS */
+
+/* START NAV ITEMS */
+.navItem 
+  @extend %three
+  @extend %whiteTextShadow
+  @extend %fullWidth-xxs
+  &:after
+    @include responsive-background($url: './../img/nav_sprite.png')
+    top: -20px
+    @include breakpoint($sm)
+        top: -10px  
+    @include breakpoint($xs)
+        content: none
+        
+  &.active .navItem__refer 
+
+@each $name, $width, $height,  $y, $y-md, $y-sm, $rotate in ("home", 128, 88%, 0, 0, 0, -5deg), ("services", 126, 85%, -211px, -198px, -225px, 2deg), ("prices", 126, 82%, -108px, -106px, -115px, -2deg), ("contacts", 124, 81%, -313px, -293px, -224px, 0)
+  .navItem_name-#{$name}
+    & .navItem__refer
+        transform: rotate(#{$rotate})
+    &:after
+        $padding-bottom: ($height / $width * 100)
+        background-position: -0 #{$y} 
+        padding-bottom: #{$padding-bottom}
+        @include breakpoint($md)
+            background-position: -0 #{$y-md} 
+        @include breakpoint($sm)
+            background-position: -0 #{$y-sm} 
+
+    
+
+.navItem__refer 
+  color: $green $i
+  padding-left:  0 $i
+  padding-right: 0 $i
+  @extend %refusedTopMargin-sm
+  @include breakpoint($sm)
+        margin-top: 0.7em
+     
+  
+  @include breakpoint(max-width 992px) 
+    
+  
+  @include breakpoint($xs) 
+    
+  
+  @include breakpoint($xxs) 
+    
+  
+  &:hover 
+    
+   
+  
+
+/* END NAV ITEMS */
+
