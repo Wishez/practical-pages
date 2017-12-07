@@ -48,12 +48,21 @@
    margin-right: auto $i
    display: block $i
 
-%centerBlock-sm
-	@include breakpoint($sm)
-		display: block $i
+%defaultTopMargin-xs
+	@include breakpoint($xs)
+		margin-top: 1em
+%centered-mdLess
+	@include breakpoint($md-less)
 		margin-left: auto $i
 		margin-right: auto $i
-		
+%centered-sm
+	@include breakpoint($sm)
+		margin-left: auto $i
+		margin-right: auto $i
+%centered-xs
+	@include breakpoint($xs)
+		margin-left: auto $i
+		margin-right: auto $i		
 %refusedTopMargin-sm
 	@include breakpoint($sm)
 		margin-top: 0.5em
