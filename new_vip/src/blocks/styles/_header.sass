@@ -1,7 +1,8 @@
 // Header
 .header 
   padding: 4em 0
-
+  // @extend %absolute
+  @extend %fullWidth
   &:after
     @extend %zeroBottom
         
@@ -27,7 +28,7 @@
     
 
 .brandName
-    @extend %centerBlock-sm
+    @extend %centered-sm
     color: $darkestRed
     @extend %whiteTextShadow
     max-width: 420px
