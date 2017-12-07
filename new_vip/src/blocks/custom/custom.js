@@ -5,7 +5,7 @@ $(window).resize(() => {
 $(function() {
   $(document).on('click', '.not-follow', openUrlInNewWindow);
   $('#openMenuButton').on('blur', function() {
-    // $('#navbar_collapse').collapse('hide');
+    $('#navbar_collapse').collapse('hide');
   });
   function openUrlInNewWindow(e) {
     e.preventDefault();
