@@ -25,7 +25,8 @@ const gulp = require('gulp'),
       envify = require('envify'),
       manifest = require('gulp-manifest'),
       watchify = require('watchify'),
-      jshint = require('gulp-jshint');
+      jshint = require('gulp-jshint'),
+      plumber = require('gulp-plumber');
 
 
 
@@ -165,6 +166,7 @@ gulp.task('styles', () => {
 
 gulp.task('html', () => {
   return gulp.src(settings.src + '/*.pug')
+    .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest(templatesPath));
 });
