@@ -4,10 +4,6 @@
 
   &:after
     @extend %zeroBottom
-.navbarCollaps
-    @extend %fullWidth-xs
-    @include breakpoint($xxs)
-        margin-left: 0 $i
         
 .navHeader, .brand
     padding-right: 0 $i
@@ -16,13 +12,18 @@
 .brandName, .navItem, .navigation
     @include set_generate_element('after', 'absolute')
 /* START BRAND */
-.brand, .brandName_beneath, .header, .navItem, .brandName, .header 
+.brand, .brandName_beneath, .header, .navItem, .brandName, .header, .navigation 
     @extend %relative
 .brand
     @extend %fullWidth
     top: -40px
     @include breakpoint($xs)
         top: -100px
+    @include breakpoint($xxs)
+        top: -95px
+        left: -25px
+    @include breakpoint($xxs-iphone)
+        top: -90px
     
 
 .brandName
@@ -34,7 +35,6 @@
     line-height: 2em
     padding-top: 5px   
     @extend %fs-14-md
-    // @extend %fs-14-sm
     @extend %fs-16-sm
     @include breakpoint($lg)
     @include breakpoint($md)
@@ -43,7 +43,7 @@
     @include breakpoint($sm)
         max-width: 330px
     @include breakpoint($xxs)
-        font-size: 3.5vw
+        font-size: 4.1vw
 
     &:after
         top: 5px
@@ -54,19 +54,19 @@
 .brandName_beneath
     &:first-of-type
       @extend %fs-21
-      // top: 15px 
+
       @include breakpoint($md)
-            // top: 23px 
+            
     &:last-of-type
       font-size: (44.5em / $baseSizeFont)
-      // top: 40px
 /* END BRAND */
+
 
 /* START NAVIGATION */
 .navigation 
   background-color: transparent $i
   border: 0
-  @extend %clearfix
+  @extend %relative
   &:after
     @extend %negativeIndex2
     @include responsive-background((68% / 975 * 100), './../img/header.png')
@@ -80,7 +80,15 @@
     &:focus
         background-color: $darkestRed $i
     @include breakpoint($xxs)
-        top:  45px
+        top:  -12px
+        left: 20px
+        margin-right: 0 $i
+.navbarCollaps
+    @extend %fullWidth-xs
+    @extend %relative-xxs
+    @include breakpoint($xxs)
+        top: -27px
+        margin-left: 0 $i
 .navList 
   font-family: 'Georgia'
   font-style: italic
@@ -137,7 +145,8 @@
   @extend %refusedTopMargin-sm
   @include breakpoint($sm)
         margin-top: 0.7em
-     
+  @include breakpoint($xs)
+      color: $darkestRed $i
   
   @include breakpoint(max-width 992px) 
     
