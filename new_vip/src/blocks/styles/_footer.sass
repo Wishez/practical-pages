@@ -3,7 +3,27 @@
   @extend %absolute
   @extend %fullWidth
   // @extend %zeroBottom
-  
+
+.footer > .container
+	@extend %relative
+.presentation
+	@extend %alignCenter
+	@extend %flex
+	@extend %defaultRowFlow
+	@extend %justifyAround
+	// @include set_generate_element()
+	// &:after
+	// 	bottom: 100%	
+	// 	@include responsive-background((222% / 919 * 100), './../img/floor.png')
+	// &:before
+	// 	bottom: 100%	
+	// 	@include responsive-background((300% / 500 * 100), './../img/pretty_woman.png')
+.figure_name-pretty_woman, .figure_name-floor	
+	display: none	
+.figure_name-pretty_woman
+	right: 10%
+	@extend %index1
+
 .aboutUs, .footerContactsItem__label
 	color: $darkestRed
 .title
@@ -22,15 +42,13 @@
 
 
 .footer__paragraph 
-
-
 .footerContactsList, .copyright
 	padding-right: 2em
 .footerContactsList 
 	// @extend %largeTopMargin
 	@extend %defaultTopMargin
-	@extend %halfWidth-md
-	@extend %halfWidth-xs
+	@extend %halfWidth-mdLess
+	
 	@include breakpoint($xxs)
 		text-align: center	
 .footerContactsItem__label
@@ -69,8 +87,8 @@
 	@extend %fullWidth-xxs
 .aboutUs
 	@extend %centered-mdLess
-	padding: 2em 2em 2.5em
 	@extend %beneathShadow
+	padding: 2em 2em 2.5em
 	border 3px solid #fff
 	@extend %whiteBg
 	top: 95px
@@ -83,11 +101,14 @@
 
 .figure_name-phone
 	min-height: 92px
+	// margin-top: 1em
 	@include breakpoint($md-less)
 		max-width: 180px
-	@include breakpoint($xxs)
-		top: 25px
 
+		
+	@include breakpoint($xs)
+		margin-left: 5em
+		
 	@include breakpoint($xxs)
 		float:none
 .figure_name-basket
