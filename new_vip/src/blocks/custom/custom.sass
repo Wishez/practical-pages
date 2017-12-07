@@ -8,6 +8,32 @@ $i: !important
 @import './config/animation.sass'
 @import './config/flex.sass'
 
+@import './short_hand_classes/transitions.sass'
+@import './short_hand_classes/margins.sass'
+@import './short_hand_classes/borders.sass'
+@import './short_hand_classes/backgrounds.sass'
+@import './short_hand_classes/visible.sass'
+@import './short_hand_classes/aligned.sass'
+@import './short_hand_classes/links.sass'
+@import './short_hand_classes/buttons.sass'
+@import './short_hand_classes/float.sass'
+@import './short_hand_classes/image.sass'
+@import './short_hand_classes/paddings.sass'
+@import './short_hand_classes/form.sass'
+@import './short_hand_classes/shadows.sass'
+@import './short_hand_classes/perspective.sass'
+@import './short_hand_classes/display.sass'
+@import './short_hand_classes/position.sass'
+@import './short_hand_classes/image.sass'
+@import './short_hand_classes/sizes.sass'
+@import './short_hand_classes/proportion.sass'
+@import './short_hand_classes/indexes.sass'
+@import './short_hand_classes/offsets.sass'
+@import './short_hand_classes/cursores.sass'
+@import './short_hand_classes/overflow.sass'
+@import './short_hand_classes/font.sass'
+@import './short_hand_classes/_generate_elements.sass'
+
 // // Blocks
 
 // Elemets
@@ -55,36 +81,35 @@ body
       @include responsive-background($attachment: fixed)
       background-image: $bodyImageBg $i
 
+  // &:after
+  //     max-width: 383px
+  //     @include responsive-background((294% / 383 * 100))
+  //     @extend %zeroTop
+  //     background-image: url("./../img/leaf.png") $i
+  // &:before
 
 
+.figure
+    @extend %fixed
+    @include set_generate_element('after', 'absolute')
+    @extend %fullWidth
+    @extend %negativeIndex2
 
+@each $name, $width, $height, $x, $y in ('leaf', 383, 294%, 0, 0), ('branch', 232, 404%, 17%, 0)
 
-@import './short_hand_classes/transitions.sass'
-@import './short_hand_classes/margins.sass'
-@import './short_hand_classes/borders.sass'
-@import './short_hand_classes/backgrounds.sass'
-@import './short_hand_classes/visible.sass'
-@import './short_hand_classes/aligned.sass'
-@import './short_hand_classes/links.sass'
-@import './short_hand_classes/buttons.sass'
-@import './short_hand_classes/float.sass'
-@import './short_hand_classes/image.sass'
-@import './short_hand_classes/paddings.sass'
-@import './short_hand_classes/form.sass'
-@import './short_hand_classes/shadows.sass'
-@import './short_hand_classes/perspective.sass'
-@import './short_hand_classes/display.sass'
-@import './short_hand_classes/position.sass'
-@import './short_hand_classes/image.sass'
-@import './short_hand_classes/sizes.sass'
-@import './short_hand_classes/proportion.sass'
-@import './short_hand_classes/indexes.sass'
-@import './short_hand_classes/offsets.sass'
-@import './short_hand_classes/cursores.sass'
-@import './short_hand_classes/overflow.sass'
-@import './short_hand_classes/font.sass'
+    .figure_name-#{$name}
+        max-width: #{$width}px
+        left: $x
+        top: $y
+        &:after
+          @include responsive-background(($height / $width * 100), './../img/#{$name}.png')
+.figure_name-branch
+    @include breakpoint($sm-less)
+        left: auto
+        right: 5%
 
-
+    @include breakpoint($xs)
+        max-width: 180px
 h1, h2, h3, h4, h5, h6 
   font-family: inherit
   hyphens: none
