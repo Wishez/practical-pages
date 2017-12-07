@@ -8,31 +8,7 @@ $i: !important
 @import './config/animation.sass'
 @import './config/flex.sass'
 
-@import './short_hand_classes/transitions.sass'
-@import './short_hand_classes/margins.sass'
-@import './short_hand_classes/borders.sass'
-@import './short_hand_classes/backgrounds.sass'
-@import './short_hand_classes/visible.sass'
-@import './short_hand_classes/aligned.sass'
-@import './short_hand_classes/links.sass'
-@import './short_hand_classes/buttons.sass'
-@import './short_hand_classes/float.sass'
-@import './short_hand_classes/image.sass'
-@import './short_hand_classes/paddings.sass'
-@import './short_hand_classes/form.sass'
-@import './short_hand_classes/shadows.sass'
-@import './short_hand_classes/perspective.sass'
-@import './short_hand_classes/display.sass'
-@import './short_hand_classes/position.sass'
-@import './short_hand_classes/image.sass'
-@import './short_hand_classes/sizes.sass'
-@import './short_hand_classes/proportion.sass'
-@import './short_hand_classes/indexes.sass'
-@import './short_hand_classes/offsets.sass'
-@import './short_hand_classes/cursores.sass'
-@import './short_hand_classes/overflow.sass'
-@import './short_hand_classes/font.sass'
-@import './short_hand_classes/_generate_elements.sass'
+
 
 // // Blocks
 
@@ -81,22 +57,44 @@ body
       @include responsive-background($attachment: fixed)
       background-image: $bodyImageBg $i
 
-  // &:after
-  //     max-width: 383px
-  //     @include responsive-background((294% / 383 * 100))
-  //     @extend %zeroTop
-  //     background-image: url("./../img/leaf.png") $i
-  // &:before
-
+@import './short_hand_classes/_generate_elements.sass'
+@import './short_hand_classes/transitions.sass'
+@import './short_hand_classes/margins.sass'
+@import './short_hand_classes/borders.sass'
+@import './short_hand_classes/backgrounds.sass'
+@import './short_hand_classes/visible.sass'
+@import './short_hand_classes/aligned.sass'
+@import './short_hand_classes/links.sass'
+@import './short_hand_classes/buttons.sass'
+@import './short_hand_classes/float.sass'
+@import './short_hand_classes/image.sass'
+@import './short_hand_classes/paddings.sass'
+@import './short_hand_classes/form.sass'
+@import './short_hand_classes/shadows.sass'
+@import './short_hand_classes/perspective.sass'
+@import './short_hand_classes/display.sass'
+@import './short_hand_classes/position.sass'
+@import './short_hand_classes/image.sass'
+@import './short_hand_classes/sizes.sass'
+@import './short_hand_classes/proportion.sass'
+@import './short_hand_classes/indexes.sass'
+@import './short_hand_classes/offsets.sass'
+@import './short_hand_classes/cursores.sass'
+@import './short_hand_classes/overflow.sass'
+@import './short_hand_classes/font.sass'
 
 .figure
-    @extend %fixed
+    @extend %absolute
     @include set_generate_element('after', 'absolute')
     @extend %fullWidth
     @extend %negativeIndex2
-
-@each $name, $width, $height, $x, $y in ('leaf', 383, 294%, 0, 0), ('branch', 232, 404%, 17%, 0)
-
+.figure_relative
+  position: relative
+  z-index: 1
+$figures: ('leaf', 383, 294%, 0, 0), ('branch', 232, 404%, -8%, -64% ), ('phone', 132, 67%, 0, -15px), ('basket', 160 , 150%, 0, 45px), ('bucket', 317 , 201%, 0, 0), ('star', 124, 123%, auto, -35px)
+@each $name, $width, $height, $x, $y in $figures
+    // .figure_name-#{$name}.figure_relative
+        // padding-bottom:  ($height / $width * 100 / 2)
     .figure_name-#{$name}
         max-width: #{$width}px
         left: $x
@@ -104,15 +102,19 @@ body
         &:after
           @include responsive-background(($height / $width * 100), './../img/#{$name}.png')
 .figure_name-branch
+    @include breakpoint($md-up)
+        top:  -128%
     @include breakpoint($sm-less)
         left: auto
         right: 5%
-
     @include breakpoint($xs)
         max-width: 180px
+.figure_name-basket:after
+    @extend %index1
 h1, h2, h3, h4, h5, h6 
-  font-family: inherit
+  font-family: $secondAdditionalFont
   hyphens: none
+
 
 
 h1 
@@ -122,12 +124,11 @@ h1
 
 h2 
   font-size: $secondSizeHeading
-  color: $gray
-  @include breakpoint($sm) 
+  font-size: (32em / 16)
+  @include breakpoint($sm-less) 
       font-size: (24em / 16)
     
   @include breakpoint($xs) 
-      font-size: 7vw
     
   @include breakpoint($xxs) 
      font-size: 8vw
@@ -137,7 +138,12 @@ ul
   list-style: none
 
 p 
-
+  @extend %defaultTopMargin
+  @include breakpoint($sm-less) 
+      font-size: (18em / 16)
+    
+  @include breakpoint($xs) 
+      font-size: (21em / 16)
 a 
   border-radius: 5px
   @include smooth-transition-link
