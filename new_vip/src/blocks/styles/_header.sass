@@ -14,13 +14,7 @@
     @include breakpoint($xs)
 /* AFTER content */
 .brandName, .navItem, .navigation
-    &:after
-        content: ""
-        @extend %absolute
-        @extend %zeroLeft 
-        @extend %fullWidth
-        @extend %negativeIndex1
-        overflow: hidden
+    @include set_generate_element('after', 'absolute')
 /* START BRAND */
 .brand, .brandName_beneath, .header, .navItem, .brandName, .header 
     @extend %relative

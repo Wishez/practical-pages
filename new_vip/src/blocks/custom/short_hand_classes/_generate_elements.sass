@@ -1,0 +1,36 @@
+%content 
+	content: ""
+
+%baseGenerateElement
+	@extend %content
+	@extend %zeroLeft 
+	@extend %negativeIndex1
+	@extend %overflowHidden 
+	@extend %fullWidth
+
+
+%afterElement
+	&:after
+		@extend %baseGenerateElement
+
+%beforeElement
+	&:before
+		@extend %baseGenerateElement
+
+%beforeAndAfterElements
+	&:before, &:after
+		@extend %baseGenerateElement
+		
+@mixin set_generate_element($element: 'both', $position: 'absolute')
+	@if $element == 'both'
+		@extend %beforeAndAfterElements
+		&:before, &:before
+			@extend %#{$position}
+	@elif $element == 'before'
+		@extend %beforeElement
+		&:before
+			@extend %#{$position}
+	@elif $element == 'after'
+		@extend %afterElement
+		&:after
+			@extend %#{$position}
