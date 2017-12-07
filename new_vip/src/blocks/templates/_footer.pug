@@ -2,24 +2,21 @@ footer.footer(itemscope, itemtype='http://schema.org/Person')
     span.sr-only(itemprop="name") vip-sauna6.ru
     .container
         <!-- begin footerNav -->
-        nav.footerNav(role="navigation", aria-labelledby="footerNav")
-            span.sr-only#footerNav The footer's navigation
-            ul.footerNavList.list-unstyled
-                li.footerNavItem.zoom.col-sm-7.col-md-4.col-xs-12
-                    a(href= turkishUrl, role='menuitem').footerNavItemRefer
-                        figure.footerNavItemRefer__image.footerNavItemRefer__image_name-turkish
-                li.footerNavItem.zoom.col-sm-6.col-md-4.col-xs-12
-                    a(href= finskayaUrl, role='menuitem').footerNavItemRefer
-                        figure.footerNavItemRefer__image.footerNavItemRefer__image_name-finskaya
-                li.footerNavItem.zoom.col-sm-6.col-md-4.col-xs-12
-                    a(href= contactUrl, role='menuitem').footerNavItemRefer
-                        figure.footerNavItemRefer__image.footerNavItemRefer__image_name-contact
+        ul#present.presentation
+          li.footerNavItem.zoom.col-sm-7.col-md-4.col-xs-12
+            img.img-reponsive(src='')
+          li.footerNavItem.zoom.col-sm-7.col-md-4.col-xs-12
+            img.img-reponsive(src='')
+          li.footerNavItem.zoom.col-sm-7.col-md-4.col-xs-12
+            img.img-reponsive(src='')
+          li.footerNavItem.zoom.col-sm-7.col-md-4.col-xs-12
+            img.img-reponsive(src='')        
         <!-- end footerNav -->
     <!-- begin footerInfo -->
     .footerInfo
       .container 
         <!-- begin footerContacts -->
-        address.footerContacts.col-lg-4.col-md-4.col-sm-6.col-xs-12
+        address.footerContacts.col-lg-4.col-md-6.col-sm-12.col-xs-10
             h2.title.footerContacts__title Мы ждём вас:
             figure.figure.figure_name-phone.figure_relative
             ul.footerContactsList.list-unstyled
@@ -37,16 +34,17 @@ footer.footer(itemscope, itemtype='http://schema.org/Person')
                       span(itemprop="telephone") +7 (343) 36-16-911
         <!-- end footerContacts -->
         <!-- begin aboutUs -->
-        .aboutUs.col-lg-8.col-md-8.col-sm-6.col-xs-12.pull-right
+        .aboutUs.col-lg-8.col-md-12.col-sm-12.col-xs-10.pull-right
             figure.figure.figure_name-star
             h2.title.title_color-brown О нас
             figure.figure.figure_relative.figure_name-basket.col-lg-3.col-md-3.col-sm-4.col-xs-12
+            //- .clearfix.visible-xs
             p.aboutUs__paragraph.col-lg-9.col-md-9.col-sm-8.col-xs-12.pull-right Сауны Екатеринбурга гостеприимно распахивают перед Вами свои двери. Говорят, что убить двух зайцев одним выстрелом &mdash; это большая удача. Проведя время в сауне, вы убьете одним выстрелом гораздо больше зайцев. Во-первых, вы приятно и весело проведете время. 
             p.aboutUs__paragraph.aboutUs__paragraph.col-lg-9.col-md-9.col-sm-8.col-xs-12.pull-right Парные с профессиональными банщиками, комнаты отдыха с баром и бильярдом, массаж, стрип-шоу &mdash; это все для вас. Во-вторых, сауны и бани &mdash; это замечательный способ поправить свое здоровье или поддерживать его в великолепной форме. В-третьих, в сауне можно легко и приятно расслабиться, отдохнуть от повседневных забот.
                 
         <!-- end aboutUs -->
         <!-- begin сopyright -->
-        .col-lg-4.col-md-4.col-sm-12.col-xs-12.copyright
+        .col-lg-4.col-md-6.col-sm-12.col-xs-12.copyright
             figure.figure.figure_name-bucket
             h3.copyright__title.title.text-right Copyright by Ideal'
             

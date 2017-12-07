@@ -27,8 +27,12 @@
 .footerContactsList, .copyright
 	padding-right: 2em
 .footerContactsList 
-	@extend %largeTopMargin
-
+	// @extend %largeTopMargin
+	@extend %defaultTopMargin
+	@extend %halfWidth-md
+	@extend %halfWidth-xs
+	@include breakpoint($xxs)
+		text-align: center	
 .footerContactsItem__label
 	@extend %fs-18
 	font-style: italic
@@ -36,7 +40,10 @@
 	
  
 .footerContacts
-	@extend %increasedTopMargin
+	margin-top: 4.5em
+	@include breakpoint($md)
+		order: 3
+		top: -20px
 .footerContacts__title
 	@extend %eleven
 .footerContactsItem
@@ -44,43 +51,88 @@
 
 .footerContactsItem__contact 
 
-.footerContacts, .copyright
+.footerContacts, .copyright, .footerInfo > .container
 	@extend %defaultFlex
-	// @extend %relative
-	// @include set_generate_element('after', 'absolute')
-	// &:after
-.footerInfo
-	padding: 7em 0 1.5em
+.footerInfo	
 	@include set_generate_element('after', 'absolute')
 	&:after
 		@extend %fullHeight
 		@extend %zeroTop
 		@include responsive-background($url: './../img/footer_top.png')
-
+	@include breakpoint($xxs)
+		padding-bottom: 3em
+.footerInfo > .container
+	padding-top: 2em
+.figure_name-basket, .footerContacts, .figure_name-phone
+	@extend %centered-xs
+.aboutUs, .footerContactsList, .footerContacts
+	@extend %fullWidth-xxs
 .aboutUs
+	@extend %centered-mdLess
 	padding: 2em 2em 2.5em
 	@extend %beneathShadow
 	border 3px solid #fff
 	@extend %whiteBg
-// .figure_name-basket
-// 	@extend %four
+	top: 95px
+	@include breakpoint($md-less)
+		top: 15px	
+		margin-top: 2em
+	
+		// padding-left: 2m
+		// padding-right: 1em	
 
+.figure_name-phone
+	min-height: 92px
+	@include breakpoint($md-less)
+		max-width: 180px
+	@include breakpoint($xxs)
+		top: 25px
+
+	@include breakpoint($xxs)
+		float:none
+.figure_name-basket
+	min-height: 150px
+	@extend %defaultTopMargin-xs
+	@include breakpoint($xs)
+		float: none
+		top: 0
+	@include breakpoint($xxs)
+		float: left
+
+
+.aboutUs__paragraph
+	@include breakpoint($md-less)
+		padding-left: 2em
+	@include breakpoint($xxs)
+		padding: 0
 .figure_name-star
 	right: -65px
 	z-index: 1
+	@include breakpoint($xxs)
+		right: -10px
+		top: -16px
 .figure_name-bucket
 	z-index: 1
 	left: -140px
+	@include breakpoint($md-less)
+		left: -60px	
+	@include breakpoint($xs)
+		left: 15px
+
+
 .copyright__title
 	@extend %fullWidth
 	$paleDarkGray: rgba(21, 21, 21, .6)
-	background: linear-gradient(to right, $paleDarkGray 0%, $paleDarkGray 90%, transparent 100%)
+	background: linear-gradient(to right, transparent 0 , transparent 20%, $paleDarkGray 20%, $paleDarkGray 90%, transparent 100%)
 	color: $white
 	padding: 0.5em 1.5em 0.5em 0
 	margin-top: 6em
 	@extend %zeroIndex
 	border: 0
 	@extend %fs-21
+	@include breakpoint($xs)
+		padding-right: 4em
+
 
 	// @extend %fs-
 
@@ -91,7 +143,13 @@
 	STANRT FOOTER COPYRIGHT 
 											*/					
 .copyright
-	top: -0.5em 
+	top: -2em 
+	@include breakpoint($md)
+		top: 0.5em
+	@include breakpoint($sm-less)
+		margin-top: 7em
+	@include breakpoint($xxs)
+		display: none
 
 .copyright__refer 
 
