@@ -6,6 +6,8 @@
     @extend %zeroBottom
 .navbarCollaps
     @extend %fullWidth-xs
+    @include breakpoint($xxs)
+        margin-left: 0 $i
         
 .navHeader, .brand
     padding-right: 0 $i
@@ -83,7 +85,8 @@
     background-color: #f5e7d7
     &:focus
         background-color: $darkestRed $i
-
+    @include breakpoint($xxs)
+        top:  45px
 .navList 
   font-family: 'Georgia'
   font-style: italic
@@ -97,6 +100,10 @@
   @extend %alignCenter 
   @include breakpoint($sm)
     margin-top: 36px
+  @include breakpoint($xxs)
+    padding-right: 0
+    margin-left: 0
+    margin-right: 0 
 /* END NAV ITEMS */
 
 /* START NAV ITEMS */
@@ -144,8 +151,9 @@
   @include breakpoint($xs) 
     
   
-  @include breakpoint($xxs) 
-    
+  
+  @include breakpoint($xxs)
+    transform: none $i
   
   &:hover 
     
