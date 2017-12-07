@@ -1,8 +1,15 @@
 /* START FOOTER	*/
 .footer 
+  @extend %absolute
+  @extend %fullWidth
+  // @extend %zeroBottom
   
-  
-
+.aboutUs, .footerContactsItem__label
+	color: $darkestRed
+.title
+	border-bottom-width: 1px
+	border-bottom-style: solid
+	border-image: linear-gradient(to right, transparent 0%, $darkestRed 15%, $darkestRed 85%, transparent 100%) 1
 /* 
 	END FOOTER
 							*/
@@ -16,23 +23,66 @@
 
 .footer__paragraph 
 
-	
 
-.footerContacts 
+.footerContactsList, .copyright
+	padding-right: 2em
+.footerContactsList 
+	@extend %largeTopMargin
 
+.footerContactsItem__label
+	@extend %fs-18
+	font-style: italic
 	
 	
  
-
-.footerContactsItem 
-
-
-.footerContactsItem__label 
-
-
+.footerContacts
+	@extend %increasedTopMargin
+.footerContacts__title
+	@extend %eleven
+.footerContactsItem
+	@extend %defaultTopMargin
 
 .footerContactsItem__contact 
 
+.footerContacts, .copyright
+	@extend %defaultFlex
+	// @extend %relative
+	// @include set_generate_element('after', 'absolute')
+	// &:after
+.footerInfo
+	padding: 7em 0 1.5em
+	@include set_generate_element('after', 'absolute')
+	&:after
+		@extend %fullHeight
+		@extend %zeroTop
+		@include responsive-background($url: './../img/footer_top.png')
+
+.aboutUs
+	padding: 2em 2em 2.5em
+	@extend %beneathShadow
+	border 3px solid #fff
+	@extend %whiteBg
+// .figure_name-basket
+// 	@extend %four
+
+.figure_name-star
+	right: -65px
+	z-index: 1
+.figure_name-bucket
+	z-index: 1
+	left: -140px
+.copyright__title
+	@extend %fullWidth
+	$paleDarkGray: rgba(21, 21, 21, .6)
+	background: linear-gradient(to right, $paleDarkGray 0%, $paleDarkGray 90%, transparent 100%)
+	color: $white
+	padding: 0.5em 1.5em 0.5em 0
+	margin-top: 6em
+	@extend %zeroIndex
+	border: 0
+	@extend %fs-21
+
+	// @extend %fs-
 
 /* 
 	END FOOTER CONTACTS 
@@ -40,7 +90,8 @@
 /* 
 	STANRT FOOTER COPYRIGHT 
 											*/					
-.copyright 
+.copyright
+	top: -0.5em 
 
 .copyright__refer 
 
