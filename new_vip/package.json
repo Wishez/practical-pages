@@ -85,6 +85,7 @@
     "js-cookie": "^2.1.4",
     "jshint": "^2.9.5",
     "lightbox2": "^2.10.0",
+    "lozad": "^1.0.9",
     "rimraf": "^2.5.4",
     "slick-carousel": "^1.8.1",
     "superagent": "^3.5.2",
