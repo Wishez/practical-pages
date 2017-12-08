@@ -5,6 +5,7 @@ $(function() {
   $('#openMenuButton').on('blur', function() {
     $('#navbar_collapse').collapse('hide');
   });
+
   function openUrlInNewWindow(e) {
     e.preventDefault();
     
