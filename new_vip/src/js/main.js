@@ -7,6 +7,8 @@
 import 'jquery';
 import 'bootstrap-sass';
 import 'babel-polyfill';
+import 'lightbox';
+import 'slick-carousel'
 // import 'whatwg-fetch';
 // import 'semantic-ui-sass';
 // import './modernizr.min.js';
