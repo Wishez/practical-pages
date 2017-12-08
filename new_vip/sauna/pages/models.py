@@ -41,7 +41,7 @@ class HomePage(BasePage):
         max_length=150
     )
     jumbotron_video = models.TextField(
-        _('Джамботрон - видое'),
+        _('Джамботрон - видео'),
         help_text=_('Элемент идущий после главного заголовка - это может быть картинка, либо видео и т.д. Будет выбрано либо видео, либо изображение.'),
         max_length=1024,
         blank=True,
@@ -59,8 +59,8 @@ class HomePage(BasePage):
 
     class Meta:
         db_table='data_home_page'
-        verbose_name=_('Главная')
-        verbose_name_plural = _('Главная')
+        verbose_name=_('Страница "Главная"')
+        verbose_name_plural = _('Страница "Главная"')
 
 
 
@@ -91,7 +91,7 @@ class SaunaPage(BasePage):
     class Meta:
         db_table = 'data_sauna_page'
         verbose_name = _('Сауна')
-        verbose_name_plural = _('Стараницы "Сауна"')
+        verbose_name_plural = _('Сауны')
 
 class ServicesPage(BasePage):
     sauna = models.ManyToManyField(
