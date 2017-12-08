@@ -9,7 +9,7 @@ from django.conf import settings
 urlpatterns = [
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'', include('app.urls')),
+    url(r'', include('pages.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

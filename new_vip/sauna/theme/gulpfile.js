@@ -44,7 +44,7 @@ const settings = {
   src: './src',
   build: './../static/sauna'
 }, 
-templatesPath = './../app/templates/',
+templatesPath = './../pages/templates/',
 scssPathes = [
   'node_modules/susy/sass', 
   'node_modules/breakpoint-sass/stylesheets',
