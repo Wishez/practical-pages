@@ -16,11 +16,25 @@ class TimeStampedModel(models.Model):
     modified = models.DateTimeField(auto_now=True)
     class Meta:
         abstract = True
-class Contacts(TimeStampedModel):
+
+
+class Settings(TimeStampedModel):
     name = models.CharField(
-        _('Подпись'),
-        help_text=_('Заметка для того, чтобы отличать одни контакты от других. К примеру, "Основные контакты" или "Запасной вариант".'),
-        max_length=100
+        _('Имя настройки'),
+        max_length=100,
+        default='Main Settings'
+    )
+    widgets = models.TextField(
+        _('Метрики, виджеты и прочее'),
+        max_length=8196,
+        blank=True,
+        null=True
+    )
+    meta = models.TextField(
+        _('Глобальное META-описание сайта'),
+        max_length=300,
+        blank=True,
+        null=True
     )
     email = models.CharField(
         _('Email'),
@@ -60,51 +74,11 @@ class Contacts(TimeStampedModel):
         null=True
     )
 
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        db_table='site_contacts'
-        verbose_name = _('Контакты')
-        verbose_name_plural = _('Контакты')
-
-class Settings(TimeStampedModel):
-    name = models.CharField(
-        _('Имя настройки'),
-        max_length=100
-    )
-    widgets = models.TextField(
-        _('Метрики, виджеты и прочее'),
-        max_length=8196,
-        blank=True,
-        null=True
-    )
-    meta = models.TextField(
-        _('Глобальное META-описание сайта'),
-        max_length=300,
-        blank=True,
-        null=True
-    )
-
-    contacts = models.ForeignKey(
-        Contacts,
-        models.SET_NULL,
-        verbose_name=_('Контакты'),
-        related_name='site_contacts',
-        help_text=_('Укажите контакты, которые хотите отобразить'),
-        blank=True,
-        null=True
-    )
-
     default_link_color = ColorField(_('Стандартный цвет ссылок'), blank=True,
                                     null=True)
     default_link_hover_color = ColorField(_('Стандартный цвет ссылок при наведении'), blank=True,
                                           null=True)
 
-    menu_link_active_color = ColorField(_('Цвет шрифта активной ссылки'), blank=True,
-                                        null=True)
-    menu_link_hover_bg = ColorField(_('Цвет фона ссылок при наведении'), blank=True,
-                                    null=True)
     default_color = ColorField(_('Цвет шрифта по умолчанию'), blank=True,
                                null=True)
     default_bg = ColorField(_('Цвет фона сайта'), blank=True,
@@ -120,16 +94,6 @@ class Settings(TimeStampedModel):
                                  null=True)
     curtain_bg = ColorField(_('Цвет фона предварительной загрузки'), blank=True,
                             null=True)
-    # statuses = (
-    #     (_('Не активная'), 'Не активна'),
-    #     (_('Активная'), 'Активная'),
-    # )
-    # is_active = models.CharField(
-    #     _('Активация'),
-    #     default=_('Не активна'),
-    #     choices=statuses,
-    #     max_length=12
-    # )
 
     def __str__(self):
         return self.name
@@ -139,20 +103,6 @@ class Settings(TimeStampedModel):
         verbose_name = _('Настройка')
         verbose_name_plural = _('Настройки')
 
-
-# def switch_active_custom(sender, instance, **kwargs):
-#     print('Sender:', sender.objects.all())
-#     print('Instance:', instance.is_active)
-#     if instance.is_active == _('Активная'):
-#         customs = sender.objects.all()
-#         if len(customs):
-#             for custom in customs:
-#                 custom.is_active = _('Не активная')
-#                 custom.save()
-#         instance.is_active = _('Активная')
-#
-#
-# pre_save.connect(switch_active_custom, sender=Settings)
 
 class Service(TimeStampedModel):
     name = models.CharField(
@@ -206,5 +156,5 @@ class Schedule(TimeStampedModel):
         return self.title
     class Meta:
         db_table = 'sauna_schedule'
-        verbose_name = _('Услуга')
-        verbose_name_plural = _('Услуги')
+        verbose_name = _('Расписание')
+        verbose_name_plural = _('Расписания')
