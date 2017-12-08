@@ -1,0 +1,31 @@
+h1.mainTitle.text-center= saunaName
+<!-- begin schedule -->
+h2.saunaTitle.saunaTitle_big Финская сауна + Турецкий хамам + Бильярд!
+section.schedule.col-lg-8
+	if active == 'newHall'
+		h2.schedule__title.saunaTitle.col-lg-12 Будние дни с ПН по ЧТ
+	ul.list-unstyled.daysList
+		li.daysList__day с 9:00 до 17:00 &mdash; 500 руб.\час
+		li.daysList__day с 17:00 до 09:00 – 1000 руб.\час
+	h2.schedule__title.saunaTitle Будние дни с ПН по ЧТ
+	ul.list-unstyled.daysList
+		li.daysList__day с 9:00 до 17:00 – 500 руб.\час
+		li.daysList__day с 17:00 до 09:00 – 1000 руб.\час
+	p.schedule__warn *свыше 6 чел, за каждого последующего 100 руб.\час
+<!-- end schedule -->
+<!-- begin services -->
+section.services.col-lg-4
+	h2.schedule__title.saunaTitle К вашим услугам:
+	ul.servicesList
+		each service in saunaServices
+			li.servicesList__service= service
+<!-- end services -->
+.clearfix
+<!-- begin photos -->
+section.photos
+	h2.photos__title.blueContainer.text-center Фотографии
+	.photosList
+		each photoUrl in photosList
+			a.photoContainer(href= bp + photoUrl)
+				img.photoContainer__photo(data-src= bp + photoUrl, alt='Апартаменты')
+<!-- end photos -->
