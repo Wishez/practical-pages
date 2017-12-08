@@ -153,3 +153,58 @@ class Settings(TimeStampedModel):
 #
 #
 # pre_save.connect(switch_active_custom, sender=Settings)
+
+class Service(TimeStampedModel):
+    name = models.CharField(
+        _('Наименование услуги'),
+        max_length=150
+    )
+    def __str__(self):
+        return self.name
+    class Meta:
+        db_table = 'sauna_service'
+        verbose_name = _('Услуга')
+        verbose_name_plural = _('Услуги')
+
+class Schedule(TimeStampedModel):
+    title = models.CharField(
+        _('Период'),
+        max_length=250,
+        help_text=_('К примеру, "Буднии дни с ПН по ЧТ')
+    )
+
+    condition_1 = models.CharField(
+        _('Время и цена(Условие 1)'),
+        max_length=200,
+        help_text=_('С 9:00 до 17:00 – 500 руб.\час')
+    )
+
+    condition_2 = models.CharField(
+        _('Время и цена(Условие 2)'),
+        max_length=200,
+        help_text=_('с 17:00 до 09:00 – 1000 руб.\час'),
+        blank=True,
+        null=True
+    )
+    condition_3 = models.CharField(
+        _('Время и цена(Условие 3)'),
+        max_length=200,
+        help_text=_('с 17:00 до 09:00 – 1000 руб.\час'),
+        blank=True,
+        null=True
+    )
+
+    note = models.CharField(
+        _('Примечание'),
+        max_length=250,
+        help_text=_('К примеру, "*свыше 6 чел, за каждого последующего 100 руб.\час".'),
+        blank=True,
+        null=True
+    )
+
+    def __str__(self):
+        return self.title
+    class Meta:
+        db_table = 'sauna_schedule'
+        verbose_name = _('Услуга')
+        verbose_name_plural = _('Услуги')
