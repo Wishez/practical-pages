@@ -1,2 +1,8 @@
 __pycache__
 .idea
+debug.log
+db.sqlite3
+admin
+colorfield
+grappelli
+rest_framework
