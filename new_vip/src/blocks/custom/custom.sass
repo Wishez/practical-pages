@@ -82,6 +82,14 @@ body
 @import './short_hand_classes/cursores.sass'
 @import './short_hand_classes/overflow.sass'
 @import './short_hand_classes/font.sass'
+.fadeOut,
+.fadeIn
+  transition: opacity 0.6s
+
+.fadeOut
+  opacity: 0
+.fadeIn
+  opacity: 1
 
 .figure
     @extend %absolute

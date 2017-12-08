@@ -1,6 +1,4 @@
-$(window).resize(() => {
-
-});
+import lozad from 'lozad';
 
 $(function() {
   $(document).on('click', '.not-follow', openUrlInNewWindow);
@@ -17,10 +15,11 @@ $(function() {
     
     window.open(url);
   }// end openUrlInNewWindow
+  
   // Preload
   $('.curtain')
     .css('width', 0)
-    .find('.sk-double-bounce')
+    .find('.sk-cube-grid')
     .css('opacity', 0); // end preload
     
     // For scroll
@@ -31,5 +30,52 @@ $(function() {
           scrollTop: scrollTo
       }, 1500, Linear.ease);
       window.scrollTop
-    }) 
+    });
+     lozad('.fadeOut', {
+        load: function(el) {
+          el.src = el.dataset.src;
+          el.onload = function() {
+              el.classList.add('fadeIn');
+          }
+        }
+    }).observe();
+
+    $('#presentation').slick({
+      slidesToShow: 4,
+      arrows: true,
+      infinite:false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+
+    });
+
+    lightbox.option({
+      wrapAround: true,
+      albumLabel: '%1 изображение из %2',
+      fadeDuration: 300,
+      imageFadeDuration: 300
+    });
 });// end ready

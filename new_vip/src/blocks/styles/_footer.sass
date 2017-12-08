@@ -11,13 +11,19 @@
 	@extend %flex
 	@extend %defaultRowFlow
 	@extend %justifyAround
-	// @include set_generate_element()
-	// &:after
-	// 	bottom: 100%	
-	// 	@include responsive-background((222% / 919 * 100), './../img/floor.png')
-	// &:before
-	// 	bottom: 100%	
-	// 	@include responsive-background((300% / 500 * 100), './../img/pretty_woman.png')
+	& .slick-prev:before, & .slick-next:before
+		font-size: 70px
+		text-shadow: 0 8px 10px $shadow
+	& .slick-prev:before
+		content: "<"
+	& .slick-next:before
+		content: ">"
+	& .slick-prev, & .slick-next,
+		top: 65px
+	& .slick-prev
+		left: -50px
+	& .slick-next,
+		right: -30px
 .figure_name-pretty_woman, .figure_name-floor	
 	display: none	
 .figure_name-pretty_woman
