@@ -21,6 +21,9 @@ class Album(TimeStampedModel):
 
     def __unicode__(self):
         return self.title
+    class Meta:
+        verbose_name = _('Альбом')
+        verbose_name_plural = _('Альбомы')
 
 class AlbumImage(TimeStampedModel):
     image = ProcessedImageField(upload_to='albums', processors=[ResizeToFit(1280)], format='JPEG', options={'quality': 70})
@@ -30,3 +33,7 @@ class AlbumImage(TimeStampedModel):
     width = models.IntegerField(_('Ширина, на ваше усмотрение'), default=0, help_text=_('По умолчанию - адаптивно'))
     height = models.IntegerField(_('Высонта, на ваше усмотрение'), default=0, help_text=_('По умолчанию - адаптивно'))
     slug = models.SlugField(max_length=70, default=uuid.uuid4, editable=False)
+
+    class Meta:
+        verbose_name = _('Изображение')
+        verbose_name_plural = _('Изображения')
