@@ -26,7 +26,8 @@ const gulp = require('gulp'),
       manifest = require('gulp-manifest'),
       watchify = require('watchify'),
       jshint = require('gulp-jshint'),
-      plumber = require('gulp-plumber');
+      plumber = require('gulp-plumber'),
+      livereload = require('gulp-livereload');
 
 
 
@@ -69,9 +70,15 @@ gulp.task('lintsource', () => {
     .pipe(jshint.reporter('default'));
 });
 
+const reloadOptions = {
+	port: 8080,
+	host: 'localhost'
+};
 /* ----------------- */
 /* SCRIPTS
 /* ----------------- */
+
+
 const vendors = [
   'moment',
   'cropit'
@@ -81,7 +88,16 @@ const babelPlugins = [
        'transform-decorators-legacy',
        'transform-object-rest-spread'
 ];
-
+const devBabelOptions = {
+  plugins: babelPlugins,
+  presets: ['latest'],
+  sourceMapsAbsolute: true
+};
+const prodBabelOptions = {
+  plugins: babelPlugins,
+  presets: ['latest'],
+  sourceMapsAbsolute: false
+};
 gulp.task('fastjs', () => {
   process.env.NODE_ENV = 'development';
 
@@ -90,17 +106,14 @@ gulp.task('fastjs', () => {
       entries: settings.src + '/js/main.js',
       debug: true
     })
-    .transform("babelify", {
-      plugins: babelPlugins,
-      presets: ['latest'],
-      sourceMapsAbsolute: true
-    })
+    .transform("babelify", devBabelOptions)
     .bundle()
     .pipe(source('main.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(settings.build + '/js'));
+    .pipe(gulp.dest(settings.build + '/js'))
+    .pipe(livereload(reloadOptions));
 });
 
 
@@ -113,11 +126,7 @@ gulp.task('source', ['lintsource'], () => {
       debug: false
     })
     // .external(vendors)
-    .transform("babelify", {
-      plugins: babelPlugins,
-      presets: ['latest'],
-      sourceMapsAbsolute: true
-    })
+    .transform("babelify", prodBabelOptions)
     .bundle()
     .pipe(source('main.js'))
     .pipe(buffer())
@@ -127,7 +136,38 @@ gulp.task('source', ['lintsource'], () => {
     .pipe(gulp.dest(settings.build + '/js'));
 });
 
+gulp.task('serviceworker', () => {
+  return browserify({
+      transform: ['hbsfy'],
+      entries: settings.src + '/js/sw.js',
+      debug: true
+    })
+    .transform("babelify", devBabelOptions)
+    .bundle()
+    .pipe(source('sw.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(settings.build + '/js'));
+});
 
+gulp.task('serviceworker-min', () => {
+  process.env.NODE_ENV = 'production';
+
+  return browserify({
+      transform: ['hbsfy'],
+      entries: settings.src + '/js/sw.js',
+      debug: true
+    })
+    .transform("babelify", prodBabelOptions)
+    .bundle()
+    .pipe(source('sw.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init())
+    .pipe(uglify())
+  	.pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(settings.build + '/js'));
+});
 
 /* ----------------- */
 /* STYLES
@@ -145,7 +185,7 @@ gulp.task('faststyles', () => {
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(settings.build + '/css'))
-    .pipe(browserSync.stream());
+    .pipe(livereload(reloadOptions));
 });
 
 gulp.task('styles', () => {
@@ -168,7 +208,8 @@ gulp.task('html', () => {
   return gulp.src(settings.src + '/*.pug')
     .pipe(plumber())
     .pipe(pug())
-    .pipe(gulp.dest(templatesPath));
+    .pipe(gulp.dest(templatesPath))
+    .pipe(livereload(reloadOptions));
 });
 
 
@@ -178,7 +219,8 @@ gulp.task('html', () => {
 
 gulp.task('fonts', () => {
   return gulp.src(settings.src + '/fonts/**/*.*')
-    .pipe(gulp.dest(settings.build + '/fonts'));
+    .pipe(gulp.dest(settings.build + '/fonts'))
+    .pipe(livereload(reloadOptions));
 });
 
 /* ----------------- */
@@ -186,7 +228,8 @@ gulp.task('fonts', () => {
 /* ----------------- */
 gulp.task('fastimages', () => {
   return gulp.src(settings.src + '/img/**/*')
-    .pipe(gulp.dest(settings.build + '/img'));
+    .pipe(gulp.dest(settings.build + '/img'))
+    .pipe(livereload(reloadOptions));
 });
 
 gulp.task('images', () => {
@@ -233,24 +276,25 @@ gulp.task('serve', () => {
       baseDir: settings.build
     },
     open: true,
-    port: 9020,
+    port: 8080,
     reloadDelay: 2200
   });
 });
 
 gulp.task('watch', () => {
-  gulp.watch(settings.src + '/**/*.sass', ['faststyles']).on('change', browserSync.reload);
-  gulp.watch(settings.src + '/img/**/*.*', ['fastimages']).on('change', browserSync.reload);
-  gulp.watch(settings.src + '/fonts/**/*.*', ['fonts']).on('change', browserSync.reload);
-  gulp.watch(settings.src + '/**/*.pug', ['html']).on('change', browserSync.reload);
-  gulp.watch(settings.src + '/**/*.js', ['fastjs']).on('change', browserSync.reload);
+  livereload.listen();
+  gulp.watch(settings.src + '/**/*.sass', ['faststyles'])//.on('change', browserSync.reload);
+  gulp.watch(settings.src + '/img/**/*.*', ['fastimages'])//.on('change', browserSync.reload);
+  gulp.watch(settings.src + '/fonts/**/*.*', ['fonts'])//.on('change', browserSync.reload);
+  gulp.watch(settings.src + '/**/*.pug', ['html'])//.on('change', browserSync.reload);
+  gulp.watch(settings.src + '/**/*.js', ['fastjs'])//.on('change', browserSync.reload);
 });
 
 gulp.task('lintfastjs', ['lintsource', 'fastjs']);
 gulp.task('fastlintdevelop', ['html', 'lintfastjs', 'faststyles', 'fastmedia']);
 
-gulp.task('fastdevelop', ['html', 'fastjs', 'faststyles', 'fastmedia', 'serve']); 
-gulp.task('production', ['source', 'styles', 'media', 'html', 'manifest']);
+gulp.task('fastdevelop', ['html', 'fastjs', 'faststyles', 'fastmedia', 'serviceworker']); 
+gulp.task('production', ['source', 'styles', 'media', 'html', 'manifest', 'serviceworker-min']);
 
 
 gulp.task('default', ['fastdevelop', 'watch']);  // development
@@ -273,3 +317,4 @@ gulp.task('test', ['lintsource'], () => {
     })
     .bundle();
 });
+
