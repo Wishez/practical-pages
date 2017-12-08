@@ -114,6 +114,12 @@ class PricesPage(BasePage):
         related_name='shown_prices_sauna',
         help_text=_('Сауны, чьи цены и расписание будут отображенны на странице цен.')
     )
+    slug = models.SlugField(
+        _('Название ссылки к странице сауны'),
+        max_length=70,
+        help_text=_('К примеру, "my_new_awesome_hall"'),
+        default=''
+    )
     class Meta:
         db_table = 'data_prices_page'
         verbose_name = _('Страница "Цены"')
