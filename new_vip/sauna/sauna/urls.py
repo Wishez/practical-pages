@@ -7,7 +7,9 @@ from django.conf import settings
 # from django.contrib.static
 
 urlpatterns = [
-    url(r'^grappelli/', include('grappelli.urls')),
+    # url(r'^grappelli/', include('grappelli.urls')),
+    url(r'^jet/', include('jet.urls', 'jet')),
+url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
     url(r'^admin/', admin.site.urls),
     url(r'', include('pages.urls')),
 ]
