@@ -30,10 +30,9 @@ class SettingsAdmin(SingleModelAdmin):
         },),
         ('Настройка контактной информации', {
             'fields': (
-                ('email',),
-                ('contacts_phone', 'footer_phone',),
-                ('address', 'addressHref',),
-                ('map',),
+                ('email', 'footer_phone',),
+                ('city', 'address',),
+                ('addressHref',),
             ),
         },),
         ('Ссылки', {
@@ -54,6 +53,12 @@ class SettingsAdmin(SingleModelAdmin):
         ('Шрифт', {
             'fields': (
                 ('default_color',),
+            ),
+        },),
+        ('Нижняя часть страницы', {
+            'fields': (
+                ('footer_photo',),
+                ('footer_copyright',)
             ),
         },),
     )
