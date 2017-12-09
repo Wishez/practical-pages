@@ -13,7 +13,7 @@ header.header
 						span.icon-bar
 						span.icon-bar
 						span.icon-bar
-					a.brand.navbar-brand(href="#").text-center
+					a.brand.navbar-brand(href="{% url 'home' %}").text-center
 						h1.brandName 
 							span.brandName_beneath.text-uppercase Сауна 
 							br
@@ -23,8 +23,8 @@ header.header
 						li.navItem.navItem_name-home 
 							a.navItem__refer(href="{% url 'home' %}") Главная
 						li.navItem.navItem_name-services
-							a.navItem__refer(href="#") Услуги
+							a.navItem__refer(href="{% url 'services' %}") Услуги
 						li.navItem.navItem_name-prices
-							a.navItem__refer(href="#") Цены
+							a.navItem__refer(href="{% url 'prices' %}") Цены
 						li.navItem.navItem_name-contacts
-							a.navItem__refer(href="#") Контакты
+							a.navItem__refer(href="{% url 'contacts' %}") Контакты

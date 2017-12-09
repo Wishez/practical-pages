@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% load pages_tags %}
+{% block content %}
+{% for sauna in page.sauna|get_array %}<section class="sauna"><a href="{% url 'sauna' slug=sauna.slug %}"><h2 class="title title_col-nine">{{ sauna.name }}</h2></a>{% if sauna.content %}<details class="saunaDetails">{{ sauna.content|safe }}<summary>Подробнее о сауне</summary></details>{% endif %}</section>{% endfor %}
+{% endblock %}

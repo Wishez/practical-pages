@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}<!-- begin contactInfo --><div class="contactInfo text-center"><!-- begin contactInfoPhones --><div class="contactInfoPhones textContainer textContainer_color-black textContainer_refer-white"><strong class="contactInfoPhones__label">Телефон: </strong>{% if page.phone_1 %}<a class="contactInfoPhones__refer hightlight" href="tel:{{ page.phone_1 }}"><span itemprop="telephone">{{ page.phone_1 }}</span></a>{% endif %}
+{% if page.phone_2 %}
+, <a class="contactInfoPhones__refer hightlight" href="tel:{{ page.phone_2 }}"><span itemprop="telephone">{{ page.phone_2 }}</span></a>{% endif %}
+{% if not page.phone_2 and page.phone_1 %}<a class="contactInfoPhones__refer hightlight" href="tel:{{ settings.footer_phone }}"><span itemprop="telephone">{{ settings.footer_phone }}</span></a>{% endif %}</div><!-- end contactInfoPhones -->
+<!-- begin contactInfoPhones --><div class="contactInfoAddress textContainer textContainer_color-black textContainer_refer-white"><strong class="contactInfoAddress__label">Адрес: </strong><a class="footerContactsItem__refer not-follow hightlight" href="{{ settings.addressHref }}">{% if settings.city %}<span itemprop="addressLocality">{{ settings.city }}</span>, 
+{% endif %}<span itemprop="streetAddress">{{ settings.address }}</span></a></div><!-- end contactInfoPhones --></div><!-- end contactInfo -->
+<!-- begin mapContainer --><div class="mapContainer">{{ page.map|safe }}</div><!-- end mapContainer -->{% endblock %}

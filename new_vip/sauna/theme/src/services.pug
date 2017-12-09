@@ -1,0 +1,14 @@
+| {% extends "base.html" %}
+| {% load pages_tags %}
+
+| {% block content %}
+| {% for sauna in page.sauna|get_array %}
+section.sauna
+	a(href="{% url 'sauna' slug=sauna.slug %}")
+		h2.title.title_col-nine {{ sauna.name }}
+	| {% if sauna.content %}
+	details.saunaDetails {{ sauna.content|safe }}
+		summary Подробнее о сауне
+	| {% endif %}
+| {% endfor %}
+| {% endblock %}

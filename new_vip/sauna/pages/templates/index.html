@@ -1,3 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
-{% block content %}<main class="main"></main>{% endblock %}
+{% load pages_tags %}
+{% block content %}<!-- begin jumbotron --><div class="jumbotron">{% if page.is_video %}<div class="banner banner_type-video center-block">{{ page.jumbotron_video|safe }}</div>{% endif %}
+{% if page.is_image %}<a class="banner banner_type-image" href="{{ page.image_href }}" rel="alternate"><figure class="banner__image" style="padding-bottom:{{ page.jumbotron_image.height|get_responsive_height:page.jumbotron_image.width }};"></figure></a>{% endif %}</div><!-- end jumbotron -->{% if page.content %}<!-- begin content --><section class="pageContent center-block">{{ page.content|safe }}</section>{% endif %}<!-- end content  -->
+<!-- begin bathesList -->{% if page.sauna %}<ul class="bathesList center-block">{% for sauna in page.sauna|get_array %}<li class="bathesListItem"><a class="bathesListItem__refer" href="{% url 'sauna' slug=sauna.slug %}" rel="alternative">{{ sauna.name }}</a></li>{% endfor %}</ul>{% endif %}<!-- end bathesList -->{% endblock %}

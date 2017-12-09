@@ -42,7 +42,7 @@ class HomeView(BaseView):
     template_name = 'index.html'
 
     def __init__(self):
-        super().__init__()
+        super(HomeView, self).__init__()
         self.page_model = HomePage
 
 
@@ -56,14 +56,14 @@ class PricesView(BaseView):
     template_name = 'prices.html'
 
     def __init__(self):
-        super().__init__()
+        super(PricesView, self).__init__()
         self.page_model = PricesPage
 
 class ContactsView(BaseView):
     template_name = 'contacts.html'
 
     def __init__(self):
-        super().__init__()
+        super(ContactsView, self).__init__()
         self.page_model = ContactsPage
 
 class SaunaView(BaseView):
@@ -72,5 +72,5 @@ class SaunaView(BaseView):
     def get(self, request, slug):
         self.page = get_object_or_404(SaunaPage, slug=slug)
 
-        return super(SaunaPage, self).get()
+        return super().get(request)
 
