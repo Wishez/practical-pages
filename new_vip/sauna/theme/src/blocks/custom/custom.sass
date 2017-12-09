@@ -52,10 +52,8 @@ body
   -webkit-hyphenate-after: 3
   hyphenate-lines: 3
   color: $baseColorFont
-  background-color: $bodyColorBg
-  @if $bodyImageBg
-      @include responsive-background($attachment: fixed)
-      background-image: $bodyImageBg $i
+  background-color: $bodyColorBg 
+  @include responsive-background($attachment: fixed $i)
 
 @import './short_hand_classes/_generate_elements.sass'
 @import './short_hand_classes/transitions.sass'
@@ -122,6 +120,7 @@ $figures: ('leaf', 383, 294%, 0, 0), ('branch', 232, 404%, -8%, -64% ), ('phone'
 h1, h2, h3, h4, h5, h6 
   font-family: $secondAdditionalFont
   hyphens: none
+  break-word: word-break
 
 
 
@@ -143,15 +142,15 @@ h2
   
 
 ul 
-  list-style: none
+  list-style: square
+  list-style-position: inside
 
 p 
   @extend %defaultTopMargin
+  @extend %fs-16-xs
   @include breakpoint($sm-less) 
       font-size: (18em / 16)
     
-  @include breakpoint($xs) 
-      font-size: (21em / 16)
 a 
   border-radius: 5px
   @include smooth-transition-link
