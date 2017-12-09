@@ -15,6 +15,7 @@ base_settings_page = ('Базовая настройка страницы', {
 
 @admin.register(HomePage)
 class HomePageAdmin(SingleModelAdmin):
+    # filter_horizontal = ('sauna',)
     fieldsets = (
         base_settings_page,
         ('Контент страницы', {
@@ -22,6 +23,7 @@ class HomePageAdmin(SingleModelAdmin):
                 ('main_title',),
                 ('jumbotron_video', 'is_video',),
                 ('jumbotron_image', 'is_image',),
+                ('sauna',),
                 ('content',),
             ),
         },),
@@ -33,17 +35,22 @@ class ServicesPageAdmin(SingleModelAdmin):
         base_settings_page,
         ('Контент страницы', {
             'fields': (
-                ('sauna', 'content',),
+                ('main_title',),
+                ('sauna', ),
+                ('content',),
             ),
         },),
     )
 @admin.register(PricesPage)
 class ServicesPageAdmin(SingleModelAdmin):
+    # filter_horizontal = ('sauna',)
     fieldsets = (
         base_settings_page,
         ('Контент страницы', {
             'fields': (
-                ('sauna', 'content',),
+                ('main_title',),
+                ('sauna',),
+                ( 'content',),
             ),
         },),
     )
@@ -55,22 +62,29 @@ class ContactsPageAdmin(SingleModelAdmin):
         base_settings_page,
         ('Контент страницы', {
             'fields': (
+                ('main_title',),
+                ('phone_1','phone_2',),
+                ('map',),
                 ('content',),
             ),
         },),
     )
+
+
+
 @admin.register(SaunaPage)
 class SaunaPageAdmin(admin.ModelAdmin):
     list_per_page = 10
     list_display = ('name', 'gallery',)
-    filter_fields = ('name', 'gallery',)
+    filter_fields = ('name', 'gallery', )
     search_fields = ('name', 'gallery',)
-    filter_horizontal = ('schedule', 'services',)
+    prepopulated_fields = {'slug': ('title',)}
+    # filter_horizontal = ('schedule', 'services',)
     fieldsets = (
         base_settings_page,
         ('Контент страницы', {
             'fields': (
-                ('name',),
+                ('name', 'slug',),
                 ('services'),
                 ('schedule'),
                 ('gallery',),
