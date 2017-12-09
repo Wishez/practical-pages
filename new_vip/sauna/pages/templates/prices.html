@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load pages_tags %}
+{% block content %}
+ 
+{% for sauna in page.sauna|get_array %}<a href="{% url 'sauna' slug=sauna.slug %}"><h2 class="title title_col-nine">{{ sauna.name }}</h2></a>{% if page.sauna %}	<!-- begin schedule -->{% for schedule in sauna.schedule|get_array %}<section class="schedule col-lg-6"><h2 class="title title_color-white">{{ schedule.title }}</h2><!-- begin daysList --><ul class="list-unstyled daysList"><li class="daysList__day">{{ schedule.condition_1 }}</li>{% if schedule.condition_2 %}<li class="daysList__day">{{ schedule.condition_2 }}</li>{% endif %}
+{% if schedule.condition_3 %}<li class="daysList__day">{{ schedule.condition_3 }}</li>{% endif %}</ul><!-- end daysList -->{% if schedule.note %}<p class="schedule__warn">{{ schedule.note }}</p>{% endif %}</section>{% endfor %}<!-- end schedule --><div class="clearfix"></div>{% endif %}
+{% endfor %}
+{% endblock %}

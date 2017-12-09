@@ -1,31 +1,51 @@
-h1.mainTitle.text-center= saunaName
+| {% extends 'base.html '%}
+| {% load pages_tags %}
+
+| {% block content %}
+h2.mainTitle.text-center {{ page.name }}
+| {% if page.schedule %}	
 <!-- begin schedule -->
-h2.saunaTitle.saunaTitle_big Финская сауна + Турецкий хамам + Бильярд!
 section.schedule.col-lg-8
-	if active == 'newHall'
-		h2.schedule__title.saunaTitle.col-lg-12 Будние дни с ПН по ЧТ
+	| {% for schedule in page.schedule|get_array %}
+	h2.title.title_color-white {{ schedule.title }}
 	ul.list-unstyled.daysList
-		li.daysList__day с 9:00 до 17:00 &mdash; 500 руб.\час
-		li.daysList__day с 17:00 до 09:00 – 1000 руб.\час
-	h2.schedule__title.saunaTitle Будние дни с ПН по ЧТ
-	ul.list-unstyled.daysList
-		li.daysList__day с 9:00 до 17:00 – 500 руб.\час
-		li.daysList__day с 17:00 до 09:00 – 1000 руб.\час
-	p.schedule__warn *свыше 6 чел, за каждого последующего 100 руб.\час
+		li.daysList__day {{ schedule.condition_1 }}
+		| {% if schedule.condition_2 %}
+		li.daysList__day {{ schedule.condition_2 }}
+		| {% endif %}
+		| {% if schedule.condition_3 %}
+		li.daysList__day {{ schedule.condition_3 }}
+		| {% endif %}
+	| {% if schedule.note %}
+	p.schedule__warn {{ schedule.note }}
+	| {% endif %}
+	| {% endfor %}
 <!-- end schedule -->
+| {% endif %}	
+| {% if page.services %}
 <!-- begin services -->
 section.services.col-lg-4
-	h2.schedule__title.saunaTitle К вашим услугам:
+	h2.title.title_color-white К вашим услугам:
 	ul.servicesList
-		each service in saunaServices
-			li.servicesList__service= service
+		| {% for service in page.services|get_array %}
+		li.servicesList__service {{ service }}
+		| {% endfor %}
 <!-- end services -->
+| {% endif %}
 .clearfix
 <!-- begin photos -->
+| {% if page.gallery %}
 section.photos
-	h2.photos__title.blueContainer.text-center Фотографии
+	h2.title.textContainer.textContainer_color-white.text-center Фотографии
 	.photosList
-		each photoUrl in photosList
-			a.photoContainer(href= bp + photoUrl)
-				img.photoContainer__photo(data-src= bp + photoUrl, alt='Апартаменты')
+		| {% for photo in page.gallery.id|get_photo %}
+		a.photoContainer.col-lg-3.col-md-4.col-sm-6.col-xs-12(href="/media/{{ photo.image }}",
+			 data-lightbox="gallery" )
+			img.photoContainer__photo.img-responsive.fadeOut(data-src="/media/{{ photo.image }}", alt="{{ photo.alt }}")
+		| {% endfor %}
+| {% endif %}
+| {% if page.content %}
+| {{ page.content|safe }}
+| {% endif %}
 <!-- end photos -->
+| {% endblock %}

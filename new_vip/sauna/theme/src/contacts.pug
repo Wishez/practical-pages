@@ -1,0 +1,41 @@
+| {% extends "base.html" %}
+| {% load static %}
+
+| {% block content %}
+<!-- begin contactInfo -->
+.contactInfo.text-center
+	<!-- begin contactInfoPhones -->
+	.contactInfoPhones.textContainer.textContainer_color-black.textContainer_refer-white
+		strong.contactInfoPhones__label Телефон: 
+		| {% if page.phone_1 %}
+		a.contactInfoPhones__refer.hightlight(href='tel:{{ page.phone_1 }}')
+			span(itemprop="telephone") {{ page.phone_1 }}
+		| {% endif %}
+		| {% if page.phone_2 %}
+		| , 
+		a.contactInfoPhones__refer.hightlight(href='tel:{{ page.phone_2 }}')
+			span(itemprop="telephone") {{ page.phone_2 }}
+		| {% endif %}
+		| {% if not page.phone_2 and page.phone_1 %}
+		a.contactInfoPhones__refer.hightlight(href='tel:{{ settings.footer_phone }}')
+			span(itemprop="telephone") {{ settings.footer_phone }}
+		| {% endif %}
+	<!-- end contactInfoPhones -->
+
+	<!-- begin contactInfoPhones -->
+	.contactInfoAddress.textContainer.textContainer_color-black.textContainer_refer-white
+		strong.contactInfoAddress__label Адрес: 
+		a.footerContactsItem__refer.not-follow.hightlight(href="{{ settings.addressHref }}")
+			| {% if settings.city %}
+			span(itemprop="addressLocality") {{ settings.city }}
+			| , 
+			| {% endif %}
+			span(itemprop="streetAddress") {{ settings.address }}
+	<!-- end contactInfoPhones -->
+<!-- end contactInfo -->
+
+<!-- begin mapContainer -->
+.mapContainer
+	| {{ page.map|safe }}
+<!-- end mapContainer -->
+| {% endblock %}

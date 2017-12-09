@@ -1,7 +1,146 @@
+
+.hightlight
+	&:hover
+		color: darken($white, 10%) $i	
+
+/* Start main page */
+.banner, .pageContent p, .bathesList
+	@extend %defaultTopMargin
+.bathesList__refer
+	color: $brown
+.pageContent, .aboutSauna, .bathesList, .sauna
+	@extend %centered
+	max-width: 730px $i
 .main
-	padding-bottom: 524px
-	// @if $bodyImageBg
- //      @include responsive-background($attachment: fixed)
- //      background-image: $bodyImageBg $i
- //      z-index: -1
- //      height: 100%	
+	padding-bottom: 5%
+	// color: $white
+	@extend %fs-24
+	line-height: 145%
+	@include breakpoint($xs)
+		padding: 0 5% 5%
+		
+	& h3, & .title
+		line-height: 145%
+		@extend %bold
+		@extend %fs-24
+		@extend %increasedTopMargin
+.jumbotron
+	@extend %noneBackground
+	padding: 0 $i
+.banner_type-video
+	max-width: 720px
+	& iframe
+		width: 100% $i
+
+.mainTitle
+	@extend %bold
+	@extend %fs-28
+	@include breakpoint($xs)
+		font-size: 5vw
+
+.banner
+	// @extend %inline-block
+	@extend %fullWidth
+	@include breakpoint($xs)
+		margin-top: 1em
+
+.banner__image
+	// @include responsive-background((350% / 960 * 100), './../img/jumbotron.jpg')
+
+.pageContent p
+	@extend %fs-21-sm
+
+/* END main page */
+/* START contact */
+.textContainer
+	background-color: $brown
+	padding: 1em 0
+	@extend %fs-21
+	@extend %bold
+
+.textContainer_refer-white
+	& a
+		color: $white $i
+		&:hover
+			color: darken($white, 10%) $i
+
+.textContainer_color, .title_color
+	&-black
+		color: $darkGray
+	&-white
+		color: $white
+.contactInfoPhones, .contactInfoAddress, .aboutSauna__paragraph, 
+.daysList__day, .daysList, .servicesList, .schedule__warn
+	@extend %defaultTopMargin
+.mapContainer, .banner, .photosList, .saunaTitle
+	@extend %largeTopMargin
+
+.mapContainer__map,
+.banner__image, 
+.contactInfoPhones, 
+.contactInfoAddress
+	@extend %defaultBorderRadius
+
+.photosList
+	@extend %flex
+	@extend %defaultRowFlow
+	@extend %justifyBetween
+	@extend %alignCenter
+	cursor: pointer
+	@include breakpoint($xs)
+		justify-content: center
+.mfp-image-holder .mfp-content
+	transition: transform 0.8s
+	transform: scale(2)
+	@include breakpoint($xs)
+		transform: scale(1.3)
+
+.photoContainer, .photoContainer__photo 
+	@extend %relative
+	&::after	
+		content: ''
+		@extend %absolute
+		@extend %fullWidth
+		@extend %fullHeight
+
+
+
+.photoContainer
+	@extend %bigestTopMargin
+	@include breakpoint($xs)
+		@include gutters(1em)
+	&::after
+		@extend %negativeIndex1
+		@extend %defaultBorderRadius
+		// background-color: lighten($darkGray, 10%)
+		// box-shadow: 40px 40px 15px $shadow
+		top: -15px
+		left: -15px
+.photoContainer__photo 
+	border: 5px solid $brown
+	@extend %defaultBorderRadius
+	@extend %zeroOpacity
+	min-height: 205px
+	border-color: $brown
+	transition: 0.7s ease
+	&:hover
+		transform: scale(1.02)
+
+.title_col-nine
+	@extend %nine
+.saunaDetails
+	cursor: pointer
+	@extend %refusedTopMargin
+.saunaTitle 
+	color: #424242
+	@extend %fs-24
+	@extend %bold
+
+.servicesList__service 
+	@extend %refusedTopMargin
+	list-style: square
+	list-style-position: inside
+
+.photos, .aboutSauna 
+	@extend %bigestTopMargin
+/* END contact */

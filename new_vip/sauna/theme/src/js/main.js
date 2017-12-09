@@ -7,9 +7,9 @@
 import 'jquery';
 import 'bootstrap-sass';
 import 'babel-polyfill';
+import 'whatwg-fetch';
 import 'lightbox';
 import 'slick-carousel'
-// import 'whatwg-fetch';
 // import 'semantic-ui-sass';
 // import './modernizr.min.js';
 //  const mask = require('jquery-mask-plugin'),

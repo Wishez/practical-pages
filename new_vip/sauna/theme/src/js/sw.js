@@ -4,13 +4,13 @@
 
 const CACHE_NAME = 'filipp-zhuravlev-cache-v1';
 function _createUrl(url) {
-	return `${current_static_url}url`
+	return `/static/sauna/${url}`
 
 }
 const urlsToCache = [
-	_createUrl('/'),
-	_createUrl('css/main.css'),
-	_createUrl('js/main.js')
+	'/',
+	'./css/main.css',
+	'./js/main.js'
 ];
 
 self.addEventListener('install', e => {

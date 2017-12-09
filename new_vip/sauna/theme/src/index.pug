@@ -1,6 +1,31 @@
 | {% extends "base.html" %}
-| {% load static %}
+| {% load pages_tags %}
 
 | {% block content %}
-include ./blocks/templates/_main.pug
+<!-- begin jumbotron -->
+.jumbotron
+	| {% if page.is_video %}
+	div.banner.banner_type-video.center-block
+		| {{ page.jumbotron_video|safe }}
+	| {% endif %}
+	| {% if page.is_image %}
+	a.banner.banner_type-image(href="{{ page.image_href }}" , rel='alternate')
+		figure.banner__image(style='padding-bottom:{{ page.jumbotron_image.height|get_responsive_height:page.jumbotron_image.width }}')
+	| {% endif %}
+<!-- end jumbotron -->
+| {% if page.content %}
+<!-- begin content -->
+section.pageContent.center-block
+	| {{ page.content|safe }}
+| {% endif %}
+<!-- end content  -->
+<!-- begin bathesList -->
+| {% if page.sauna %}
+ul.bathesList.center-block
+	| {% for sauna in page.sauna|get_array %}
+	li.bathesListItem
+		a.bathesListItem__refer(href="{% url 'sauna' slug=sauna.slug %}", rel='alternative') {{ sauna.name }}
+	| {% endfor %}
+| {% endif %}
+<!-- end bathesList -->
 | {% endblock %}

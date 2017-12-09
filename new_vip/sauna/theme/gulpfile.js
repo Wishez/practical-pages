@@ -287,7 +287,7 @@ gulp.task('watch', () => {
   gulp.watch(settings.src + '/img/**/*.*', ['fastimages'])//.on('change', browserSync.reload);
   gulp.watch(settings.src + '/fonts/**/*.*', ['fonts'])//.on('change', browserSync.reload);
   gulp.watch(settings.src + '/**/*.pug', ['html'])//.on('change', browserSync.reload);
-  gulp.watch(settings.src + '/**/*.js', ['fastjs'])//.on('change', browserSync.reload);
+  gulp.watch(settings.src + '/**/*.js', ['fastjs', 'serviceworker'])//.on('change', browserSync.reload);
 });
 
 gulp.task('lintfastjs', ['lintsource', 'fastjs']);
