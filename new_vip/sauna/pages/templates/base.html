@@ -1,4 +1,4 @@
-{% load static pages_tags %}<!DOCTYPE html><html class="no-js" lang="ru" manifest="{% static '/sauna/app.manifest' %}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="{{ meta }}"><meta http-equive="X-UA-Compatible" content="IE=edge"><link rel="shortcut icon" type="image/x-icon" href="{% static '/sauna/img/favicon.ico' %}"><title>{{ page.title }}</title><style>.curtain {
+{% load static pages_tags %}<!DOCTYPE html><html lang="ru" manifest="{% static '/sauna/app.manifest' %}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="{{ meta }}"><meta http-equive="X-UA-Compatible" content="IE=edge"><link rel="shortcut icon" type="image/x-icon" href="{% static '/sauna/img/favicon.ico' %}"><title>{{ page.title }}</title><style>.curtain {
   margin: 0;
   padding: 0;
   {% if settings.curtain_bg %}
@@ -115,7 +115,7 @@ a:hover {
       console.log("No it didn't. This happened: ", err)
     });
 }
-    </script><link rel="stylesheet" href="{% static '/sauna/css/main.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1"><link rel="stylesheet" href="{% static '/sauna/css/ie-10-up.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1">{% if settings.widgets %}
+    </script><link rel="stylesheet" href="{% static '/sauna/css/main.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1"><noscript><link rel="stylesheet" href="{% static '/sauna/css/main.css' %}" lazyload="1"></noscript><link rel="stylesheet" href="{% static '/sauna/css/ie-10-up.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1"><noscript><link rel="stylesheet" href="{% static '/sauna/css/ie-10-up.css' %}" lazyload="1"></noscript>{% if settings.widgets %}
 {{ settings.widgets|safe }}
 {% endif %}
 {% if page.scripts %}
