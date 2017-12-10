@@ -8,6 +8,7 @@ import 'jquery';
 import 'bootstrap-sass';
 import 'babel-polyfill';
 import 'whatwg-fetch';
+import './../libs/details-shim.js';
 import 'lightbox';
 import 'slick-carousel'
 // import 'semantic-ui-sass';
