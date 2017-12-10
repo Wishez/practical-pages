@@ -115,7 +115,7 @@ html.no-js(lang="ru", manifest="{% static '/sauna/app.manifest' %}")
         {% if settings.default_image_bg %}
         background-image: url("/media/{{ settings.default_image_bg }}") !important;
         {% else %}
-        background-image: url("{% static '/sauna/img/background.png' %}")
+        background-image: url("{% static '/sauna/img/background.png' %}") !important;
         {% endif %}
       }
       {% if settings.default_link_color %}
@@ -155,28 +155,28 @@ html.no-js(lang="ru", manifest="{% static '/sauna/app.manifest' %}")
 
     script(async, src="{% static '/sauna/js/main.js' %}")
     script.
-      //- window.current_static_url = "{% static '/sauna/'%}";
-      
-      //- if ('serviceWorker' in navigator) {
-      //-   navigator.serviceWorker.register("{% static '/sauna/js/sw.js' %}")
-      //-     .then(function(reg){
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register("{% static '/sauna/js/sw.js' %}")
+          .then(function(reg){
             
-      //-     }).catch(function(err) {
-      //-       console.log("No it didn't. This happened: ", err)
-      //-     });
-      //- }
+          }).catch(function(err) {
+            console.log("No it didn't. This happened: ", err)
+          });
+      }
           
     link(
       rel="stylesheet",
       href="{% static '/sauna/css/main.css' %}",
       media='none',
-      onload='if (media == "none") media = "all"'
+      onload='if (media == "none") this.media = "all"',
+      lazyload="1"
     ) 
     link(
       rel="stylesheet",
       href="{% static '/sauna/css/ie-10-up.css' %}",
       media='none',
-      onload='if (media == "none") media = "all"'
+      onload='if (media == "none") this.media = "all"',
+      lazyload="1"
     ) 
 
     | {% if settings.widgets %}
@@ -188,8 +188,8 @@ html.no-js(lang="ru", manifest="{% static '/sauna/app.manifest' %}")
     | {% endif %}
 
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+      <script async src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
+      <script async src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
     <![endif]-->
     <!--[if IE]><link type="text/css" rel="stylesheet" href="{% static '/sauna/css/ie9.css' %}" lazyload="1" /><![endif]-->
 
