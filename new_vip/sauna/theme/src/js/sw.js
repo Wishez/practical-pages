@@ -9,8 +9,8 @@ function _createUrl(url) {
 }
 const urlsToCache = [
 	'/',
-	'./css/main.css',
-	'./js/main.js'
+	'/static/sauna/css/main.css',
+	'/static/sauna/js/main.js'
 ];
 
 self.addEventListener('install', e => {
