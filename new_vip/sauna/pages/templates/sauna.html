@@ -1,4 +1,4 @@
-{% extends 'base.html '%}
+{% extends "base.html" %}
 {% load pages_tags %}
 {% block content %}<h2 class="mainTitle text-center">{{ page.name }}</h2>{% if page.schedule %}	<!-- begin schedule --><section class="schedule col-lg-8">{% for schedule in page.schedule|get_array %}<h2 class="title title_color-white">{{ schedule.title }}</h2><ul class="list-unstyled daysList"><li class="daysList__day">{{ schedule.condition_1 }}</li>{% if schedule.condition_2 %}<li class="daysList__day">{{ schedule.condition_2 }}</li>{% endif %}
 {% if schedule.condition_3 %}<li class="daysList__day">{{ schedule.condition_3 }}</li>{% endif %}</ul>{% if schedule.note %}<p class="schedule__warn">{{ schedule.note }}</p>{% endif %}

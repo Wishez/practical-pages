@@ -91,7 +91,7 @@ body {
   {% if settings.default_image_bg %}
   background-image: url("/media/{{ settings.default_image_bg }}") !important;
   {% else %}
-  background-image: url("{% static '/sauna/img/background.png' %}")
+  background-image: url("{% static '/sauna/img/background.png' %}") !important;
   {% endif %}
 }
 {% if settings.default_link_color %}
@@ -107,23 +107,21 @@ a:hover {
 {% block content %}
 {% endblock %}</div></main><footer class="footer" itemscope itemtype="http://schema.org/Person"><span class="sr-only" itemprop="name">vip-sauna6.ru</span><div class="container"><figure class="figure figure_name-pretty_woman"></figure><figure class="figure figure_name-floor"></figure>{% if settings.footer_photo %}<!-- begin presentation --><ul class="presentation" id="presentation">{% for photo in settings.footer_photo.id|get_photo %}<li class="footerNavItem col-lg-3 col-md-4 col-sm-4 col-xs-6"><a href="/media/{{ photo.image }}" data-lightbox="roadtrip"><img class="img-responsive fadeOut" data-src="/media/{{ photo.image }}"></a></li>{% endfor %}</ul><!-- end presentation -->{% endif %}</div><!-- begin footerInfo --><div class="footerInfo"><div class="container"> <!-- begin footerContacts --><address class="footerContacts col-lg-4 col-md-6 col-sm-12 col-xs-10"><h2 class="title title_color-black footerContacts__title">Мы ждём вас:</h2><figure class="figure figure_name-phone figure_relative"></figure><ul class="footerContactsList list-unstyled"><li class="footerContactsItem" itemscope itemtype="http://schema.org/PostalAddress"><strong class="footerContactsItem__label">По адресу:</strong><br><a class="footerContactsItem__refer not-follow" href="{{ settings.addressHref }}"><span itemprop="addressLocality"> </span><span itemprop="streetAddress">{{ settings.address }}</span></a></li><li class="footerContactsItem"><strong class="footerContactsItem__label">Телефон для записи:</strong><br>{% if settings.footer_phone %}<a class="not-follow footerContactsItem__refer" href="tel:{{ settings.footer_phone }}"><span itemprop="telephone">{{ settings.footer_phone }}</span></a>{% endif %}</li></ul></address><!-- end footerContacts -->
 <!-- begin aboutUs --><div class="aboutUs col-lg-8 col-md-12 col-sm-12 col-xs-10 pull-right"><figure class="figure figure_name-star"></figure><h2 class="title title_color-brown">О нас</h2><figure class="figure figure_relative figure_name-basket col-lg-3 col-md-3 col-sm-4 col-xs-12"></figure><p class="aboutUs__paragraph col-lg-9 col-md-9 col-sm-8 col-xs-12 pull-right">Сауны Екатеринбурга гостеприимно распахивают перед Вами свои двери. Говорят, что убить двух зайцев одним выстрелом &mdash; это большая удача. Проведя время в сауне, вы убьете одним выстрелом гораздо больше зайцев. Во-первых, вы приятно и весело проведете время. </p><p class="aboutUs__paragraph aboutUs__paragraph col-lg-9 col-md-9 col-sm-8 col-xs-12 pull-right">Парные с профессиональными банщиками, комнаты отдыха с баром и бильярдом, массаж, стрип-шоу &mdash; это все для вас. Во-вторых, сауны и бани &mdash; это замечательный способ поправить свое здоровье или поддерживать его в великолепной форме. В-третьих, в сауне можно легко и приятно расслабиться, отдохнуть от повседневных забот.</p></div><!-- end aboutUs -->
-<!-- begin сopyright --><div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 copyright"><figure class="figure figure_name-bucket"></figure><h3 class="copyright__title title text-right">{{ settings.footer_copyright }}</h3></div><!-- end сopyright --></div></div><!-- end footerInfo --></footer><script async src="{% static '/sauna/js/main.js' %}"></script><script>//- window.current_static_url = "{% static '/sauna/'%}";
-
-//- if ('serviceWorker' in navigator) {
-//-   navigator.serviceWorker.register("{% static '/sauna/js/sw.js' %}")
-//-     .then(function(reg){
+<!-- begin сopyright --><div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 copyright"><figure class="figure figure_name-bucket"></figure><h3 class="copyright__title title text-right">{{ settings.footer_copyright }}</h3></div><!-- end сopyright --></div></div><!-- end footerInfo --></footer><script async src="{% static '/sauna/js/main.js' %}"></script><script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register("{% static '/sauna/js/sw.js' %}")
+    .then(function(reg){
       
-//-     }).catch(function(err) {
-//-       console.log("No it didn't. This happened: ", err)
-//-     });
-//- }
-    </script><link rel="stylesheet" href="{% static '/sauna/css/main.css' %}" media="none" onload="if (media == &quot;none&quot;) media = &quot;all&quot;"><link rel="stylesheet" href="{% static '/sauna/css/ie-10-up.css' %}" media="none" onload="if (media == &quot;none&quot;) media = &quot;all&quot;">{% if settings.widgets %}
+    }).catch(function(err) {
+      console.log("No it didn't. This happened: ", err)
+    });
+}
+    </script><link rel="stylesheet" href="{% static '/sauna/css/main.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1"><link rel="stylesheet" href="{% static '/sauna/css/ie-10-up.css' %}" media="none" onload="if (media == &quot;none&quot;) this.media = &quot;all&quot;" lazyload="1">{% if settings.widgets %}
 {{ settings.widgets|safe }}
 {% endif %}
 {% if page.scripts %}
 {{ page.scripts|safe }}
 {% endif %}<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
+<script async src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js">
+<script async src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js">
 <![endif]-->
 <!--[if IE]><link type="text/css" rel="stylesheet" href="{% static '/sauna/css/ie9.css' %}" lazyload="1" /><![endif]--></body></html>
