@@ -82,7 +82,7 @@ import lozad from 'lozad';
 
               });
           $slider.animate({opacity: 1}, 700);
-      }, 1500)
+      }, 2500)
       
       // Поп-ап слайдер
       lightbox.option({
