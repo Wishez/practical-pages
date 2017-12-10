@@ -50,7 +50,7 @@ class ServicesView(BaseView):
     template_name = 'services.html'
 
     def __init__(self):
-        super().__init__()
+        super(ServicesView, self).__init__()
         self.page_model = ServicesPage
 class PricesView(BaseView):
     template_name = 'prices.html'
@@ -72,5 +72,5 @@ class SaunaView(BaseView):
     def get(self, request, slug):
         self.page = get_object_or_404(SaunaPage, slug=slug)
 
-        return super().get(request)
+        return super(SaunaView, self).get(request)
 
