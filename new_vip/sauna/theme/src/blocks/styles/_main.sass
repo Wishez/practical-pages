@@ -33,10 +33,13 @@
 		width: 100% $i
 
 .mainTitle
+	word-break: break-word
 	@extend %bold
 	@extend %fs-28
 	@include breakpoint($xs)
-		font-size: 5vw
+		font-size: (24em / 16)
+	@include breakpoint($xxs)
+		font-size: 7vw
 
 .banner
 	// @extend %inline-block
