@@ -1,8 +1,8 @@
 footer.footer(itemscope, itemtype='http://schema.org/Person')
     span.sr-only(itemprop="name") vip-sauna6.ru
     .container
-        figure.figure.figure_name-pretty_woman
-        figure.figure.figure_name-floor
+        //- figure.figure.figure_name-floor
+        //- figure.figure.figure_name-pretty_woman
         | {% if settings.footer_photo %}
         <!-- begin presentation -->
         ul#presentation.presentation
@@ -48,6 +48,11 @@ footer.footer(itemscope, itemtype='http://schema.org/Person')
         <!-- end aboutUs -->
         <!-- begin сopyright -->
         .col-lg-4.col-md-6.col-sm-12.col-xs-12.copyright
+            <!--LiveInternet counter-->
+            #liveCounter
+                 
+            
+            <!--/LiveInt ernet-->
             figure.figure.figure_name-bucket
             h3.copyright__title.title.text-right {{ settings.footer_copyright }}
             

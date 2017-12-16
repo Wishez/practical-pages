@@ -19,17 +19,27 @@
 	& .slick-next:before
 		content: ">"
 	& .slick-prev, & .slick-next,
-		top: 65px
+		top: 45%
+		top: calc(50% - 35px)
 	& .slick-prev
 		left: -50px
 	& .slick-next,
 		right: -30px
-.figure_name-pretty_woman, .figure_name-floor	
-	display: none	
+// .figure_name-pretty_woman, .figure_name-floor	
+// 	display: none	
 .figure_name-pretty_woman
 	right: 10%
-	@extend %index1
+	@include breakpoint($xs)
+		right: 	0
+		top: -255px
+		max-width: 320px
 
+.figure_name-floor
+	@include breakpoint($xs)
+		left: 0
+
+	// &:after
+		// @extend %index1
 .aboutUs, .footerContactsItem__label
 	color: $darkestRed
 .title, .pageContent h3
@@ -126,8 +136,13 @@
 	@include breakpoint($xxs)
 		float: left
 
-
+#liveCounter
+	@extend %absolute
+	top: 5em
+	right: 2.5em
 .aboutUs__paragraph
+	background-color: transparent
+	box-shadow: none
 	@include breakpoint($md-less)
 		padding-left: 2em
 	@include breakpoint($xxs)
