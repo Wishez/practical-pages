@@ -6,18 +6,18 @@
 /* Start main page */
 .banner, .pageContent p, .bathesList
 	@extend %defaultTopMargin
-.bathesList__refer
-	color: $brown
+// .bathesList__refer
+// 	color: $brown 
 .pageContent, .aboutSauna, .bathesList, .sauna
 	@extend %centered
 	max-width: 730px $i
 .main
-	padding-bottom: 5%
+	padding-bottom: 15em
 	// color: $white
 	@extend %fs-24
 	line-height: 145%
 	@include breakpoint($xs)
-		padding: 0 5% 5%
+		padding: 0 1em 15em
 		
 	& h3, & .title
 		line-height: 145%
@@ -77,6 +77,9 @@
 	@extend %defaultTopMargin
 .mapContainer, .banner, .photosList, .saunaTitle
 	@extend %largeTopMargin
+.daysList__day, .servicesList__service
+	&:first-child
+		margin-top: 0
 
 .mapContainer__map,
 .banner__image, 
