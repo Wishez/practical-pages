@@ -33,7 +33,7 @@ html(lang="ru", manifest="{% static '/sauna/app.manifest' %}")
         {% endif %}
         height: 100%;
         width: 100%;
-        z-index: 11;
+        z-index: 100000;
         position: fixed;
         top: 0;
         left: 0;
@@ -110,6 +110,7 @@ html(lang="ru", manifest="{% static '/sauna/app.manifest' %}")
         {% if settings.default_color %}
         color: {{ settings.default_color }} !important;
         {% endif %}
+        //- background: url(/media/background/girl.jpg);
         {% if settings.default_bg %}
         background-color: {{ settings.default_bg }};
         {% endif %}
@@ -118,6 +119,11 @@ html(lang="ru", manifest="{% static '/sauna/app.manifest' %}")
         {% else %}
         background-image: url("{% static '/sauna/img/background.png' %}") !important;
         {% endif %}
+        background-blend-mode: soft-light;
+        z-index: -1;
+        /* background-color: rgba(49, 49, 84, .9); */
+        /* background-color: #76635c !important; */
+        background-color: rgba(118, 99, 92, .5) !important;
       }
       {% if settings.default_link_color %}
       a {
