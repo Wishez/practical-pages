@@ -1,7 +1,7 @@
 header.header
 	.container
-		nav.navigation.navbar.navbar-default(role="navigation")
-			figure.figure.figure_name-branch
+		nav.navigation.navbar.navbar-default.navbar-fixed-top(role="navigation")
+			//- figure.figure.figure_name-branch
 			.container
 				.navbar-header.navHeader.col-lg-5.col-md-4.col-sm-12.col-xs-12
 					button#openMenuButton.navigation__openMenuButton.navbar-toggle( 
@@ -21,10 +21,25 @@ header.header
 				.navbarCollaps.collapse.navbar-collapse#navbar_collapse
 					ul.nav.navbar-nav.navList.col-lg-7.col-md-8.col-sm-12.col-xs-12.text-center
 						li.navItem.navItem_name-home 
-							a.navItem__refer(href="{% url 'home' %}") Главная
+							a.navItem__refer(
+								href="{% url 'home' %}", 
+								title='Главная страница сайта') Главная
+						
 						li.navItem.navItem_name-services
-							a.navItem__refer(href="{% url 'services' %}") Услуги
+							a.navItem__refer(
+								href="{% url 'services' %}", 
+								title='Список доступных залов'
+							) Залы
+						| {% if appartments %}
 						li.navItem.navItem_name-prices
-							a.navItem__refer(href="{% url 'prices' %}") Цены
+							a.navItem__refer.navItem__refer_appartments(
+								href="{% url 'sauna' slug=appartments %}"
+							) Аппартаменты
+						| {% else %}
+						li.navItem.navItem_name-prices
+							a.navItem__refer(
+								href="{% url 'prices' %}",
+								title='Расписание и цени на аренду залов') Цены
+						| {% endif %}
 						li.navItem.navItem_name-contacts
 							a.navItem__refer(href="{% url 'contacts' %}") Контакты

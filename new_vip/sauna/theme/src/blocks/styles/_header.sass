@@ -1,6 +1,6 @@
 // Header
 .header 
-  padding: 4em 0
+  padding: 5.5em 0
   // @extend %absolute
   @extend %fullWidth
   &:after
@@ -10,10 +10,10 @@
     padding-right: 0 $i
     @include breakpoint($xs)
 /* AFTER content */
-.brandName, .navItem, .navigation
+.brandName, .navItem, .navigation > .container
     @include set_generate_element('after', 'absolute')
 /* START BRAND */
-.brand, .brandName_beneath, .header, .navItem, .brandName, .header, .navigation 
+.brand, .brandName_beneath, .header, .navItem, .brandName, .header 
     @extend %relative
 .brand
     @extend %fullWidth
@@ -67,8 +67,14 @@
 .navigation 
   background-color: transparent $i
   border: 0
-  @extend %relative
-  &:after
+  top: 2.5em
+
+  @include breakpoint($xs)
+      // top: 0
+      transform: none
+  & > .container
+      @extend %relative
+  & > .container:after
     @extend %negativeIndex2
     @include responsive-background((68% / 975 * 100), './../img/header.png')
     top: 10px
@@ -124,7 +130,7 @@
         
   &.active .navItem__refer 
 
-@each $name, $width, $height,  $y, $y-md, $y-sm, $rotate in ("home", 128, 88%, 0, 0, 0, -5deg), ("services", 126, 85%, -211px, -198px, -225px, 2deg), ("prices", 126, 82%, -108px, -106px, -115px, -2deg), ("contacts", 124, 81%, -313px, -293px, -224px, 0)
+@each $name, $width, $height,  $y, $y-md, $y-sm, $rotate in ("home", 128, 88%, 0, 0, 0, -5deg), ("services", 126, 85%, -217px, -205px, -234px, 2deg), ("prices", 126, 82%, -108px, -106px, -115px, -2deg), ("contacts", 124, 81%, -320px, -305px, -234px, 0)
   .navItem_name-#{$name}
     & .navItem__refer
         transform: rotate(#{$rotate})
@@ -164,7 +170,10 @@
   
   &:hover 
     
-   
+.navItem__refer_appartments
+  font-size: 0.75em
+  position: relative
+  top: 0.5em
   
 
 /* END NAV ITEMS */
