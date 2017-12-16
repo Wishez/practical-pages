@@ -27,14 +27,19 @@ class BaseView(TemplateView):
             self.get_page()
 
         page = self.page
-        #
-        # # Установка мета-описания для текущей страницы
+        
+        # Установка мета-описания для текущей страницы
         if page.meta != '':
             self.meta = page.meta
 
         context['meta'] = self.meta
         context['page'] = page
         context['settings'] = self.settings
+
+        appartments = SaunaPage.objects.filter(name='Аппартаменты')
+
+        if appartments.exists():
+            context['appartments'] = appartments[0].slug
 
         return self.set_additional_context(context)
 
