@@ -36,7 +36,7 @@ class BaseView(TemplateView):
         context['page'] = page
         context['settings'] = self.settings
 
-        appartments = SaunaPage.objects.filter(name='Аппартаменты')
+        appartments = SaunaPage.objects.filter(name='Апартаменты')
 
         if appartments.exists():
             context['appartments'] = appartments[0].slug

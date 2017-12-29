@@ -58,7 +58,8 @@ import lozad from 'lozad';
                     settings: {
                       slidesToShow: 3,
                       slidesToScroll: 1,
-                      infinite: true
+                      infinite: true,
+                      arrows: false
                     }
                   },
                   {
