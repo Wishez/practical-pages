@@ -1,5 +1,3 @@
 {% extends "base.html" %}
 {% load pages_tags %}
-{% block content %}
-{% for sauna in page.sauna|get_array %}<section class="sauna"><a href="{% url 'sauna' slug=sauna.slug %}"><h2 class="title title_col-nine">{{ sauna.name }}</h2></a>{% if sauna.content %}<details class="saunaDetails">{{ sauna.content|safe }}<summary>Подробнее о сауне</summary></details>{% endif %}</section>{% endfor %}
-{% endblock %}
+{% block content %}<ul class="saunaList list-unstyled">{% for sauna in page.sauna|get_array %}<li class="sauna"><a class="sauna__href" href="{% url 'sauna' slug=sauna.slug %}"><figure class="sauna__figure" style="background-image: url(&quot;/media/{% if sauna.thumb %}{{ sauna.thumb.image }}{% endif %}&quot;);"></figure><h2 class="sauna__title">{{ sauna.name }}</h2></a></li>{% endfor %}</ul>{% endblock %}

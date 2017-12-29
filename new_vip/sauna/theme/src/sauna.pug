@@ -3,6 +3,21 @@
 
 | {% block content %}
 h2.mainTitle.text-center {{ page.name }}
+| {% if page.name == "Апартаменты" %}
+p.text-center(style='max-width: 35rem; font-weight: bold')
+	a(href="{% url 'prices' %}") Цены
+| {% if page.services %}
+<!-- begin services -->
+section.services.center-block.col-lg-4(style='float: none')
+	h2.title.title_color-white К вашим услугам:
+	ul.servicesList
+		| {% for service in page.services|get_array %}
+		li.servicesList__service {{ service }}
+		| {% endfor %}
+<!-- end services -->
+| {% endif %}
+//- end page.services
+| {% else %}
 | {% if page.schedule %}	
 <!-- begin schedule -->
 section.schedule.col-lg-8
@@ -32,6 +47,10 @@ section.services.col-lg-4
 		| {% endfor %}
 <!-- end services -->
 | {% endif %}
+//- end page.services
+| {% endif %}
+//- end if page.name
+
 .clearfix
 <!-- begin photos -->
 | {% if page.gallery %}

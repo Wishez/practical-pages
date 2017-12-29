@@ -85,6 +85,7 @@ class SaunaPageAdmin(admin.ModelAdmin):
         ('Контент страницы', {
             'fields': (
                 ('name', 'slug',),
+                ('thumb',),
                 ('services'),
                 ('schedule'),
                 ('gallery',),

@@ -55,6 +55,13 @@ class SaunaPage(BasePage):
         _('Название сауны'),
         max_length=150
     )
+    thumb = models.ForeignKey(
+        "album.albumimage",
+        verbose_name=_('Превью сауны'),
+        related_name='sauna_thumb',
+        blank=True,
+        null=True
+    )
     schedule = models.ManyToManyField(
         Schedule,
         verbose_name=_('Расписание'),

@@ -1,23 +1,24 @@
 
+
 .hightlight
 	&:hover
 		color: darken($white, 10%) $i	
 
 /* Start main page */
-.banner, .pageContent p, .bathesList
+.banner, .pageContent p
 	@extend %defaultTopMargin
 // .bathesList__refer
 // 	color: $brown 
-.pageContent, .aboutSauna, .bathesList, .sauna
+.pageContent, .aboutSauna, .bathesList
 	@extend %centered
-	max-width: 730px $i
+	max-width: 60rem $i
 .main
-	padding-bottom: 15em
+	padding-bottom: 5em
 	// color: $white
 	@extend %fs-24
 	line-height: 145%
 	@include breakpoint($xs)
-		padding: 0 1em 15em
+		padding: 0 1em 5em
 		
 	& h3, & .title
 		line-height: 145%
@@ -75,7 +76,7 @@
 .contactInfoPhones, .contactInfoAddress, .aboutSauna__paragraph, 
 .daysList__day, .daysList, .servicesList, .schedule__warn
 	@extend %defaultTopMargin
-.mapContainer, .banner, .photosList, .saunaTitle
+.mapContainer, .banner, .photosList, .saunaTitle, .bathesList
 	@extend %largeTopMargin
 .daysList__day, .servicesList__service
 	&:first-child
@@ -134,9 +135,46 @@
 
 .title_col-nine
 	@extend %nine
-.saunaDetails
-	cursor: pointer
-	@extend %refusedTopMargin
+.saunaList
+	display: flex
+	flex-flow: row wrap
+	margin-right: -2.5em
+	margin-top: 3em
+.sauna
+	flex: 1 0 50%
+	padding-right: 3em;
+	min-width: 33%;
+	transition: .3s ease
+	&:hover
+		transform: translate(0, -5%) 
+.sauna__href
+	transition: .3s ease
+	display: block
+	&:hover
+		box-shadow: 0 0 25px $shadow
+
+.sauna__figure
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	min-height: 340px
+
+.sauna__title
+	padding: 1em 0
+	text-transform: capitalize
+	text-align: center
+	border: 3px solid $darkGray
+	background: $white
+	transition: .3s ease
+	color: $darkGray
+	&:hover
+		color: $white
+		border-color: $blue
+		background: $blue
+
+// .saunaDetails
+	// cursor: pointer
+	// @extend %refusedTopMargin
 .saunaTitle 
 	color: #424242
 	@extend %fs-24

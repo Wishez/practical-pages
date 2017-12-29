@@ -2,13 +2,11 @@
 | {% load pages_tags %}
 
 | {% block content %}
-| {% for sauna in page.sauna|get_array %}
-section.sauna
-	a(href="{% url 'sauna' slug=sauna.slug %}")
-		h2.title.title_col-nine {{ sauna.name }}
-	| {% if sauna.content %}
-	details.saunaDetails {{ sauna.content|safe }}
-		summary Подробнее о сауне
-	| {% endif %}
-| {% endfor %}
+ul.saunaList.list-unstyled
+	| {% for sauna in page.sauna|get_array %}
+	li.sauna
+		a.sauna__href(href="{% url 'sauna' slug=sauna.slug %}")
+			figure.sauna__figure(style='background-image: url("/media/{% if sauna.thumb %}{{ sauna.thumb.image }}{% endif %}");')
+			h2.sauna__title {{ sauna.name }}
+	| {% endfor %}
 | {% endblock %}

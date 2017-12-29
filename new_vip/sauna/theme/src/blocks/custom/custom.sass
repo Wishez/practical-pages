@@ -38,7 +38,7 @@ body
   @extend %relative
   font: 
     family: $mainFont
-    size: #{$baseSizeFont}px
+    size: 1em
   
   text-rendering: optimizeLegibility
   font-kerning: normal
@@ -98,7 +98,7 @@ body
   position: relative
   z-index: 1
 // ('branch', 232, 404%, -8%, -64% )
-$figures: ('leaf', 383, 294%, 0, 0), ('phone', 132, 67%, 0, 25px), ('basket', 160 , 150%, 0, 45px), ('bucket', 317 , 201%, 0, 0), ('star', 124, 123%, auto, -35px), ('floor', 919, 222%, 10%, -130px), ('pretty_woman', 500, 300%, auto, -325px)
+$figures: ('leaf', 383, 294%, 0, 0), ('phone', 132, 67%, 0, 25px), ('basket', 160 , 150%, 0, 2em), ('bucket', 317 , 201%, 0, 0), ('star', 124, 123%, auto, -35px), ('floor', 919, 222%, 10%, -130px), ('pretty_woman', 500, 300%, auto, -325px)
 @each $name, $width, $height, $x, $y in $figures
     // .figure_name-#{$name}.figure_relative
         // padding-bottom:  ($height / $width * 100 / 2)
@@ -152,7 +152,7 @@ p, .daysList, .servicesList
   border-radius: 5px
   box-shadow: 0 10px 15px rgba(0, 0, 0, .6)
   color: #222
-p, h3 
+p, h3
   max-width: 60rem
   @extend %centered
 p
