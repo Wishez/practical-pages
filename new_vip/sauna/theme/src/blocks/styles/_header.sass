@@ -1,6 +1,6 @@
 // Header
 .header 
-  padding: 5.5em 0
+  padding: 7.5em 0
   // @extend %absolute
   @extend %fullWidth
   &:after
@@ -44,7 +44,7 @@
     @include breakpoint($sm)
         max-width: 330px
     @include breakpoint($xxs)
-        font-size: 4.1vw
+        font-size: 4.6vw
 
     &:after
         top: 5px
@@ -109,6 +109,8 @@
   @extend %alignCenter 
   @include breakpoint($sm)
     margin-top: 36px
+  @include breakpoint($xs)
+    flex-direction: column
   @include breakpoint($xxs)
     padding-right: 0
     margin-left: 0
@@ -120,17 +122,22 @@
   @extend %three
   @extend %whiteTextShadow
   @extend %fullWidth-xxs
+  font-size: 1.3em
+  @include breakpoint($xs)
+      min-height: 85px
+      max-width: 121px
+  &:first-of-type
+    @include breakpoint($xs) 
+        margin-top:  0.5em
   &:after
     @include responsive-background($url: './../img/nav_sprite.png')
     top: -20px
     @include breakpoint($sm)
         top: -10px  
-    @include breakpoint($xs)
-        content: none
         
   &.active .navItem__refer 
 
-@each $name, $width, $height,  $y, $y-md, $y-sm, $rotate in ("home", 128, 88%, 0, 0, 0, -5deg), ("services", 126, 85%, -217px, -205px, -234px, 2deg), ("prices", 126, 82%, -108px, -106px, -115px, -2deg), ("contacts", 124, 81%, -320px, -305px, -234px, 0)
+@each $name, $width, $height,  $y, $y-md, $y-sm, $y-xs, $rotate in ("home", 128, 88%, 0, 0, 0, 0, -5deg), ("services", 126, 85%, -217px, -205px, -234px, -239px, 2deg), ("prices", 126, 82%, -108px, -106px, -115px, -82px, -2deg), ("contacts", 124, 81%, -320px, -305px, -234px, -238px, 0)
   .navItem_name-#{$name}
     & .navItem__refer
         transform: rotate(#{$rotate})
@@ -142,6 +149,8 @@
             background-position: -0 #{$y-md} 
         @include breakpoint($sm)
             background-position: -0 #{$y-sm} 
+        @include breakpoint($xs)
+            background-position: -0 #{$y-xs} 
 
     
 
@@ -156,24 +165,24 @@
   @include breakpoint($sm)
         margin-top: 0.7em
   @include breakpoint($xs)
-      color: $darkestRed $i
+      margin-top: 0 
+      // color: $darkestRed $i
   
   @include breakpoint(max-width 992px) 
     
   
   @include breakpoint($xs) 
-    
+    font-size: 0.8em 
   
   
-  @include breakpoint($xxs)
-    transform: none $i
+  // @include breakpoint($xxs)
+  //   // transform: none $i
   
   &:hover 
     
-.navItem__refer_appartments
-  font-size: 0.75em
-  position: relative
-  top: 0.5em
+
+  
+  
   
 
 /* END NAV ITEMS */
