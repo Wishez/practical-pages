@@ -53,28 +53,32 @@
 	START FOOTER CONTACTS 
 										*/
 									
-.footer__paragraph, .footerContacts, .copyright	
-
+.footer__paragraph, .footerContacts, .aboutUs__paragraph 
+	font-size: 1.3333333333333333333333333333333em
 
 
 .footer__paragraph 
 .footerContactsList, .copyright
 	padding-right: 2em
 .footerContactsList 
-	// @extend %largeTopMargin
 	@extend %defaultTopMargin
 	@extend %halfWidth-mdLess
 	
 	@include breakpoint($xxs)
 		text-align: center	
+		font-size: 1.5em
+		padding-right: 	0;
 .footerContactsItem__label
-	@extend %fs-18
 	font-style: italic
 	
 	
  
 .footerContacts
-	margin-top: 4.5em
+	padding: 1em 1em 2em
+	box-shadow: 0 5px 15px -3px $shadow;
+	max-width: 330px
+	margin-top: 1em
+	background: #f1f1f1
 	@include breakpoint($md)
 		order: 3
 		top: -20px
@@ -94,9 +98,9 @@
 		@extend %zeroTop
 		@include responsive-background($url: './../img/footer_top.png')
 	@include breakpoint($xxs)
-		padding-bottom: 3em
+		padding-bottom: 18em
 .footerInfo > .container
-	padding-top: 2em
+	padding-top: 7em
 .figure_name-basket, .footerContacts, .figure_name-phone
 	@extend %centered-xs
 .aboutUs, .footerContactsList, .footerContacts
@@ -107,7 +111,7 @@
 	padding: 2em 2em 2.5em
 	border 3px solid #fff
 	@extend %whiteBg
-	top: 95px
+	top: 5.4em
 	@include breakpoint($md-less)
 		top: 15px	
 		margin-top: 2em
@@ -155,7 +159,8 @@
 		top: -16px
 .figure_name-bucket
 	z-index: 1
-	left: -140px
+	max-width: 200px $i
+	// left: -140px
 	@include breakpoint($md-less)
 		left: -60px	
 	@include breakpoint($xs)
@@ -165,6 +170,7 @@
 .copyright__title
 	@extend %fullWidth
 	$paleDarkGray: rgba(21, 21, 21, .6)
+	background: $paleDarkGray;
 	background: linear-gradient(to right, transparent 0 , transparent 20%, $paleDarkGray 20%, $paleDarkGray 90%, transparent 100%)
 	color: $white
 	padding: 0.5em 1.5em 0.5em 0
@@ -172,8 +178,10 @@
 	@extend %zeroIndex
 	border: 0
 	@extend %fs-21
-	@include breakpoint($xs)
-		padding-right: 4em
+	text-indent: 12em
+	text-align: center
+	// @include breakpoint($xs)
+	// 	padding-right: 4em
 
 
 	// @extend %fs-
@@ -186,6 +194,7 @@
 											*/					
 .copyright
 	top: -2em 
+	// margin-top: 1em
 	@include breakpoint($md)
 		top: 0.5em
 	@include breakpoint($sm-less)
