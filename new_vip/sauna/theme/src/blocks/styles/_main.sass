@@ -111,8 +111,11 @@
 		@extend %fullHeight
 
 
-
+.photoContainer:nth-last-child(2):nth-child(4n)
+	min-width: 33%
 .photoContainer
+	flex: 1 0 25%
+
 	@extend %bigestTopMargin
 	@include breakpoint($xs)
 		@include gutters(1em)
@@ -139,12 +142,19 @@
 	display: flex
 	flex-flow: row wrap
 	margin-right: -2.5em
+	@include breakpoint($sm-less) 
+		margin-right: 0
 	margin-top: 3em
 .sauna
 	flex: 1 0 50%
-	padding-right: 3em;
-	min-width: 33%;
+	padding-right: 3em
+	min-width: 33%
 	transition: .3s ease
+
+	@include breakpoint($sm-less) 
+		min-width: 51%
+		margin-top: 1em
+		padding-right: 0
 	&:hover
 		transform: translate(0, -5%) 
 .sauna__href

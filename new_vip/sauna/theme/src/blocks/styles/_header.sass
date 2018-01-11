@@ -9,6 +9,7 @@
 .navHeader, .brand
     padding-right: 0 $i
     @include breakpoint($xs)
+
 /* AFTER content */
 .brandName, .navItem, .navigation > .container
     @include set_generate_element('after', 'absolute')
@@ -67,7 +68,7 @@
 .navigation 
   background-color: transparent $i
   border: 0
-  top: 2.5em
+  top: 3.5em
 
   @include breakpoint($xs)
       // top: 0
@@ -173,17 +174,92 @@
   
   @include breakpoint($xs) 
     font-size: 0.8em 
-  
-  
-  // @include breakpoint($xxs)
-  //   // transform: none $i
-  
-  &:hover 
+
     
+// .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header
+//   margin-left: 0 $i
+//   margin-right: 0 $i
+.headerContacts
+  font-size: 2em
+  color: $white
+  // background: $brown
+  padding: 1em 1em
+  line-height: 1.4
+  z-index: -1
+  width: (265em / 20)
+  margin-left: 1em
+  // position: absolute
+  // right: 0
+  // top: 7em
+  transition: .5s ease
+  text-align: center
+  @include breakpoint($lg)
+    margin-top: 1em
+    margin-left: 4.5em
+  @include breakpoint($sm)
+    margin-left: 0;
+    margin-top: 1.6em;
+  @include breakpoint($xs)
+    margin-top: 0
+    position: relative
+    top: -1em
+    margin-left: 4.5em
+  @include breakpoint($xxs)
+    width: 100%
+    margin: 0 0 0 -1em;
+    // top: 5em
+    padding-bottom: 1em
+  // &:hover 
+  //   transform: none
+  //   padding-bottom: 1em
+  //   & .headerContactsItem
+  //     opacity: 1 $i
+  //   &:before
+  //     opacity: 0
+  // &_hidden 
+  //   transform: translate(85%, 0)
+  //   @include breakpoint($xxs)
+  //     transform: translate(78%,0)
+  //     padding-bottom: 0
 
-  
-  
-  
+  //   &::before
+  //     transition: .3s ease
+  //     cursor: pointer
+  //     content: ""
+  //     position: absolute
+  //     width: (30em / 11)
+  //     height: (30em / 11)
+  //     margin-top: 1.3em
+  //     top: 0
+  //     left: (5em / 11)
+  //     background: url('./../img/contacts.png') no-repeat center
+  //     background-size: cover
+  //     @include breakpoint($xxs)
+  //       margin-top: 2em
 
+
+
+.headerContactsItem
+  transition: .3s ease
+  opacity: 1
+  &_hidden
+    opacity: 0
+  &:not(:first-child)
+    margin-top: .5em
+  &__hidden
+    transform: translate(100%, 0)
+  &__refer, &__label
+
+    color: $white $i
+    display: block
+    width: 100%;
+    @include breakpoint($xs)
+  &__refer
+    @include breakpoint($xs)
+      white-space: nowrap
+    &:visited
+      color: $white $i
+    &:hover, &:focus, &:acitve
+      color: darken($lightGray, 10%) $i
 /* END NAV ITEMS */
 

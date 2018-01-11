@@ -95,16 +95,33 @@ import lozad from 'lozad';
       });
   });// end ready
 
+  // const $headerContacts = $('#headerContacts');
+  // const $contacts = $('#headerContacts').find('.headerContactsItem');
+  // let isHeaderContactsHidden = false;
+
+  // $(window).scroll( function(e) {
+  //   const scrolledFromTop = $('html, body').scrollTop();
+  //   if (!isHeaderContactsHidden) {
+  //     if (scrolledFromTop >= 100) {
+  //       $headerContacts.toggleClass('headerContacts_hidden');
+  //       $contacts.toggleClass('headerContactsItem_hidden');
+  //       isHeaderContactsHidden = true;
+  //     }
+  //   }
+
+  //   if (scrolledFromTop < 100 && isHeaderContactsHidden) {
+  //       $headerContacts.toggleClass('headerContacts_hidden');
+  //       $contacts.toggleClass('headerContactsItem_hidden');
+  //       isHeaderContactsHidden = false;
+  //   }
+
+  // });
+
   const screen = typeof(screen) == "undefined" ? "" : ";s";
   const depth = screen.colorDepth ? 
       screen.colorDepth:
       screen.pixelDepth;
   const url = `//counter.yadro.ru/hit?t24.14;r${escape(document.referrer)}${screen}${screen.width} *${screen.height} *${depth};u${escape( document.URL)};h${escape(document.title.substring(0,150))} ;${Math.random()}`;
-  console.log(`<a href="//www.liveinternet.ru/click..." 
-        target=_blank>
-        <img src='${url}' 
-      alt='' title='LiveInternet: показано число посетителей за сегодня'
-      border='0' width='88' height='15'></a>`)
   $('#liveCounter').html(
       `<a href="//www.liveinternet.ru/click..." 
         target=_blank>

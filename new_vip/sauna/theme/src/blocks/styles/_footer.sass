@@ -74,14 +74,15 @@
 	
  
 .footerContacts
+	margin: auto;
 	padding: 1em 1em 2em
 	box-shadow: 0 5px 15px -3px $shadow;
 	max-width: 330px
-	margin-top: 1em
+	margin-top: 4em
 	background: #f1f1f1
-	@include breakpoint($md)
-		order: 3
-		top: -20px
+	// @include breakpoint($md)
+	// 	order: 3
+	// 	top: -20px
 .footerContacts__title
 	@extend %eleven
 .footerContactsItem
@@ -180,8 +181,8 @@
 	@extend %fs-21
 	text-indent: 12em
 	text-align: center
-	// @include breakpoint($xs)
-	// 	padding-right: 4em
+	@include breakpoint($md-less)
+		padding-right: 5.5em
 
 
 	// @extend %fs-
@@ -195,9 +196,10 @@
 .copyright
 	top: -2em 
 	// margin-top: 1em
-	@include breakpoint($md)
-		top: 0.5em
-	@include breakpoint($sm-less)
+	@include breakpoint($md-less)
+	    max-width: 45em;
+    	margin: auto;
+	@include breakpoint($md-less)
 		margin-top: 7em
 	@include breakpoint($xxs)
 		display: none

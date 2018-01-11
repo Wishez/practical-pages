@@ -32,7 +32,7 @@ footer.footer(itemscope, itemtype='http://schema.org/Person')
                   strong.footerContactsItem__label Телефон для записи:
                   br
                   | {% if settings.footer_phone %}
-                  a.not-follow.footerContactsItem__refer(href='tel:{{ settings.footer_phone }}')
+                  a.footerContactsItem__refer(href='tel:{{ settings.footer_phone }}')
                       span(itemprop="telephone") {{ settings.footer_phone }}
                   | {% endif %}
         <!-- end footerContacts -->
